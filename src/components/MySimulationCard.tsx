@@ -20,7 +20,7 @@ export default function MySimulationCard({ id, title, description, image, progre
                     alt={title}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                {/* Play İkonu Overlay (Opsiyonel Estetik) */}
+                {/* Play İkonu Overlay */}
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
                     <div className="bg-white/20 backdrop-blur-md p-3 rounded-full text-white">
                         <Play size={24} fill="currentColor" />
@@ -43,7 +43,7 @@ export default function MySimulationCard({ id, title, description, image, progre
                 <div className="w-full mt-1">
                     <div className="flex justify-between items-center mb-1.5">
                         <span className="text-xs font-medium text-text-muted-light">Tamamlanan</span>
-                        <span className="text-xs font-bold text-primary">%{progress}</span>
+                        <span className="text-xs font-bold text-primary">%{Math.floor(progress)}</span>
                     </div>
                     <div className="w-full bg-gray-100 dark:bg-gray-700 rounded-full h-2.5 overflow-hidden">
                         <div
@@ -53,7 +53,7 @@ export default function MySimulationCard({ id, title, description, image, progre
                     </div>
                 </div>
 
-                {/* CANLI BUTON (Senin İstediğin Tarz) */}
+                {/* CANLI BUTON */}
                 <Link href={`/play/${id}`} className="mt-2">
                     <button className="w-full group flex items-center justify-center gap-2 rounded-xl bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 shadow-sm hover:shadow-md transition-all duration-300 active:scale-95">
                         <span>Devam Et</span>

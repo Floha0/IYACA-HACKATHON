@@ -27,14 +27,14 @@ const initDb = () => {
     )
   `);
 
-    // 3. YENİ: Zorlanılan Alanlar Tablosu
-    // Bir kullanıcı aynı kategoride defalarca zorlanabilir, sayısını (count) tutacağız.
+    // 3. Zorlanılan Alanlar Tablosu
     db.exec(`
         CREATE TABLE IF NOT EXISTS user_struggles (
             user_id INTEGER,
+            simulation_id INTEGER,
             category TEXT,
             count INTEGER DEFAULT 1,
-            PRIMARY KEY (user_id, category),
+            PRIMARY KEY (user_id, simulation_id, category),
             FOREIGN KEY(user_id) REFERENCES users(id)
         )
     `);

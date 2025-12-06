@@ -47,17 +47,32 @@ export default function PlaySimulationPage() {
 
 // ... importlar aynı kalsın (trackStruggle importunu silebilirsin artık)
 
-    // 2. İLERLEME VE KAYIT FONKSİYONU
+    // ... (Importlar aynı)
+
+// 2. İLERLEME FONKSİYONU
     const handleNext = (nextId?: string, category?: string) => {
         if (nextId && simulation.nodes[nextId]) {
-            // State güncelle
+            const nextNode = simulation.nodes[nextId];
             setCurrentNodeId(nextId);
-            const newProgress = Math.min(currentProgress + 5, 100);
+
+            // DİNAMİK İLERLEME HESABI
+            let newProgress = 0;
+
+            // EĞER SON SAHNEYSE DİREKT %100 YAP (Hesapla uğraşma)
+            if (nextNode.type === 'ending') {
+                newProgress = 100;
+            } else {
+                // Değilse matematiksel olarak ekle (Yuvarlama yapmadan!)
+                const steps = simulation.totalSteps || 20;
+                const increment = 100 / steps;
+                // Mevcut ilerlemeye ekle ama 100'ü geçmesin
+                newProgress = Math.min(currentProgress + increment, 100);
+            }
+
             setCurrentProgress(newProgress);
 
-            // Sadece kullanıcı giriş yapmışsa veritabanına yaz
             if (user) {
-                // 1. İlerlemeyi Kaydet
+                // İlerleme Kaydı (Veritabanı float/virgüllü sayı kabul eder, sorun yok)
                 fetch('/api/progress/save', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
@@ -69,13 +84,14 @@ export default function PlaySimulationPage() {
                     })
                 });
 
-                // 2. Zorlanılan Alanı Kaydet (Eğer kategori varsa)
+                // Zorluk Kaydı
                 if (category) {
                     fetch('/api/struggles/save', {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({
                             userId: user.id,
+                            simulationId: requestedId,
                             category: category
                         })
                     });
@@ -84,26 +100,28 @@ export default function PlaySimulationPage() {
         }
     };
 
-    // 3. SIFIRLAMA
+    // 3. SIFIRLAMA FONKSİYONU (GÜNCELLENDİ)
     const handleReset = () => {
-        if (confirm("Başa dönmek istediğine emin misin?")) {
+        if (confirm("İlerlemeni ve bu simülasyondaki verilerini sıfırlamak istediğine emin misin?")) {
             setCurrentNodeId(simulation.startNodeId);
             setCurrentProgress(0);
 
             if (user) {
-                // Veritabanında da sıfırla
-                fetch('/api/progress/save', {
+                // Yeni Reset API'sini çağır
+                fetch('/api/reset', {
                     method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
                         userId: user.id,
                         simulationId: requestedId,
-                        currentNodeId: simulation.startNodeId,
-                        progress: 0
+                        startNodeId: simulation.startNodeId
                     })
                 });
             }
         }
     };
+
+
 
     return (
         <div className="container mx-auto px-4 mt-6 h-[calc(100vh-100px)] overflow-hidden">

@@ -8,8 +8,15 @@ export async function POST(request: Request) {
         return NextResponse.json({ error: 'Kullanıcı yok' }, { status: 400 });
     }
 
-    // Kullanıcının tüm zorlandığı alanları getir
-    const stmt = db.prepare('SELECT category, count FROM user_struggles WHERE user_id = ? ORDER BY count DESC');
+    // GÜNCELLENDİ: Simülasyon ayrımı yapmaksızın kategorileri topla
+    const stmt = db.prepare(`
+    SELECT category, SUM(count) as count 
+    FROM user_struggles 
+    WHERE user_id = ? 
+    GROUP BY category 
+    ORDER BY count DESC
+  `);
+
     const struggles = stmt.all(userId);
 
     return NextResponse.json({ success: true, data: struggles });
