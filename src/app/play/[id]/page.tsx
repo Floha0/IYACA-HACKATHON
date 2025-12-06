@@ -45,10 +45,6 @@ export default function PlaySimulationPage() {
 
     const currentNode = simulation.nodes[currentNodeId];
 
-// ... importlar aynı kalsın (trackStruggle importunu silebilirsin artık)
-
-    // ... (Importlar aynı)
-
 // 2. İLERLEME FONKSİYONU
     const handleNext = (nextId?: string, category?: string) => {
         if (nextId && simulation.nodes[nextId]) {
@@ -155,7 +151,7 @@ export default function PlaySimulationPage() {
                     )}
 
                     {currentNode.characterImage && currentNode.text && (
-                        <div className="absolute bottom-[35%] left-[30%] md:left-[25%] max-w-[60%] md:max-w-[50%] z-30 animate-pop-in">
+                        <div className="absolute bottom-[70%] left-[30%] md:left-[25%] max-w-[60%] md:max-w-[50%] z-30 animate-pop-in">
                             <div className="bg-white/95 text-gray-900 p-5 rounded-2xl rounded-bl-none shadow-xl border border-gray-100 relative">
                                 <div className="text-primary font-bold text-xs uppercase mb-1 tracking-wide opacity-80">
                                     {currentNode.speaker}
