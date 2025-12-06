@@ -1,5 +1,8 @@
-import Link from 'next/link';
+"use client"; // Tıklama olayı olduğu için client component olmalı
+
+import { useRouter } from 'next/navigation';
 import { Clock, ArrowRight } from 'lucide-react';
+import { enrollSimulation } from '@/lib/storage'; // Az önce yazdığımız fonksiyon
 
 interface SimulationCardProps {
     id: number;
@@ -11,6 +14,16 @@ interface SimulationCardProps {
 }
 
 export default function SimulationCard({ id, title, description, image, duration, category }: SimulationCardProps) {
+    const router = useRouter();
+
+    const handleStart = () => {
+        // 1. Önce hafızaya kaydet
+        enrollSimulation(id);
+
+        // 2. Sonra oynama sayfasına yönlendir
+        router.push(`/play/${id}`);
+    };
+
     return (
         <div className="group flex flex-col bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-soft hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-700 relative top-0 hover:-top-2">
 
@@ -21,11 +34,9 @@ export default function SimulationCard({ id, title, description, image, duration
                     alt={title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                {/* Kategori Etiketi */}
                 <div className="absolute top-3 right-3 bg-white/95 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-primary shadow-sm">
                     {category}
                 </div>
-                {/* Süre Etiketi (Resmin Sol Altında) */}
                 <div className="absolute bottom-3 left-3 bg-black/60 backdrop-blur-sm text-white px-2 py-1 rounded-lg text-xs font-medium flex items-center gap-1">
                     <Clock size={12} />
                     {duration}
@@ -42,13 +53,16 @@ export default function SimulationCard({ id, title, description, image, duration
                     {description}
                 </p>
 
-                {/* Buton Alanı */}
-                <Link href={`/play/${id}`} className="mt-auto">
-                    <button className="w-full group flex items-center justify-center gap-2 rounded-xl bg-blue-700 hover:bg-blue-800 text-white font-bold py-3.5 px-4 shadow-sm hover:shadow-md transition-all duration-300 active:scale-95">
+                {/* Buton Alanı (Link yerine onClick kullanıyoruz) */}
+                <div className="mt-auto">
+                    <button
+                        onClick={handleStart}
+                        className="w-full group flex items-center justify-center gap-2 rounded-xl bg-blue-700 hover:bg-blue-800 text-white font-bold py-3.5 px-4 shadow-sm hover:shadow-md transition-all duration-300 active:scale-95"
+                    >
                         <span>Simülasyona Başla</span>
                         <ArrowRight size={18} className="transition-transform duration-300 group-hover:translate-x-1" />
                     </button>
-                </Link>
+                </div>
             </div>
         </div>
     );

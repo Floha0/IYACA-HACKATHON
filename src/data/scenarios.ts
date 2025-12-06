@@ -4,6 +4,7 @@ export type Choice = {
     label: string;
     next: string;
     style?: 'default' | 'success' | 'danger';
+    struggleCategory?: string;
 };
 export type ScenarioNode = {
     id: string;
@@ -575,9 +576,10 @@ export const scenarios: Record<number, Simulation> = {
                 characterImage: "https://i.imgur.com/dY4DwKl.png", // Elena Karakteri
                 environment: "Toplantı Odası • Gün 12",
                 choices: [
-                    { label: "A) Direkt savunmaya geç ('Hayır yanlış anlıyorsun')", next: "sahne-6-A", style: "danger" },
+                    // YENİ: struggleCategory eklendi
+                    { label: "A) Direkt savunmaya geç", next: "sahne-6-A", style: "danger", struggleCategory: "Kültürel İletişim" },
                     { label: "B) Dili kullanamamanın etkisini kabul et", next: "sahne-6-B", style: "success" },
-                    { label: "C) Sessiz kal ve geçiştir ('Okay... I guess')", next: "sahne-6-C", style: "default" }
+                    { label: "C) Sessiz kal ve geçiştir", next: "sahne-6-C", style: "default", struggleCategory: "Özgüven Eksikliği" }
                 ]
             },
             "sahne-6-A": {
@@ -634,9 +636,9 @@ export const scenarios: Record<number, Simulation> = {
                 characterImage: "https://i.imgur.com/dY4DwKl.png", // Maria (Elena ile aynı görseli kullandım placeholder olarak)
                 environment: "Etkinlik Odası • Gün 25",
                 choices: [
-                    { label: "A) 'Tamam yaparım' de (Tükenmeye yaklaş)", next: "sahne-8-A", style: "danger" },
-                    { label: "B) Kibarca sınır koy ('Bugün kapasitem bu kadar')", next: "sahne-8-B", style: "success" },
-                    { label: "C) Direkt reddet ('Hayır yapamam, çok fazla')", next: "sahne-8-C", style: "default" }
+                    { label: "A) 'Tamam yaparım' de", next: "sahne-8-A", style: "danger", struggleCategory: "Sınır Koyma / Hayır Diyebilme" },
+                    { label: "B) Kibarca sınır koy", next: "sahne-8-B", style: "success" },
+                    { label: "C) Direkt reddet", next: "sahne-8-C", style: "default", struggleCategory: "Kültürel İletişim" }
                 ]
             },
             "sahne-8-A": { id: "sahne-8-A", type: "dialogue", speaker: "Mentor João", text: "Kendine koymadığın sınır, seni zamanla yorar. En tehlikeli davranış budur.", characterImage: "https://i.imgur.com/dY4DwKl.png", image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200", next: "sahne-9" },
@@ -653,7 +655,7 @@ export const scenarios: Record<number, Simulation> = {
                 image: "https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&q=80&w=1200",
                 environment: "Yalnız Oda • Gün 40",
                 choices: [
-                    { label: "A) Yalnızlığı bastırıp çalışmaya gömül", next: "sahne-9-A", style: "danger" },
+                    { label: "A) Yalnızlığı bastırıp çalışmaya gömül", next: "sahne-9-A", style: "danger", struggleCategory: "Duygusal Dayanıklılık" },
                     { label: "B) Mentora mesaj atıp yardım iste", next: "sahne-9-B", style: "success" },
                     { label: "C) Bir arkadaşına 'İyi hissetmiyorum' yaz", next: "sahne-9-C", style: "default" }
                 ]
