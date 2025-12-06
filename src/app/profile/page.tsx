@@ -1,7 +1,6 @@
 "use client";
 
 import { useAuth } from '@/context/AuthContext';
-import { getStoredSimulations, getStruggles } from '@/lib/storage';
 import { useEffect, useState } from 'react';
 import { User, Trophy, Target, AlertTriangle, Clock } from 'lucide-react';
 import Link from 'next/link';
@@ -10,38 +9,69 @@ import { useRouter } from 'next/navigation';
 export default function ProfilePage() {
     const { user } = useAuth();
     const router = useRouter();
+
+    // İstatistik State'i
     const [stats, setStats] = useState({
         totalSimulations: 0,
         completedSimulations: 0,
         averageProgress: 0,
     });
-    const [struggles, setStruggles] = useState<Record<string, number>>({});
 
-    // Eğer giriş yapmamışsa login'e at
+    // Zorlanılan Alanlar State'i
+    const [struggles, setStruggles] = useState<{ category: string; count: number }[]>([]);
+    const [loading, setLoading] = useState(true);
+
+    // Giriş kontrolü
     useEffect(() => {
         if (!user && typeof window !== 'undefined') {
-            router.push('/login');
+            // router.push('/login'); // İstersen açabilirsin
         }
     }, [user, router]);
 
-    // Verileri çek
+    // VERİLERİ API'DEN ÇEK
     useEffect(() => {
-        const sims = getStoredSimulations();
-        const struggleData = getStruggles();
-        setStruggles(struggleData);
+        if (user) {
+            // 1. Simülasyon İlerlemelerini Çek
+            fetch('/api/progress/get', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ userId: user.id })
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.success) {
+                        const sims = data.data; // Veritabanından gelen liste
 
-        if (sims.length > 0) {
-            const completed = sims.filter((s: any) => s.progress === 100).length;
-            const totalProgress = sims.reduce((acc: number, curr: any) => acc + (curr.progress || 0), 0);
-            setStats({
-                totalSimulations: sims.length,
-                completedSimulations: completed,
-                averageProgress: Math.round(totalProgress / sims.length)
-            });
+                        if (sims.length > 0) {
+                            const completed = sims.filter((s: any) => s.progress === 100).length;
+                            const totalProgress = sims.reduce((acc: number, curr: any) => acc + (curr.progress || 0), 0);
+
+                            setStats({
+                                totalSimulations: sims.length,
+                                completedSimulations: completed,
+                                averageProgress: Math.round(totalProgress / sims.length)
+                            });
+                        }
+                    }
+                });
+
+            // 2. Zorlanılan Alanları Çek
+            fetch('/api/struggles/get', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ userId: user.id })
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.success) {
+                        setStruggles(data.data); // [{ category: '...', count: 2 }, ...]
+                    }
+                    setLoading(false);
+                });
         }
-    }, []);
+    }, [user]);
 
-    if (!user) return null; // Yönlendirme öncesi boş ekran
+    if (!user) return <div className="text-center py-20">Lütfen giriş yapın.</div>;
 
     return (
         <div className="container mx-auto px-4 py-12 max-w-5xl">
@@ -64,7 +94,6 @@ export default function ProfilePage() {
 
                 {/* Sol Kolon: İstatistikler */}
                 <div className="md:col-span-1 flex flex-col gap-6">
-                    {/* İstatistik Kartları */}
                     <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-sm border border-gray-100 dark:border-gray-700 flex items-center gap-4">
                         <div className="p-3 bg-purple-100 text-purple-600 rounded-xl"><Trophy size={24} /></div>
                         <div>
@@ -98,19 +127,18 @@ export default function ProfilePage() {
                         Simülasyonlarda yaptığın seçimlere göre, aşağıdaki konularda daha fazla pratik yapman faydalı olabilir.
                     </p>
 
-                    {Object.keys(struggles).length > 0 ? (
+                    {loading ? (
+                        <p>Yükleniyor...</p>
+                    ) : struggles.length > 0 ? (
                         <div className="flex flex-col gap-4">
-                            {Object.entries(struggles)
-                                // En çok zorlanılanı üste al
-                                .sort(([, a], [, b]) => b - a)
-                                .map(([category, count], index) => (
-                                    <div key={index} className="flex items-center justify-between p-4 bg-orange-50 dark:bg-orange-900/10 rounded-xl border border-orange-100 dark:border-orange-800/30">
-                                        <span className="font-bold text-gray-800 dark:text-gray-200">{category}</span>
-                                        <span className="px-3 py-1 bg-orange-200 dark:bg-orange-800 text-orange-800 dark:text-orange-200 text-xs font-bold rounded-full">
-                                {count} kez zorlandın
+                            {struggles.map((item, index) => (
+                                <div key={index} className="flex items-center justify-between p-4 bg-orange-50 dark:bg-orange-900/10 rounded-xl border border-orange-100 dark:border-orange-800/30">
+                                    <span className="font-bold text-gray-800 dark:text-gray-200">{item.category}</span>
+                                    <span className="px-3 py-1 bg-orange-200 dark:bg-orange-800 text-orange-800 dark:text-orange-200 text-xs font-bold rounded-full">
+                                {item.count} kez zorlandın
                             </span>
-                                    </div>
-                                ))}
+                                </div>
+                            ))}
                         </div>
                     ) : (
                         <div className="text-center py-10 text-gray-400 bg-gray-50 dark:bg-gray-900/50 rounded-2xl">

@@ -45,16 +45,19 @@ export default function PlaySimulationPage() {
 
     const currentNode = simulation.nodes[currentNodeId];
 
-    // 2. İLERLEME FONKSİYONU
+// ... importlar aynı kalsın (trackStruggle importunu silebilirsin artık)
+
+    // 2. İLERLEME VE KAYIT FONKSİYONU
     const handleNext = (nextId?: string, category?: string) => {
         if (nextId && simulation.nodes[nextId]) {
-            // State'i güncelle (Anlık değişim için)
+            // State güncelle
             setCurrentNodeId(nextId);
             const newProgress = Math.min(currentProgress + 5, 100);
             setCurrentProgress(newProgress);
 
-            // EĞER KULLANICI VARSA VERİTABANINA KAYDET
+            // Sadece kullanıcı giriş yapmışsa veritabanına yaz
             if (user) {
+                // 1. İlerlemeyi Kaydet
                 fetch('/api/progress/save', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
@@ -65,8 +68,19 @@ export default function PlaySimulationPage() {
                         progress: newProgress
                     })
                 });
+
+                // 2. Zorlanılan Alanı Kaydet (Eğer kategori varsa)
+                if (category) {
+                    fetch('/api/struggles/save', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            userId: user.id,
+                            category: category
+                        })
+                    });
+                }
             }
-            // User yoksa kaydetme, sadece state değişti.
         }
     };
 
