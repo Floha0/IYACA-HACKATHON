@@ -74,7 +74,7 @@ class VisualAssetGenerator:
         # Ortam görselleri için sadece 'info' veya 'ending' node'larını filtrele
         # (Genelde sahne başları _info ile biter)
         info_nodes = {k: v for k, v in nodes.items() if
-                      k.endswith('_d1') or k.endswith('_end') or v.get('type') == 'ending'}
+                      k.endswith('_info') or k.endswith('_end') or v.get('type') == 'ending'}
 
         total_scenes = len(info_nodes)
         current_count = 0
@@ -88,12 +88,13 @@ class VisualAssetGenerator:
 
             user_prompt_scene = f"""
             GÖREV: Aşağıdaki sahne metnini analiz et ve FLUX/Midjourney için tek bir İngilizce görsel prompt yaz.
-
+            KESİN KURAL: Oluşturacağın prompt sahne metnindeki 'environment' key'inin karşılığını tam olarak betimlemek zorunda. Orada yazan ortamı her şeyin üstünde 1. önceliğin almalısın
             KURALLAR:
             1. Sadece mekanı ve atmosferi betimle (Işık, renkler, dokular).
             2. İnsan yüzlerine odaklanma, genel plan (wide shot) olsun.
-            3. Stil: 'Cinematic lighting, 8k resolution, photorealistic, 35mm film grain'.
-            4. Çıktı sadece İngilizce prompt cümlesi olsun.
+            3. Çıktı sadece İngilizce prompt cümlesi olsun.
+            
+            KESİN KURAL: Oluşturacağın prompt sahne metnindeki 'environment' key'inin karşılığını tam olarak betimlemek zorunda. Orada yazan ortamı her şeyin üstünde 1. önceliğin almalısın
 
             METİN: {node.get('text', '')}
             """

@@ -1,2 +1,2 @@
-Sel
-Sel sonrası bölgenin rehabilitasyonuna yönelik simulasyon.
+Fakir köye yolculuk
+Fakir bir köye gidip yardım eden gönüllülerin simülasyonu

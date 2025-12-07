@@ -1,53 +1,52 @@
 {
-    "id": 1765100885,
-    "title": "Sel",
-    "coord": "Elif",
-    "description": "Sel afetinin ardından etkilenen bir bölgeye yardım çalışmaları ve sosyal rehabilitasyon",
+    "id": 1765099566,
+    "title": "Sel sonrası",
+    "coord": "Zeynep",
+    "description": "Bir selzedede yardım merkezinde, Zeynep ilk gününü gönüllü bir psikolog olarak başlamak üzeredir. Odası sade ve rahat bir atmosfere sahiptir. Zeynep, heyecanla ama aynı zamanda biraz da korkuyla bu yeni görevine başlamak üzeredir.",
     "difficulty": "Orta",
     "estimatedTime": "30 dk",
     "startNodeId": "s1_info",
-    "totalSteps": 35,
+    "totalSteps": 37,
     "nodes": {
         "s1_info": {
             "id": "s1_info",
             "type": "dialogue",
-            "speaker": "Elif (Koordinatör)",
-            "text": "Sel afeti nedeniyle birçok insan evini kaybetmiştir. Bizim yardımımıza ihtiyaçları var.",
-            "environment": "Sel Afetinin Ardından Etkilenen Bir Bölge",
-            "characterImage": "/characters/Ana_1.png",
+            "speaker": "Zeynep",
+            "text": "Sen, Zeynep, gerçekten bunu yapmak için hazır mısın? Bu selzedelere yardım edebilecek misin?",
+            "subtitle": "Sen, Zeynep, gerçekten bunu yapmak için hazır mısın? Bu selzedelere yardım edebilecek misin?",
+            "image": "",
+            "characterImage": "/characters/Bella.png",
+            "environment": "Selzede Yardım Merkezinde",
             "next": "s1_d1"
         },
         "s1_d1": {
             "id": "s1_d1",
             "type": "dialogue",
             "speaker": "Brad",
-            "text": "Ben bunu düşündükçe içim ürperiyor. \"Sen (İç Ses)\" beni uyarıyor, \"Acaba yeterli yardım yapabilecek miyiz?\"",
-            "subtitle": "Ben bunu düşündükçe içim ürperiyor. \"Sen (İç Ses)\" beni uyarıyor, \"Acaba yeterli yardım yapabilecek miyiz?\"",
+            "text": "Merhaba, ben Zeynep. Selzedelere yardım etmek için buradayım. İlk günüm ve çok heyecanlıyım.",
+            "image": "",
             "characterImage": "/characters/Brad.png",
+            "environment": "Selzede Yardım Merkezinde",
             "next": "s1_d2"
         },
         "s1_d2": {
             "id": "s1_d2",
             "type": "dialogue",
-            "speaker": "Elif (Koordinatör)",
-            "text": "Evet, birlikte çalışarak bu insanların yaşadıkları sosyal kaygıları keşfedebiliriz ve onlara destek olabiliriz.",
+            "speaker": "Zeynep",
+            "text": "Hoş geldin, Zeynep. Seninle birlikte çalışmak bizi çok mutlu etti. Bu selzedelere yardım etmek için çok önemli bir iş yapıyorsun.",
+            "image": "",
             "characterImage": "/characters/Ana_1.png",
+            "environment": "Selzede Yardım Merkezinde",
             "next": "s1_d3"
         },
         "s1_d3": {
             "id": "s1_d3",
             "type": "dialogue",
             "speaker": "Brad",
-            "text": "Peki, bu ayuda çalışması hangi aşamalardan oluşacak?",
+            "text": "Teşekkür ederim. Ben de çok heyecanlıyım. Bu selzedelere yardım etmek için ne yapabilirim?",
+            "image": "",
             "characterImage": "/characters/Brad.png",
-            "next": "s1_d4"
-        },
-        "s1_d4": {
-            "id": "s1_d4",
-            "type": "dialogue",
-            "speaker": "Elif (Koordinatör)",
-            "text": "Öncelikle ihtiyaç duyulan alanları belirleyeceğiz, ardından kaynaklarımızı etkili şekilde kullanacağız.",
-            "characterImage": "/characters/Ana_1.png",
+            "environment": "Selzede Yardım Merkezinde",
             "next": "s1_choice"
         },
         "s1_choice": {
@@ -55,57 +54,55 @@
             "type": "choice",
             "speaker": "",
             "text": "",
+            "image": "",
+            "characterImage": "",
+            "environment": "Selzede Yardım Merkezinde",
             "choices": [
                 {
-                    "label": "Direkt yardım çalışmalarına katıl",
-                    "next": "s2_info",
-                    "struggleCategory": "Acil Yardım"
+                    "label": "Selzedelere direkt ulaşmaya çalışır.",
+                    "next": "s2_d1",
+                    "struggleCategory": ""
                 },
                 {
-                    "label": "Topluluk örgütlenmesine katkıda bulun",
-                    "next": "s3_info",
-                    "struggleCategory": "Uzun Vadeli Çözümler"
+                    "label": "Merkezin çalışma şekli hakkında daha fazla bilgi edinmek ister.",
+                    "next": "s2_d2",
+                    "struggleCategory": ""
                 },
                 {
-                    "label": "Kaynak ve strateji geliştirme ekibine katıl",
-                    "next": "s4_info",
-                    "struggleCategory": "Kaynak Yönetimi"
+                    "label": "Kendi içsel korkularıyla mücadele etmeye çalışır.",
+                    "next": "s2_d3",
+                    "struggleCategory": "Korku"
                 }
             ]
-        },
-        "s2_info": {
-            "id": "s2_info",
-            "type": "dialogue",
-            "speaker": "Brad",
-            "text": "Benim adım Emre, sizinki nedir?",
-            "subtitle": "",
-            "characterImage": "/characters/Brad.png",
-            "environment": "Tanışma ve İlk Sosyal Etkileşim Alanı",
-            "next": "s2_d1"
         },
         "s2_d1": {
             "id": "s2_d1",
             "type": "dialogue",
-            "speaker": "Elif (Koordinatör)",
-            "text": "Ben de Ayşe. Nice tanıdığım için teşekkür ederim. Burada nasıl bir yardım çalışması planlıyoruz?",
-            "characterImage": "/characters/Ana_1.png",
+            "speaker": "Brad",
+            "text": "Merhaba, ben Zeynep. Sana nasıl yardımcı olabilirim?",
+            "image": "",
+            "characterImage": "/characters/Brad.png",
+            "environment": "Görüşme Odası",
             "next": "s2_d2"
         },
         "s2_d2": {
             "id": "s2_d2",
             "type": "dialogue",
-            "speaker": "Brad",
-            "text": "\"Sen (İç Ses)\" beni hatırlatıyor, \"Koordinasyon çok önemli.\" Bu daher, birlikte çalışmamız gerekiyor.",
-            "subtitle": "\"Sen (İç Ses)\" beni hatırlatıyor, \"Koordinasyon çok önemli.\" Bu daher, birlikte çalışmamız gerekiyor.",
-            "characterImage": "/characters/Brad.png",
+            "speaker": "Hasta",
+            "text": "Ben... ben hiçbir şey demeyeceğim.",
+            "image": "",
+            "characterImage": "",
+            "environment": "Görüşme Odası",
             "next": "s2_d3"
         },
         "s2_d3": {
             "id": "s2_d3",
             "type": "dialogue",
-            "speaker": "Elif (Koordinatör)",
-            "text": "Kesinlikle, birlikte olduğumuz sürece her zorluğu aşabileceğiz. Deneyimlerimiz ve becerilerimiz birleştirerek en etkili sonuçları elde edebiliriz.",
-            "characterImage": "/characters/Ana_1.png",
+            "speaker": "Brad",
+            "text": "Anlaştım. Sen hazır olana kadar bekleyeceğim.",
+            "image": "",
+            "characterImage": "/characters/Brad.png",
+            "environment": "Görüşme Odası",
             "next": "s2_choice"
         },
         "s2_choice": {
@@ -113,48 +110,46 @@
             "type": "choice",
             "speaker": "",
             "text": "",
+            "image": "",
+            "characterImage": "",
+            "environment": "Görüşme Odası",
             "choices": [
                 {
-                    "label": "Acil yardım kaynaklarına odaklan",
-                    "next": "s4_info",
-                    "struggleCategory": "Acil Yardım"
+                    "label": "Selzede direkt soru sorar.",
+                    "next": "s3_d1",
+                    "struggleCategory": ""
                 },
                 {
-                    "label": "Uzun vadeli yardım planlarını geliştir",
-                    "next": "s5_info",
-                    "struggleCategory": "Uzun Vadeli Çözümler"
+                    "label": "Selzede kendini tanıtmaya başlar.",
+                    "next": "s3_d2",
+                    "struggleCategory": ""
                 },
                 {
-                    "label": "Toplumsal desteği artırma çalışmaları yap",
-                    "next": "s6_info",
-                    "struggleCategory": "Toplumsal Destek"
+                    "label": "Selzedeye bir oyun veya aktivite önerir.",
+                    "next": "s3_d3",
+                    "struggleCategory": ""
                 }
             ]
-        },
-        "s3_info": {
-            "id": "s3_info",
-            "type": "dialogue",
-            "speaker": "Elif (Koordinatör)",
-            "text": "Şimdi iki farklı yol arasında seçim yapma zamanı. Yol A için acil yardım ve barınma arayışı, Yol B için ise uzun vadeli yardım ve toplu yeniden inşa planı.",
-            "characterImage": "/characters/Ana_1.png",
-            "environment": "Büyük Ayrım Noktası",
-            "next": "s3_d1"
         },
         "s3_d1": {
             "id": "s3_d1",
             "type": "dialogue",
-            "speaker": "Brad",
-            "text": "Hangi yolu seçersek daha etkili olur? \"Sen (İç Ses)\" bana iki tarafa da çekiliyor.",
-            "subtitle": "Hangi yolu seçersek daha etkili olur? \"Sen (İç Ses)\" bana iki tarafa da çekiliyor.",
-            "characterImage": "/characters/Brad.png",
+            "speaker": "Zeynep",
+            "text": "Zeynep, iki farklı yaklaşımımız var: bireysel terapi veya grup terapisi. Hangisini seçmek istersin?",
+            "image": "",
+            "characterImage": "/characters/Ana_1.png",
+            "environment": "Selzede Yardım Merkezinde",
             "next": "s3_d2"
         },
         "s3_d2": {
             "id": "s3_d2",
             "type": "dialogue",
-            "speaker": "Elif (Koordinatör)",
-            "text": "Her iki yol da önemlidir, ancak kaynaklarımızı ve önceliklerimizi iyi değerlendirmeliyiz. birlikte çalışarak hangisinin daha uygun olduğuna karar verebiliriz.",
-            "characterImage": "/characters/Ana_1.png",
+            "speaker": "Brad",
+            "text": "(kendisine) Sen, Zeynep, hangi yaklaşımı seçmelisin? Hangisi daha efektif olacak?",
+            "subtitle": "(kendisine) Sen, Zeynep, hangi yaklaşımı seçmelisin? Hangisi daha efektif olacak?",
+            "image": "",
+            "characterImage": "/characters/Brad.png",
+            "environment": "Selzede Yardım Merkezinde",
             "next": "s3_choice"
         },
         "s3_choice": {
@@ -162,80 +157,75 @@
             "type": "choice",
             "speaker": "",
             "text": "",
+            "image": "",
+            "characterImage": "",
+            "environment": "Selzede Yardım Merkezinde",
             "choices": [
                 {
-                    "label": "Yol A: Acil yardım ve barınma",
-                    "next": "s4_info",
-                    "struggleCategory": "Acil Yardım"
+                    "label": "Bireysel terapiye karar verir.",
+                    "next": "s4_d1",
+                    "struggleCategory": ""
                 },
                 {
-                    "label": "Yol B: Uzun vadeli yardım ve yeniden inşa",
-                    "next": "s5_info",
-                    "struggleCategory": "Uzun Vadeli Çözümler"
+                    "label": "Grup terapisine karar verir.",
+                    "next": "s4_d2",
+                    "struggleCategory": ""
                 },
                 {
-                    "label": "İki yolu birleştirmeye çalış",
-                    "next": "s8_info",
-                    "struggleCategory": "Esneklik"
+                    "label": "Her iki yaklaşımı da kullanmaya karar verir.",
+                    "next": "s4_d3",
+                    "struggleCategory": ""
                 }
             ]
-        },
-        "s4_info": {
-            "id": "s4_info",
-            "type": "dialogue",
-            "speaker": "Brad",
-            "text": "Acil yardım kaynaklarını bulmak için ne gibi adımlar atabiliriz? \"Sen (İç Ses)\" bana hızlı olmak gerektiğini hatırlatıyor.",
-            "subtitle": "Acil yardım kaynaklarını bulmak için ne gibi adımlar atabiliriz? \"Sen (İç Ses)\" bana hızlı olmak gerektiğini hatırlatıyor.",
-            "characterImage": "/characters/Brad.png",
-            "environment": "Acil Yardım Kaynaklarını Keşfetme Alanı",
-            "next": "s4_d1"
         },
         "s4_d1": {
             "id": "s4_d1",
             "type": "dialogue",
-            "speaker": "Elif (Koordinatör)",
-            "text": "Dil bariyeri ve iletişim sorunları nedeniyle zorlanabiliriz, ama birlikte çalışarak bu engelleri aşabiliriz. Ayrıca, yerel kaynakları ve networkü effectively kullanmalıyız.",
-            "characterImage": "/characters/Ana_1.png",
-            "next": "s4_choice"
+            "speaker": "Brad",
+            "text": "Her hasta ile tek başına çalışmaya çalışır.",
+            "image": "",
+            "characterImage": "/characters/Brad.png",
+            "environment": "Görüşme Odası",
+            "next": "s4_d2"
         },
-        "s4_choice": {
-            "id": "s4_choice",
-            "type": "choice",
-            "speaker": "",
-            "text": "",
-            "choices": [
-                {
-                    "label": "Dil bariyerini aşmak için yeni yöntemler geliştir",
-                    "next": "s6_info",
-                    "struggleCategory": "İletişim"
-                },
-                {
-                    "label": "İletişim sorunlarını öncelikle çöz",
-                    "next": "s6_info",
-                    "struggleCategory": "İletişim"
-                },
-                {
-                    "label": "Kaynak dağıtımını optimize et",
-                    "next": "s7_info",
-                    "struggleCategory": "Kaynak Yönetimi"
-                }
-            ]
-        },
-        "s5_info": {
-            "id": "s5_info",
+        "s4_d2": {
+            "id": "s4_d2",
             "type": "dialogue",
-            "speaker": "Elif (Koordinatör)",
-            "text": "Uzun vadeli yardım planları için kaynaklarımızı verimli kullanmalıyız. \"Sen (İç Ses)\" bana kaynakları hiệu quả kullanma konusunda uyarıyor.",
-            "characterImage": "/characters/Ana_1.png",
-            "environment": "Uzun Vadeli Yardım ve Yeniden İnşa Planı",
+            "speaker": "Hasta",
+            "text": "Teşekkür ederim, Zeynep. Bana gerçekten yardımcı oldun.",
+            "image": "",
+            "characterImage": "",
+            "environment": "Görüşme Odası",
+            "next": "s4_d3"
+        },
+        "s4_d3": {
+            "id": "s4_d3",
+            "type": "dialogue",
+            "speaker": "Brad",
+            "text": "Görüşmek üzere, hasta. Umarım tekrar görüşürüz.",
+            "image": "",
+            "characterImage": "/characters/Brad.png",
+            "environment": "Görüşme Odası",
             "next": "s5_d1"
         },
         "s5_d1": {
             "id": "s5_d1",
             "type": "dialogue",
+            "speaker": "Zeynep",
+            "text": "Zeynep, selzedelere yardım etmek için çok önemli bir iş yapıyorsun. Devam et.",
+            "image": "",
+            "characterImage": "/characters/Ana_1.png",
+            "environment": "Selzede Yardım Merkezinde",
+            "next": "s5_d2"
+        },
+        "s5_d2": {
+            "id": "s5_d2",
+            "type": "dialogue",
             "speaker": "Brad",
-            "text": "Zaman yönetimi sorunları ve kaynak eksikliği nedeniyle zorlanıyoruz. Yeni stratejiler geliştirmeliyiz.",
+            "text": "Teşekkür ederim, Zeynep. Ben de devam etmek istiyorum.",
+            "image": "",
             "characterImage": "/characters/Brad.png",
+            "environment": "Selzede Yardım Merkezinde",
             "next": "s5_choice"
         },
         "s5_choice": {
@@ -243,40 +233,55 @@
             "type": "choice",
             "speaker": "",
             "text": "",
+            "image": "",
+            "characterImage": "",
+            "environment": "Selzede Yardım Merkezinde",
             "choices": [
                 {
-                    "label": "Kaynakları optimize etmek için yeni planlar geliştir",
-                    "next": "s7_info",
-                    "struggleCategory": "Kaynak Yönetimi"
+                    "label": "Selzedelere direkt ulaşmaya çalışır.",
+                    "next": "s6_d1",
+                    "struggleCategory": ""
                 },
                 {
-                    "label": "Motivasyonu artırmak için ekstra destek sağlamak",
-                    "next": "s7_info",
-                    "struggleCategory": "Motivasyon"
+                    "label": "Merkezin çalışma şekli hakkında daha fazla bilgi edinmek ister.",
+                    "next": "s6_d2",
+                    "struggleCategory": ""
                 },
                 {
-                    "label": "Topluluk katılımını tăngır",
-                    "next": "s8_info",
-                    "struggleCategory": "Topluluk Katılımı"
+                    "label": "Kendi içsel korkularıyla mücadele etmeye çalışır.",
+                    "next": "s6_d3",
+                    "struggleCategory": "Korku"
                 }
             ]
-        },
-        "s6_info": {
-            "id": "s6_info",
-            "type": "dialogue",
-            "speaker": "Brad",
-            "text": "Acil yardım dağıtımında bazı gruplar arasında gerilim artıyor. Nasıl bir çözüm bulunabilir? \"Sen (İç Ses)\" bana sakin ve mantıklı olmam gerektiğini hatırlatıyor.",
-            "subtitle": "Acil yardım dağıtımında bazı gruplar arasında gerilim artıyor. Nasıl bir çözüm bulunabilir? \"Sen (İç Ses)\" bana sakin ve mantıklı olmam gerektiğini hatırlatıyor.",
-            "characterImage": "/characters/Brad.png",
-            "environment": "Acil Yardım Dağıtımında Zorluklar",
-            "next": "s6_d1"
         },
         "s6_d1": {
             "id": "s6_d1",
             "type": "dialogue",
-            "speaker": "Elif (Koordinatör)",
-            "text": "Birlikte çalışarak ve iletişim kurarak bu gerilimi azaltabiliriz. Ayrıca, açık ve şeffaf bir iletişim kanalı oluşturarak herkesin aynı bilgiye sahip olmasını sağlayabiliriz.",
-            "characterImage": "/characters/Ana_1.png",
+            "speaker": "Brad",
+            "text": "Merhaba, ben Zeynep. Sana nasıl yardımcı olabilirim?",
+            "image": "",
+            "characterImage": "/characters/Brad.png",
+            "environment": "Görüşme Odası",
+            "next": "s6_d2"
+        },
+        "s6_d2": {
+            "id": "s6_d2",
+            "type": "dialogue",
+            "speaker": "Hasta",
+            "text": "Ben... ben hiçbir şey demeyeceğim.",
+            "image": "",
+            "characterImage": "",
+            "environment": "Görüşme Odası",
+            "next": "s6_d3"
+        },
+        "s6_d3": {
+            "id": "s6_d3",
+            "type": "dialogue",
+            "speaker": "Brad",
+            "text": "Anlaştım. Sen hazır olana kadar bekleyeceğim.",
+            "image": "",
+            "characterImage": "/characters/Brad.png",
+            "environment": "Görüşme Odası",
             "next": "s6_choice"
         },
         "s6_choice": {
@@ -284,39 +289,55 @@
             "type": "choice",
             "speaker": "",
             "text": "",
+            "image": "",
+            "characterImage": "",
+            "environment": "Görüşme Odası",
             "choices": [
                 {
-                    "label": "Gruplar arasında iletişim kurmak",
-                    "next": "s8_info",
-                    "struggleCategory": "İletişim"
+                    "label": "Selzede direkt soru sorar.",
+                    "next": "s7_d1",
+                    "struggleCategory": ""
                 },
                 {
-                    "label": "Acil yardım dağıtımını yeniden organize etmek",
-                    "next": "s8_info",
-                    "struggleCategory": "Kaynak Yönetimi"
+                    "label": "Selzede kendini tanıtmaya başlar.",
+                    "next": "s7_d2",
+                    "struggleCategory": ""
                 },
                 {
-                    "label": "Topluluk liderleriyle işbirliği yapmak",
-                    "next": "s8_info",
-                    "struggleCategory": "Topluluk Katılımı"
+                    "label": "Selzedeye bir oyun veya aktivite önerir.",
+                    "next": "s7_d3",
+                    "struggleCategory": ""
                 }
             ]
-        },
-        "s7_info": {
-            "id": "s7_info",
-            "type": "dialogue",
-            "speaker": "Elif (Koordinatör)",
-            "text": "Kaynaklarımızı daha verimli kullanmak için yeni stratejiler geliştirmeliyiz. \"Sen (İç Ses)\" bana yaratıcı olmam gerektiğini hatırlatıyor.",
-            "characterImage": "/characters/Ana_1.png",
-            "environment": "Kaynakların Verimli Kullanılması",
-            "next": "s7_d1"
         },
         "s7_d1": {
             "id": "s7_d1",
             "type": "dialogue",
+            "speaker": "Zeynep",
+            "text": "Zeynep, selzedelere yardım etmek için çok önemli bir iş yapıyorsun. Devam et.",
+            "image": "",
+            "characterImage": "/characters/Ana_1.png",
+            "environment": "Selzede Yardım Merkezinde",
+            "next": "s7_d2"
+        },
+        "s7_d2": {
+            "id": "s7_d2",
+            "type": "dialogue",
             "speaker": "Brad",
-            "text": "Bazı oyuncuların motivasyonu düşüyor. Nasıl motive edebiliriz?",
+            "text": "Teşekkür ederim, Zeynep. Ben de devam etmek istiyorum.",
+            "image": "",
             "characterImage": "/characters/Brad.png",
+            "environment": "Selzede Yardım Merkezinde",
+            "next": "s7_d3"
+        },
+        "s7_d3": {
+            "id": "s7_d3",
+            "type": "dialogue",
+            "speaker": "Zeynep",
+            "text": "Zeynep, iki farklı yaklaşımımız var: bireysel terapi veya grup terapisi. Hangisini seçmek istersin?",
+            "image": "",
+            "characterImage": "/characters/Ana_1.png",
+            "environment": "Selzede Yardım Merkezinde",
             "next": "s7_choice"
         },
         "s7_choice": {
@@ -324,80 +345,85 @@
             "type": "choice",
             "speaker": "",
             "text": "",
+            "image": "",
+            "characterImage": "",
+            "environment": "Selzede Yardım Merkezinde",
             "choices": [
                 {
-                    "label": "Ekstra destek ve motivasyon araçları sağlamak",
-                    "next": "s8_info",
-                    "struggleCategory": "Motivasyon"
+                    "label": "Bireysel terapiye karar verir.",
+                    "next": "s8_d1",
+                    "struggleCategory": ""
                 },
                 {
-                    "label": "Hedefleri yeniden belirlemek",
-                    "next": "s8_info",
-                    "struggleCategory": "Hedef Belirleme"
+                    "label": "Grup terapisine karar verir.",
+                    "next": "s8_d2",
+                    "struggleCategory": ""
                 },
                 {
-                    "label": "Topluluk faaliyetleri organize etmek",
-                    "next": "s8_info",
-                    "struggleCategory": "Topluluk Katılımı"
+                    "label": "Her iki yaklaşımı da kullanmaya karar verir.",
+                    "next": "s8_d3",
+                    "struggleCategory": ""
                 }
             ]
-        },
-        "s8_info": {
-            "id": "s8_info",
-            "type": "dialogue",
-            "speaker": "Brad",
-            "text": "Her iki yolun deneyimleri birbirini tamamlıyor. Birlikte nasıl daha iyi bir yardım planı geliştirebiliriz? \"Sen (İç Ses)\" bana birlikte çalışmanın gücünü hatırlatıyor.",
-            "subtitle": "Her iki yolun deneyimleri birbirini tamamlıyor. Birlikte nasıl daha iyi bir yardım planı geliştirebiliriz? \"Sen (İç Ses)\" bana birlikte çalışmanın gücünü hatırlatıyor.",
-            "characterImage": "/characters/Brad.png",
-            "environment": "Birleşik Yardım Planı",
-            "next": "s8_d1"
         },
         "s8_d1": {
             "id": "s8_d1",
             "type": "dialogue",
-            "speaker": "Elif (Koordinatör)",
-            "text": "Birleşik bir yaklaşım geliştirerek daha etkili olabiliriz. Her iki yolun güçlü yanlarını birleştirebiliriz.",
-            "characterImage": "/characters/Ana_1.png",
-            "next": "s8_choice"
+            "speaker": "Brad",
+            "text": "Her hasta ile tek başına çalışmaya çalışır.",
+            "image": "",
+            "characterImage": "/characters/Brad.png",
+            "environment": "Görüşme Odası",
+            "next": "s8_d2"
         },
-        "s8_choice": {
-            "id": "s8_choice",
-            "type": "choice",
-            "speaker": "",
-            "text": "",
-            "choices": [
-                {
-                    "label": "Birleşmiş bir yardım planı oluşturmak",
-                    "next": "s9_info",
-                    "struggleCategory": "Birleşik Yardım"
-                },
-                {
-                    "label": "Her iki yolun güçlü yanlarını birleştirmek",
-                    "next": "s9_info",
-                    "struggleCategory": "Esneklik"
-                },
-                {
-                    "label": "Toplulukların deneyimlerine başvurmak",
-                    "next": "s9_info",
-                    "struggleCategory": "Topluluk Katılımı"
-                }
-            ]
-        },
-        "s9_info": {
-            "id": "s9_info",
+        "s8_d2": {
+            "id": "s8_d2",
             "type": "dialogue",
-            "speaker": "Elif (Koordinatör)",
-            "text": "Birleşik bir yardım planı oluşturduk, ancak son dakika engelleriyle karşılaşabiliriz. \"Sen (İç Ses)\" bana esnek olmam gerektiğini hatırlatıyor.",
-            "characterImage": "/characters/Ana_1.png",
-            "environment": "Son Dakika Engelleri",
+            "speaker": "Hasta",
+            "text": "Teşekkür ederim, Zeynep. Bana gerçekten yardımcı oldun.",
+            "image": "",
+            "characterImage": "",
+            "environment": "Görüşme Odası",
+            "next": "s8_d3"
+        },
+        "s8_d3": {
+            "id": "s8_d3",
+            "type": "dialogue",
+            "speaker": "Brad",
+            "text": "Görüşmek üzere, hasta. Umarım tekrar görüşürüz.",
+            "image": "",
+            "characterImage": "/characters/Brad.png",
+            "environment": "Görüşme Odası",
             "next": "s9_d1"
         },
         "s9_d1": {
             "id": "s9_d1",
             "type": "dialogue",
+            "speaker": "Zeynep",
+            "text": "Zeynep, selzedelere yardım etmek için çok önemli bir iş yapıyorsun. Devam et.",
+            "image": "",
+            "characterImage": "/characters/Ana_1.png",
+            "environment": "Selzede Yardım Merkezinde",
+            "next": "s9_d2"
+        },
+        "s9_d2": {
+            "id": "s9_d2",
+            "type": "dialogue",
             "speaker": "Brad",
-            "text": "Nasıl bir çözüm bulunabilir?",
+            "text": "Teşekkür ederim, Zeynep. Ben de devam etmek istiyorum.",
+            "image": "",
             "characterImage": "/characters/Brad.png",
+            "environment": "Selzede Yardım Merkezinde",
+            "next": "s9_d3"
+        },
+        "s9_d3": {
+            "id": "s9_d3",
+            "type": "dialogue",
+            "speaker": "Zeynep",
+            "text": "Zeynep, iki farklı yaklaşımımız var: bireysel terapi veya grup terapisi. Hangisini seçmek istersin?",
+            "image": "",
+            "characterImage": "/characters/Ana_1.png",
+            "environment": "Selzede Yardım Merkezinde",
             "next": "s9_choice"
         },
         "s9_choice": {
@@ -405,32 +431,55 @@
             "type": "choice",
             "speaker": "",
             "text": "",
+            "image": "",
+            "characterImage": "",
+            "environment": "Selzede Yardım Merkezinde",
             "choices": [
                 {
-                    "label": "Hızlı ve esnek çözümler geliştirmek",
-                    "next": "s10_info",
-                    "struggleCategory": "Esneklik"
+                    "label": "Bireysel terapiye karar verir.",
+                    "next": "s10_d1",
+                    "struggleCategory": ""
                 },
                 {
-                    "label": "Planı yeniden değerlendirmek",
-                    "next": "s10_info",
-                    "struggleCategory": "Planlama"
+                    "label": "Grup terapisine karar verir.",
+                    "next": "s10_d2",
+                    "struggleCategory": ""
                 },
                 {
-                    "label": "Topluluğu bilgilendirmek",
-                    "next": "s10_info",
-                    "struggleCategory": "İletişim"
+                    "label": "Her iki yaklaşımı da kullanmaya karar verir.",
+                    "next": "s10_d3",
+                    "struggleCategory": ""
                 }
             ]
         },
-        "s10_info": {
-            "id": "s10_info",
+        "s10_d1": {
+            "id": "s10_d1",
             "type": "dialogue",
             "speaker": "Brad",
-            "text": "Toplu yardım planını uygulamaya koyduk. Artık sel afetinin yaralarını sarmaya başlıyoruz. \"Sen (İç Ses)\" bana işin sonunda geldiğini hatırlatıyor.",
-            "subtitle": "Toplu yardım planını uygulamaya koyduk. Artık sel afetinin yaralarını sarmaya başlıyoruz. \"Sen (İç Ses)\" bana işin sonunda geldiğini hatırlatıyor.",
+            "text": "Her hasta ile tek başına çalışmaya çalışır.",
+            "image": "",
             "characterImage": "/characters/Brad.png",
-            "environment": "Final ve Kapanış",
+            "environment": "Görüşme Odası",
+            "next": "ending"
+        },
+        "s10_d2": {
+            "id": "s10_d2",
+            "type": "dialogue",
+            "speaker": "Hasta",
+            "text": "Teşekkür ederim, Zeynep. Bana gerçekten yardımcı oldun.",
+            "image": "",
+            "characterImage": "",
+            "environment": "Görüşme Odası",
+            "next": "ending"
+        },
+        "s10_d3": {
+            "id": "s10_d3",
+            "type": "dialogue",
+            "speaker": "Brad",
+            "text": "Görüşmek üzere, hasta. Umarım tekrar görüşürüz.",
+            "image": "",
+            "characterImage": "/characters/Brad.png",
+            "environment": "Görüşme Odası",
             "next": "ending"
         },
         "ending": {
@@ -438,6 +487,8 @@
             "type": "ending",
             "speaker": "",
             "text": "Simülasyon Tamamlandı.",
+            "image": "",
+            "characterImage": "",
             "environment": ""
         }
     }

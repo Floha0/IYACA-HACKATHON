@@ -48,7 +48,8 @@ class ImageGenerator:
                 data = json.load(f)
                 title = data.get("title", "default_scenario")
                 return self.sanitize_filename(title)
-        except Exception:
+        except Exception as e:
+            print(f"⚠️ Başlık okuma hatası: {e}")
             return "default_scenario"
 
     def download_image(self, url, save_path):
@@ -58,15 +59,17 @@ class ImageGenerator:
             if response.status_code == 200:
                 with open(save_path, 'wb') as f:
                     f.write(response.content)
-                print(f"✅ Kaydedildi: {save_path}")
+                print(f"✅ İNDİRİLDİ: {save_path}")
                 return True
+            else:
+                print(f"❌ İndirme Başarısız (Status {response.status_code}): {url}")
+                return False
         except Exception as e:
             print(f"❌ İndirme Hatası: {e}")
             return False
 
     def generate_image(self, prompt, aspect_ratio="16:9"):
-        """Replicate ile resim üretir."""
-        print(f"🎨 Üretiliyor: {prompt[:50]}...")
+        print(f"🎨 Replicate'e Gönderiliyor: {prompt[:40]}...")
         try:
             output = replicate.run(
                 MODEL_ID,
@@ -158,7 +161,7 @@ class ImageGenerator:
                 node["image"] = scene_image_map[current_scene_prefix]
 
             # Karakter resmi alanını boş string olarak ayarla (Frontend hatası olmaması için)
-            # node["characterImage"] = ""
+            node["characterImage"] = ""
 
         scenario_data["nodes"] = nodes
 

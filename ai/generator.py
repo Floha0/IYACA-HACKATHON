@@ -28,7 +28,7 @@ TEMALAR: Zaman Yönetimi, Yetersizlik Hissi, Dil Bariyeri, Sosyal Kaygılar, İs
 """
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-OUTPUT_FILE = os.path.join(BASE_DIR, "..", "public", "iyaca_frontend_ready.json")
+OUTPUT_FILE = os.path.join(BASE_DIR, "..", "public", "ai", "iyaca_frontend_ready.json")
 # OUTPUT_FILE = "../public/iyaca_frontend_ready.json"
 
 file_path = os.path.join(BASE_DIR, "..", "public", "user_prompt.txt")
@@ -177,7 +177,7 @@ class MultiAgentGenerator:
 
         HEDEF ŞEMA (TypeScript):
         type ScenarioNode = {{
-            id: string; (s1_info, s1_d1, s1_choice vb.)
+            id: string; (s1_d1, s1_choice vb.)
             type: 'dialogue' | 'choice' | 'ending';
             speaker: string; ("Sen (İç Ses)", "Sen", "{coord_name} (Koordinatör)", "")
             text: string; (Metni aynen al)
@@ -224,7 +224,6 @@ class MultiAgentGenerator:
         ÇIKTI FORMATI:
         {{
             "nodes": {{
-                "s1_info": {{ ... }},
                 "s1_d1": {{ ... }},
                 ...
                 "s10_d3": {{ "next": "ending" }},
