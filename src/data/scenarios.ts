@@ -38,7 +38,7 @@ export const scenarios: Record<number, Simulation> = {
         id: 4,
         title: "Gönüllünün Yolculuğu",
         startNodeId: "sahne-1",
-        totalSteps: 25,
+        totalSteps: 28,
         nodes: {
             // --- SAHNE 1: VARIŞ ---
             "sahne-1": {
@@ -59,15 +59,46 @@ export const scenarios: Record<number, Simulation> = {
                 subtitle: "Buradayım. Artık geri dönüş yok. Dile, kültüre, sorumluluklara… hazır olmalıyım.",
                 image: "/scenarios/background_airport.png",
                 environment: "Havaalanı Çıkışı",
+                next: "sahne-1-tanitim"
+            },
+            "sahne-1-tanitim": {
+                id: "sahne-1-tanitim",
+                type: "dialogue",
+                speaker: "Ana (Koordinatör)",
+                text: "Hoş geldiniz gençler. Bugün oryantasyon gününüz; size hem buranın düzenini hem de sizden beklenenleri anlatacağım.",
+                image: "/scenarios/background_village.png",
+                characterImage: "/characters/Ana_1.png",
+                environment: "Köy Bahçesi",
+                next: "sahne-1-tanitim2"
+            },
+            "sahne-1-tanitim2": {
+                id: "sahne-1-tanitim2",
+                type: "dialogue",
+                speaker: "Ana (Koordinatör)",
+                text: "Her gönüllü günde üç farklı çocuk grubuyla ilgilenir: sabah, öğlen ve akşamüstü. Gruplar değiştiği için zamanla tüm çocukları tanırsınız. Çocuklarla zaman geçirmek sadece oyun oynamak değildir; onları gözlemler, iletişim kurar ve güvende hissetmelerine yardımcı olursunuz.",
+                image: "/scenarios/background_village.png",
+                characterImage: "/characters/Ana_7.png",
+                environment: "Köy Bahçesi",
+                next: "sahne-1-tanitim3"
+            },
+            "sahne-1-tanitim3": {
+                id: "sahne-1-tanitim3",
+                type: "dialogue",
+                speaker: "Ana (Koordinatör)",
+                text: "Çocuk grupları dışındaki vakitlerinizde bakım ve onarım işleri var. Seranın düzeni, su yollarının kontrolü, yiyecek hazırlığı… Kulağa sıradan gelebilir ama köyün nefes almasını sağlayan işler bunlardır. Bu yüzden küçük iş yoktur; doğru yapılan iş vardır.",
+                image: "/scenarios/background_village.png",
+                characterImage: "/characters/Ana_7.png",
+                environment: "Köy Bahçesi",
                 next: "sahne-2"
             },
+
 
             // --- SAHNE 2: ORYANTASYON ---
             "sahne-2": {
                 id: "sahne-2",
                 type: "dialogue",
                 speaker: "Ana (Koordinatör)",
-                text: "Burada iki şey gönüllüleri en çok zorlar: Dil ve Zaman. Bu yılın raporu çok net. Seninle bunları işlemeyi çok istiyorum.",
+                text: "Burada iki şey gönüllüleri en çok zorlar: Dil ve Zaman. Son IYACA Faaliyet raporu net bir şekilde gözler önüne seriyor bunu. Seninle bu konuları işlemeyi ve seni en iyi şekilde hazırlamayı çok istiyorum.",
                 image: "/scenarios/background_meeting_room.jpg",
                 characterImage: "/characters/Ana_1.png",
                 environment: "Oryantasyon Salonu • Gün 1",
@@ -83,8 +114,8 @@ export const scenarios: Record<number, Simulation> = {
                 environment: "Oryantasyon Salonu",
                 next: "sahne-3",
                 videoLink: {
-                    label: "Cultural Shock Stages Explained – 3 min",
-                    url: "https://www.youtube.com"
+                    label: "10 Essential Tips to Make the Most of Your Volunteer Abroad Experience",
+                    url: "https://youtu.be/ej0fBZb8XtA?si=etT_0edLS0kJPi2L"
                 }
             },
 
@@ -102,27 +133,29 @@ export const scenarios: Record<number, Simulation> = {
             "sahne-3-video1": {
                 id: "sahne-3-video1",
                 type: "dialogue",
-                speaker: "Eğitim Önerisi",
-                text: "Zaman yönetimi için şu kaynağı inceleyebilirsin:",
+                speaker: "Ana (Koordinatör)",
+                text: "Zaman yönetimi için şu kaynağı inceleyebilirsin.",
                 image: "/scenarios/background_class.png",
                 environment: "Eğitim Kaynakları",
+                characterImage: "/characters/Ana_3.png",
                 next: "sahne-3-video2",
                 videoLink: {
-                    label: "How to Build a Weekly Planning System (5 dk)",
-                    url: "https://www.google.com"
+                    label: "How I Manage My Time - 10 Time Management Tips",
+                    url: "https://youtu.be/iONDebHX9qk?si=gaXMIdPvQ4dWQRZe"
                 }
             },
             "sahne-3-video2": {
                 id: "sahne-3-video2",
                 type: "dialogue",
-                speaker: "Eğitim Önerisi",
-                text: "Kültürel hassasiyet konusunda ise şu video önemli:",
+                speaker: "Ana (Koordinatör)",
+                text: "Kültürel hassasiyet konusunda ise şu video önemli.",
                 image: "/scenarios/background_class.png",
+                characterImage: "/characters/Ana_7.png",
                 environment: "Eğitim Kaynakları",
                 next: "sahne-4",
                 videoLink: {
-                    label: "Empathy & Cultural Sensitivity 101 (3 dk)",
-                    url: "https://www.google.com"
+                    label: "Cultural Diversity Training for Volunteers",
+                    url: "https://youtu.be/5-4-mVGhV2M?si=zhdy9fdXQHZymu42"
                 }
             },
 
@@ -160,16 +193,16 @@ export const scenarios: Record<number, Simulation> = {
                 id: "sahne-6",
                 type: "choice",
                 speaker: "Elena (Gönüllü)",
-                text: "I felt like you were not listening yesterday. I tried to explain the activity and you walked away.",
+                text: "I felt like you were not listening yesterday. I tried to explain the activity and you walked away.(Dün beni dinlemediğini hissettim. Aktiviteyi anlatmaya çalıştım ama sen uzaklaştın.)",
                 subtitle: "(Şok oldun, sadece malzeme almaya gitmiştin.)",
                 image: "/scenarios/background_class.png",
-                characterImage: "/characters/Elena.png",
+                characterImage: "/characters/Elena_3.png",
                 environment: "Toplantı Odası • Gün 12",
                 choices: [
                     // YENİ: struggleCategory eklendi
-                    { label: "A) Direkt savunmaya geç", next: "sahne-6-A", struggleCategory: "Kültürel İletişim" },
-                    { label: "B) Dili kullanamamanın etkisini kabul et", next: "sahne-6-B" },
-                    { label: "C) Sessiz kal ve geçiştir", next: "sahne-6-C", struggleCategory: "Özgüven Eksikliği" }
+                    { label: "A) Hemen savunmaya geç", next: "sahne-6-A", struggleCategory: "Kültürel İletişim" },
+                    { label: "B) Dili kullanmakta zorluk çektiğini belirt , kısaca özür dile", next: "sahne-6-B" },
+                    { label: "C) Sessiz kal", next: "sahne-6-C", struggleCategory: "Özgüven Eksikliği" }
                 ]
             },
             "sahne-6-A": {
@@ -211,8 +244,8 @@ export const scenarios: Record<number, Simulation> = {
                 environment: "Ofis • İletişim Eğitimi",
                 next: "sahne-8",
                 videoLink: {
-                    label: "Miscommunication in International Teams — 4 min",
-                    url: "https://www.google.com"
+                    label: "Secrets of cross-cultural communication",
+                    url: "https://youtu.be/kujUs_6qeUI?si=fb2oPubOqDbr0xrB"
                 }
             },
 
@@ -221,9 +254,10 @@ export const scenarios: Record<number, Simulation> = {
                 id: "sahne-8",
                 type: "choice",
                 speaker: "Ana (Koordinator)",
-                text: "Bugün 3 yerine 5 grup alsan olur mu? Sen gençsin, enerjin var. (Günün zaten dolu.)",
+                text: "İlk ayının sonuna gelmek üzeresin.Yarın 3 yerine 5 grupla ilgilenmen isteniyor.Senin için sorun olur mu ?",
                 image: "/scenarios/background_meeting_room.jpg",
                 characterImage: "/characters/Ana_1.png",
+                subtitle: "(Ama sen içten içe çok yorgunsun , 5 grubu kaldırabileceğinden şüphelisin)",
                 environment: "Etkinlik Odası • Gün 25",
                 choices: [
                     { label: "A) 'Tamam yaparım' de", next: "sahne-8-A", struggleCategory: "Sınır Koyma / Hayır Diyebilme" },
@@ -231,9 +265,9 @@ export const scenarios: Record<number, Simulation> = {
                     { label: "C) Direkt reddet", next: "sahne-8-C",  struggleCategory: "Kültürel İletişim" }
                 ]
             },
-            "sahne-8-A": { id: "sahne-8-A", type: "dialogue", speaker: "Ana (Koordinator)", text: "Kendine koymadığın sınır, seni zamanla yorar. En tehlikeli davranış budur.", characterImage: "/characters/Ana_1.png", image: "/scenarios/background_meeting_room.jpg", next: "sahne-9" },
-            "sahne-8-B": { id: "sahne-8-B", type: "dialogue", speaker: "Ana (Koordinator)", text: "Bu olgunluk göstergesidir. Gönüllülük kölelik değildir. Sınır koyabilen gönüllü uzun süre dayanır.", characterImage: "/characters/Ana_1.png", image: "/scenarios/background_meeting_room.jpg", next: "sahne-9" },
-            "sahne-8-C": { id: "sahne-8-C", type: "dialogue", speaker: "Ana (Koordinator)", text: "Haklı olsan bile sertlik yanlış okunur. Kültürel uyum bozulur.", characterImage: "/characters/Ana_1.png", image: "/scenarios/background_meeting_room.jpg", next: "sahne-9" },
+            "sahne-8-A": { id: "sahne-8-A", type: "dialogue", speaker: "Ana (Koordinator)", text: "Kendine koymadığın sınır, seni zamanla yorar. En tehlikeli davranış budur.", characterImage: "/characters/Ana_7.png", image: "/scenarios/background_meeting_room.jpg", next: "sahne-9" },
+            "sahne-8-B": { id: "sahne-8-B", type: "dialogue", speaker: "Ana (Koordinator)", text: "Bu olgunluk göstergesidir. Gönüllülük kölelik değildir. Sınır koyabilen gönüllü uzun süre dayanır.", characterImage: "/characters/Ana_7.png", image: "/scenarios/background_meeting_room.jpg", next: "sahne-9" },
+            "sahne-8-C": { id: "sahne-8-C", type: "dialogue", speaker: "Ana (Koordinator)", text: "Haklı olsan bile sertlik yanlış okunur. Kültürel uyum bozulur.", characterImage: "/characters/Ana_7.png", image: "/scenarios/background_meeting_room.jpg", next: "sahne-9" },
 
             // --- SAHNE 9: PSİKOLOJİK DÜŞÜŞ ---
             "sahne-9": {
@@ -250,9 +284,9 @@ export const scenarios: Record<number, Simulation> = {
                     { label: "C) Bir arkadaşına 'İyi hissetmiyorum' yaz", next: "sahne-9-C" }
                 ]
             },
-            "sahne-9-A": { id: "sahne-9-A", type: "dialogue", speaker: "Mentor Analizi", text: "Duyguları bastırmak çalışmayı yüceltmez, sadece çatlatır.", image: "/scenarios/background_dirty_room.png", next: "sahne-10" },
-            "sahne-9-B": { id: "sahne-9-B", type: "dialogue", speaker: "Mentor Analizi", text: "Bu profesyonel bir destek adımıdır. En sağlıklı davranış budur.", image: "/scenarios/background_dirty_room.png", next: "sahne-10" },
-            "sahne-9-C": { id: "sahne-9-C", type: "dialogue", speaker: "Mentor Analizi", text: "İyi bir adım ama profesyonel destekle birleşirse daha güçlü olur.", image: "/scenarios/background_dirty_room.png", next: "sahne-10" },
+            "sahne-9-A": { id: "sahne-9-A", type: "dialogue", speaker: "Mentor Analizi", text: "Duyguları bastırmak çalışmayı yüceltmez, sadece çatlatır.", image: "/scenarios/background_dirty_room.png", characterImage: "/characters/Ana_7.png", next: "sahne-10" },
+            "sahne-9-B": { id: "sahne-9-B", type: "dialogue", speaker: "Mentor Analizi", text: "Bu profesyonel bir destek adımıdır. En sağlıklı davranış budur.", image: "/scenarios/background_dirty_room.png",characterImage: "/characters/Ana_7.png" ,  next: "sahne-10" },
+            "sahne-9-C": { id: "sahne-9-C", type: "dialogue", speaker: "Mentor Analizi", text: "İyi bir adım ama profesyonel destekle birleşirse daha güçlü olur.", image: "/scenarios/background_dirty_room.png",characterImage: "/characters/Ana_7.png" , next: "sahne-10" },
 
             // --- SAHNE 10: ENERJİ YÖNETİMİ ---
             "sahne-10": {
@@ -265,8 +299,8 @@ export const scenarios: Record<number, Simulation> = {
                 environment: "Ofis • Enerji Eğitimi",
                 next: "sahne-11",
                 videoLink: {
-                    label: "The 3-layer Energy Model — 3 min",
-                    url: "https://www.google.com"
+                    label: "The Power of Energy Management Over Time Management | Tony Schwartz, Craig Groeschel & Chris Bailey",
+                    url: "https://youtu.be/7PJepk6hnCg?si=FaBhXIR_Afv5GGq7"
                 }
             },
 
@@ -275,9 +309,10 @@ export const scenarios: Record<number, Simulation> = {
                 id: "sahne-11",
                 type: "choice",
                 speaker: "Elena (Gönüllü)",
-                text: "Mehmet, her zaman bu kadar ciddi misin? (Gülüyorlar, ama sen rahatsız oldun.)",
+                text: "Mehmet, are you always this serious?(Mehmet, her zaman bu kadar ciddi misin?)",
+                subtitle: "(Gülüyorlar, ama sen rahatsız oldun.)",
                 image: "/scenarios/background_class.png",
-                characterImage: "/characters/Elena.png",
+                characterImage: "/characters/Elena_3.png",
                 environment: "Grup Toplantısı • Gün 55",
                 choices: [
                     { label: "A) İçinden kırılıp sessizleş", next: "sahne-11-A" },
@@ -304,9 +339,9 @@ export const scenarios: Record<number, Simulation> = {
                     { label: "C) 'Zor ama tamamlayacağım.'", next: "sahne-12-C" }
                 ]
             },
-            "sahne-12-A": { id: "sahne-12-A", type: "dialogue", speaker: "Mentor Analizi", text: "Kısa vadede rahatlık, uzun vadede pişmanlık getirebilir.", image: "/scenarios/background_office.png", next: "sahne-13" },
-            "sahne-12-B": { id: "sahne-12-B", type: "dialogue", speaker: "Mentor Analizi", text: "En sağlıklı yaklaşım. Yardım istemek güçlülüktür.", image: "/scenarios/background_office.png", next: "sahne-13" },
-            "sahne-12-C": { id: "sahne-12-C", type: "dialogue", speaker: "Mentor Analizi", text: "Kararlı ama destek almazsan süreç çok yorucu olabilir.", image: "/scenarios/background_office.png", next: "sahne-13" },
+            "sahne-12-A": { id: "sahne-12-A", type: "dialogue", speaker: "Mentor Analizi", text: "Kısa vadede rahatlık, uzun vadede pişmanlık getirebilir.", image: "/scenarios/background_office.png", characterImage: "/characters/Ana_7.png", next: "sahne-13" },
+            "sahne-12-B": { id: "sahne-12-B", type: "dialogue", speaker: "Mentor Analizi", text: "En sağlıklı yaklaşım. Yardım istemek güçlülüktür.", image: "/scenarios/background_office.png", characterImage: "/characters/Ana_7.png", next: "sahne-13" },
+            "sahne-12-C": { id: "sahne-12-C", type: "dialogue", speaker: "Mentor Analizi", text: "Kararlı, ama destek almazsan süreç çok yorucu olabilir.", image: "/scenarios/background_office.png",  characterImage: "/characters/Ana_7.png", next: "sahne-13" },
 
             // --- SAHNE 13: SONUÇ ---
             "sahne-13": {
@@ -317,7 +352,7 @@ export const scenarios: Record<number, Simulation> = {
                 image: "/scenarios/background_class.png",
                 characterImage: "/characters/Ana_3.png",
                 environment: "Kapanış Toplantısı • Gün 150",
-                subtitle: "(İstatistikler: Dil Gelişimi %85, Empati Puanı %90, Dayanıklılık %95)",
+                subtitle: "(Geliştirilen özellikler : Empati , Psikoloji Yönetimi , Zaman Yönetimi , Enerji Yönetimi...)",
                 next: "sahne-14"
             },
 
@@ -329,6 +364,7 @@ export const scenarios: Record<number, Simulation> = {
                 text: "Bir drama atölyesinde sakinleştirdiğin o küçük çocuk… iki yıl sonra kendi mahallesinde gönüllü oldu. Sen bilmesen bile — o gün aldığın kararlardan biri bugün onlarca kişiye umut oldu.",
                 image: "/scenarios/background_kids.png",
                 environment: "Gelecekten Bir Görüntü",
+                subtitle: "(Köyde artık çocuklar çok daha mutlu ! Senden de birçok şey öğrendiler. Ayrıca çocuklar gelecekte senin gibi bir gönüllü olarak diğer insanlara yardım edeceklerini söyledir.Artık bir rol modelsin" ,
                 next: "sahne-15"
             },
 
