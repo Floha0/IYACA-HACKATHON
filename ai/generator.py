@@ -201,6 +201,7 @@ class MultiAgentGenerator:
            - characterImage kısmını konuşan karakter eğer kordinator ise /characters/Ana_1.png ile doldur.
            - characterImage kısmını bir sahne için bir diyalogda oluşturduktan sonra yeni gelecek olan diyaloglarda da olmalı.
            - characterImage eğer text kısmı dolu ise KESİNLİKLE olmalı.
+           - image kısmını ise /scenarios/x.png (x yerine şunlardan birini seç, bir sahnenin bütün nodeları aynı olmalı: background_airport.png, background_class.png, background_kids.png, background_office.png, background_dirty_room.png) yaz
            - Eğer kordinator konuşuyor ise isim kısmında {coord_name} olmalı
            - Eğer gönüllü konuşuyor ise isim kısmına karakterin cinsiyetine uygun bir isim bul.
 
@@ -220,6 +221,8 @@ class MultiAgentGenerator:
         6. **TEXT VS SUBTITLE:**
            - Eğer speaker biz veya bizim iç sesimiz ise text'teki metin subtitle'da olmalı, text boş kalmalı.
            - Eğer konuşan kişi kordinator ya da gönüllü ise subtitle'a gerek yok.
+
+        BURASI ÇOK ÖNEMLİ! SON NODE KESSİNLİKLE AMA KESİNLİKLE "ending" OLMALI VE NEXT BOŞ OLMALI!!!
 
         ÇIKTI FORMATI:
         {{
