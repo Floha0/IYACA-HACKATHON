@@ -6,14 +6,25 @@ from groq import Groq
 import time
 import re
 import dotenv
+import io
+import os
+import sys
+from pathlib import Path
 
 # .env.local dosyasından API anahtarını yükle
-dotenv.load_dotenv(".env.local")
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8')
+
+current_dir = Path(__file__).parent
+env_path = os.path.join(current_dir, ".env.local")
+dotenv.load_dotenv(env_path)
+
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 class VisualAssetGenerator:
-    def __init__(self, json_path="../public/ai/iyaca_frontend_ready.json"):
+    def __init__(self, json_path=os.path.join(BASE_DIR, "..", "public", "ai", "iyaca_frontend_ready.json")):
         self.client = Groq(api_key=GROQ_API_KEY)
         self.json_path = json_path
         self.log("Sistem", f"JSON Yolu: {self.json_path}")
@@ -106,7 +117,8 @@ class VisualAssetGenerator:
         final_prompts = self.agent_visual_architect(scenario_data)
 
         if final_prompts:
-            output_path = "../public/ai/visual_prompts_for_assets.json"
+            # output_path = "../public/ai/visual_prompts_for_assets.json"
+            output_path = os.path.join(BASE_DIR, "..", "public", "ai", "visual_prompts_for_assets.json")
             # Klasör yoksa oluştur (Opsiyonel güvenlik)
             os.makedirs(os.path.dirname(output_path), exist_ok=True)
 
@@ -123,5 +135,6 @@ if __name__ == "__main__":
     if not GROQ_API_KEY:
         print("Lütfen GROQ_API_KEY'i .env.local dosyasına ekleyin.")
     else:
-        generator = VisualAssetGenerator(json_path="../public/ai/iyaca_frontend_ready.json")
+        # generator = VisualAssetGenerator(json_path="../public/ai/iyaca_frontend_ready.json")
+        generator = VisualAssetGenerator(json_path=os.path.join(BASE_DIR, "..", "public", "ai", "iyaca_frontend_ready.json"))
         generator.generate_assets_json()

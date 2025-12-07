@@ -5,20 +5,26 @@ import { exec } from 'child_process';
 
 export async function POST(request: Request) {
     try {
-        const { prompt } = await request.json();
+        // Frontend'den gelen title ve prompt'u alıyoruz
+        const { title, prompt } = await request.json();
 
-        if (!prompt) {
-            return NextResponse.json({ error: 'Prompt boş olamaz' }, { status: 400 });
+        // Basit validasyon: İkisi de dolu olmalı
+        if (!title || !prompt) {
+            return NextResponse.json({ error: 'Başlık ve Prompt alanları zorunludur.' }, { status: 400 });
         }
 
-        // 1. DOSYAYI KAYDET (public/user_prompt.txt)
+        // 1. DOSYA İÇERİĞİNİ HAZIRLA
+        // İsteğin: 1. satır Title, 2. satır (ve devamı) Prompt olsun.
+        const fileContent = `${title}\n${prompt}`;
+
+        // 2. DOSYAYI KAYDET (public/user_prompt.txt)
         const filePath = path.join(process.cwd(), 'public', 'user_prompt.txt');
-        fs.writeFileSync(filePath, prompt, 'utf-8');
+        fs.writeFileSync(filePath, fileContent, 'utf-8');
 
-        // PYTHON SCRIPT
-        const pythonScriptPath = path.join(process.cwd(), 'ai', 'generator.py');
+        // 3. PYTHON SCRIPT ÇALIŞTIR
+        const pythonScriptPath = path.join(process.cwd(), 'ai', 'run_pipeline.py');
 
-        // Run Python
+        // Scripti çalıştır ve bekle
         await new Promise((resolve, reject) => {
             exec(`python "${pythonScriptPath}"`, (error, stdout, stderr) => {
                 if (error) {
@@ -34,7 +40,7 @@ export async function POST(request: Request) {
             });
         });
 
-        return NextResponse.json({ success: true, message: 'Dosya yazıldı ve script çalıştı' });
+        return NextResponse.json({ success: true, message: 'Dosya yazıldı ve script başarıyla çalıştı' });
 
     } catch (error: any) {
         console.error(error);

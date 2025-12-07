@@ -14,7 +14,8 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8')
 
 current_dir = Path(__file__).parent
-env_path = current_dir / ".env.local"
+env_path = os.path.join(current_dir, ".env.local")
+# env_path = current_dir / ".env.local"
 
 # API Key Kontrolü
 dotenv.load_dotenv(env_path)
@@ -30,8 +31,12 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 OUTPUT_FILE = os.path.join(BASE_DIR, "..", "public", "iyaca_frontend_ready.json")
 # OUTPUT_FILE = "../public/iyaca_frontend_ready.json"
 
-with open("../public/user_prompt.txt") as f:
-    konu_girdisi = f.read()
+file_path = os.path.join(BASE_DIR, "..", "public", "user_prompt.txt")
+with open(file_path, "r", encoding="utf-8") as f:
+    konu_basligi = f.readline().strip()
+    konu_girdisi = f.read().strip()
+
+
 
 class MultiAgentGenerator:
     def __init__(self):
@@ -65,7 +70,7 @@ class MultiAgentGenerator:
     # --- 0. ADIM: CONTEXT BUILDER ---
     def agent_context_builder(self, user_topic):
         self.log("Context Builder", "Derinlikli tema ve karakterler oluşturuluyor...")
-        coord_name = "Ana"
+        coord_name = random.choice(["Elif", "Zeynep", "Leyla"])
         system_prompt = "Sen IYACA Stratejistisin. Sadece JSON döndür."
         user_prompt = f"""
         KONU: "{user_topic}"
@@ -115,6 +120,7 @@ class MultiAgentGenerator:
 
         FORMAT KURALLARI (BUNA UY):
         Her sahneyi kesin çizgilerle ayır:
+        Speaker kısmına SADECE ama SADECE gönüllü veya kordinator yazabilirsin
 
         --- SAHNE 1 ---
         ORTAM: ...
@@ -142,6 +148,7 @@ class MultiAgentGenerator:
         1. **DİYALOG ZİNCİRİ:** Her sahnede en az 3-4 karşılıklı konuşma (ping-pong) olsun. Sahne hemen bitmesin.
         2. **İÇ SES:** "Sen (İç Ses)" repliklerini artır. Karakterin korkularını görelim.
         3. **SEÇENEKLER:** Her karar anında MUTLAKA 2 veya 3 farklı, derinlikli seçenek yaz. Asla tek seçenek bırakma.
+        4. **SPEAKER:** Eğer speaker kısmında gönüllü veya kordinator dışında bir şey varsa sil.
 
         METİN: {draft_story}
         """
@@ -166,6 +173,7 @@ class MultiAgentGenerator:
         {rich_text}
 
         KOORDİNATÖR ADI: {coord_name}
+        GÖNÜLLÜ ADI: Brad
 
         HEDEF ŞEMA (TypeScript):
         type ScenarioNode = {{
@@ -173,27 +181,45 @@ class MultiAgentGenerator:
             type: 'dialogue' | 'choice' | 'ending';
             speaker: string; ("Sen (İç Ses)", "Sen", "{coord_name} (Koordinatör)", "")
             text: string; (Metni aynen al)
-            image: ""; 
-            characterImage: "";
+            subtitle?: "",
+            image: "";
+            characterImage?: "";
+            environment?: "";
             next?: string;
             choices?: [ {{ "label": "...", "next": "...", "struggleCategory": "..." }} ]
         }}
 
         KRİTİK KURALLAR:
         1. **NODE ZİNCİRİ:** Her sahneyi parçala:
-           - Info (Ortam) -> Dialogue 1 -> Dialogue 2 -> ... -> Choice -> (Sonraki Sahne Info).
+           - Sahne 1 Dialogue 1 -> Sahne 1 Dialogue 2 -> ... -> Choice -> (Sonraki Sahne Dialogu 1).
            - Sahneleri birbirine `next` ile bağla. Zinciri koparma.
+           - Environment hikayedeki mekan olacak. Kısa mekan ve/veya gün isimleri yaz. Örnek: Ofis - Gün 5
 
-        2. **SAHNE SAYISI:** Metinde 10 sahne var. JSON çıktısında da 10 sahne olmalı.
+        2. **KARAKTERLER:**
+           - Toplam 1 gönüllü ve 1 kordinator olacak, isimler de characterImage'daki isimleriyle aynı olmalı!
+           - characterImage kısmını konuşan karakter eğer gönüllü ise /characters/x.png (x şunlardan biri olmalı: Brad, Elena, Bella) ile doldur.
+           - characterImage kısmını konuşan karakter eğer kordinator ise /characters/Ana_1.png ile doldur.
+           - characterImage kısmını bir sahne için bir diyalogda oluşturduktan sonra yeni gelecek olan diyaloglarda da olmalı.
+           - characterImage eğer text kısmı dolu ise KESİNLİKLE olmalı.
+           - Eğer kordinator konuşuyor ise isim kısmında {coord_name} olmalı
+           - Eğer gönüllü konuşuyor ise isim kısmına karakterin cinsiyetine uygun bir isim bul.
+
+
+        3. **SAHNE SAYISI:** Metinde 10 sahne var. JSON çıktısında da 10 sahne olmalı.
            - s1_... den başlayıp s10_... a kadar git.
 
-        3. **SEÇİMLER (CHOICE):**
+        4. **SEÇİMLER (CHOICE):**
            - `choices` dizisi EN AZ 2 seçenek içermeli.
            - Tek seçenek varsa, sen mantıklı bir "Vazgeç/Risk Al" seçeneği uydur.
+           - eğer cevap olumlu bir cevap ise struggleCategory kısmını ekleme!
 
-        4. **BİTİŞ (ENDING):**
+        5. **BİTİŞ (ENDING):**
            - 10. Sahne bittikten sonra MUTLAKA `id: "ending"` olan, `type: "ending"` bir node ekle.
            - Son diyalog bu "ending" node'una bağlanmalı (`next: "ending"`).
+
+        6. **TEXT VS SUBTITLE:**
+           - Eğer speaker biz veya bizim iç sesimiz ise text'teki metin subtitle'da olmalı, text boş kalmalı.
+           - Eğer konuşan kişi kordinator ya da gönüllü ise subtitle'a gerek yok.
 
         ÇIKTI FORMATI:
         {{
@@ -284,7 +310,7 @@ class MultiAgentGenerator:
 
         final_simulation = {
             "id": int(time.time()),
-            "title": metadata.get("title", "Yeni Simülasyon"),
+            "title": konu_basligi,
             "coord": context.get('coordinator_name'),
             "description": metadata.get("description", ""),
             "difficulty": metadata.get("difficulty", "Orta"),
@@ -295,35 +321,12 @@ class MultiAgentGenerator:
         }
 
         with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-            final_simulation_env_added = add_env_field(final_simulation)
-            json.dump(final_simulation_env_added, f, indent=4, ensure_ascii=False)
+            # final_simulation_env_added = add_env_field(final_simulation)
+            json.dump(final_simulation, f, indent=4, ensure_ascii=False)
 
         print(f"\n✅ DOSYA HAZIR: {OUTPUT_FILE}")
         print(f"Toplam Node: {len(nodes_record)}")
         print(f"⏱️ Süre: {time.time() - start_time:.2f} saniye")
-
-def add_env_field(data):
-    nodes = data.get("nodes", {})
-
-    environments = {}
-
-    for key, node in nodes.items():
-        if key.endswith("_info"):
-            prefix = key.split("_")[0]
-            text = node.get("text")
-
-            if "ORTAM: " in text:
-                env_text = text.split("ORTAM: ")[1].strip()
-                environments[prefix] = env_text
-
-    for key, node in nodes.items():
-        if "_" in key:
-            prefix = key.split("_")[0]
-
-            if prefix in environments:
-                node["environment"] = environments[prefix]
-
-    return data
 
 
 if __name__ == "__main__":

@@ -4,14 +4,27 @@ import requests
 import replicate
 import re
 from dotenv import load_dotenv
+import io
+import os
+import sys
+from pathlib import Path
 
 # .env.local dosyasından REPLICATE_API_TOKEN'ı çeker
-load_dotenv(".env.local")
+
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8')
+
+current_dir = Path(__file__).parent
+env_path = os.path.join(current_dir, ".env.local")
+load_dotenv(env_path)
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+OUTPUT_FILE = os.path.join(BASE_DIR, "..", "public", "iyaca_frontend_ready.json")
 
 # KONFIGÜRASYON
-INPUT_PROMPTS_FILE = "../public/ai/visual_prompts_for_assets.json"
-MAIN_SCENARIO_FILE = "../public/ai/iyaca_frontend_ready.json"
-BASE_OUTPUT_DIR = "../public/ai/assets"
+INPUT_PROMPTS_FILE = os.path.join(BASE_DIR, "..", "public", "ai", "visual_prompts_for_assets.json")
+MAIN_SCENARIO_FILE = os.path.join(BASE_DIR, "..", "public", "ai", "iyaca_frontend_ready.json")
+BASE_OUTPUT_DIR = os.path.join(BASE_DIR, "..", "public", "ai", "assets")
 MODEL_ID = "black-forest-labs/flux-schnell"
 
 

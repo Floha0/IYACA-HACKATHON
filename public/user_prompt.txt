@@ -1,1 +1,2 @@
-Yangın sonrası insanlara yardıma giden gönüllünün yaşadığı zorluklar
+Deprem Sonrası
+Deprem sonrası yetişkinlere yönelik rehabilitasyon çalışması için simulasyon oluştur.
