@@ -10,7 +10,7 @@ export default function SimulationsPage() {
 
     // Sayfa açılınca üretilen JSON var mı diye kontrol et
     useEffect(() => {
-        fetch('/iyaca_frontend_ready.json')
+        fetch('/ai/iyaca_frontend_ready.json')
             .then(res => {
                 if (res.ok) return res.json();
                 throw new Error('Dosya yok');

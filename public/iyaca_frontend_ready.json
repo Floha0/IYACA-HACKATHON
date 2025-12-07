@@ -1,26 +1,28 @@
 {
-    "id": 1765098351,
-    "title": "Deprem Sonrası",
+    "id": 1765100885,
+    "title": "Sel",
     "coord": "Elif",
-    "description": "Deprem sonrası yaşanan travmanın toplum üzerindeki etkilerini keşfetmek için tasarlanmış bir oyun. Oyuncular, karakterlerini tanımlar ve deprem öncesi ve sonrası yaşamın nasıl değiştiğini keşfeder.",
+    "description": "Sel afetinin ardından etkilenen bir bölgeye yardım çalışmaları ve sosyal rehabilitasyon",
     "difficulty": "Orta",
     "estimatedTime": "30 dk",
     "startNodeId": "s1_info",
-    "totalSteps": 62,
+    "totalSteps": 35,
     "nodes": {
         "s1_info": {
             "id": "s1_info",
             "type": "dialogue",
             "speaker": "Elif (Koordinatör)",
-            "text": "Bu oyun, deprem sonrası yaşanan travmanın toplum üzerindeki etkilerini keşfetmek ve günlük yaşamı düzenleme konusundaki zorlukları anlamak için tasarlandı.",
-            "environment": "Deprem Sonrası",
+            "text": "Sel afeti nedeniyle birçok insan evini kaybetmiştir. Bizim yardımımıza ihtiyaçları var.",
+            "environment": "Sel Afetinin Ardından Etkilenen Bir Bölge",
+            "characterImage": "/characters/Ana_1.png",
             "next": "s1_d1"
         },
         "s1_d1": {
             "id": "s1_d1",
             "type": "dialogue",
             "speaker": "Brad",
-            "text": "Deprem gibi büyük bir felaket, toplumun psikolojisini nasıl etkiler?",
+            "text": "Ben bunu düşündükçe içim ürperiyor. \"Sen (İç Ses)\" beni uyarıyor, \"Acaba yeterli yardım yapabilecek miyiz?\"",
+            "subtitle": "Ben bunu düşündükçe içim ürperiyor. \"Sen (İç Ses)\" beni uyarıyor, \"Acaba yeterli yardım yapabilecek miyiz?\"",
             "characterImage": "/characters/Brad.png",
             "next": "s1_d2"
         },
@@ -28,7 +30,7 @@
             "id": "s1_d2",
             "type": "dialogue",
             "speaker": "Elif (Koordinatör)",
-            "text": "Oyunun amacı, deprem sonrası yaşanan travmanın etkilerini anlamak ve günlük yaşamı düzenleme konusundaki zorlukları keşfetmektir.",
+            "text": "Evet, birlikte çalışarak bu insanların yaşadıkları sosyal kaygıları keşfedebiliriz ve onlara destek olabiliriz.",
             "characterImage": "/characters/Ana_1.png",
             "next": "s1_d3"
         },
@@ -36,7 +38,7 @@
             "id": "s1_d3",
             "type": "dialogue",
             "speaker": "Brad",
-            "text": "Ancak, bu oyunun gerçek hayatımızda nasıl bir etkisi olacaktır?",
+            "text": "Peki, bu ayuda çalışması hangi aşamalardan oluşacak?",
             "characterImage": "/characters/Brad.png",
             "next": "s1_d4"
         },
@@ -44,7 +46,7 @@
             "id": "s1_d4",
             "type": "dialogue",
             "speaker": "Elif (Koordinatör)",
-            "text": "Oyunun amacı, deprem sonrası yaşanan travmanın etkilerini anlamak ve günlük yaşamı düzenleme konusundaki zorlukları keşfetmektir.",
+            "text": "Öncelikle ihtiyaç duyulan alanları belirleyeceğiz, ardından kaynaklarımızı etkili şekilde kullanacağız.",
             "characterImage": "/characters/Ana_1.png",
             "next": "s1_choice"
         },
@@ -55,68 +57,55 @@
             "text": "",
             "choices": [
                 {
-                    "label": "Oyuna başlamak",
+                    "label": "Direkt yardım çalışmalarına katıl",
                     "next": "s2_info",
-                    "struggleCategory": ""
+                    "struggleCategory": "Acil Yardım"
                 },
                 {
-                    "label": "Daha fazla bilgi almak",
-                    "next": "s1_d5",
-                    "struggleCategory": "Bilgi"
+                    "label": "Topluluk örgütlenmesine katkıda bulun",
+                    "next": "s3_info",
+                    "struggleCategory": "Uzun Vadeli Çözümler"
                 },
                 {
-                    "label": "Oyunun amaçlarını ve hedeflerini daha iyi anlamak için zaman almak",
-                    "next": "s1_d6",
-                    "struggleCategory": "Anlama"
+                    "label": "Kaynak ve strateji geliştirme ekibine katıl",
+                    "next": "s4_info",
+                    "struggleCategory": "Kaynak Yönetimi"
                 }
             ]
-        },
-        "s1_d5": {
-            "id": "s1_d5",
-            "type": "dialogue",
-            "speaker": "Elif (Koordinatör)",
-            "text": "Oyunun amacı, deprem sonrası yaşanan travmanın etkilerini anlamak ve günlük yaşamı düzenleme konusundaki zorlukları keşfetmektir.",
-            "characterImage": "/characters/Ana_1.png",
-            "next": "s1_choice"
-        },
-        "s1_d6": {
-            "id": "s1_d6",
-            "type": "dialogue",
-            "speaker": "Brad",
-            "text": "Acaba bu oyun, gerçekten deprem sonrası travmanın etkilerini anlamamı sağlayacak mı?",
-            "characterImage": "/characters/Brad.png",
-            "next": "s1_choice"
         },
         "s2_info": {
             "id": "s2_info",
             "type": "dialogue",
-            "speaker": "Elif (Koordinatör)",
-            "text": "Her karakterin kendi hikayesi ve zorlukları olacaktır. Oyuncular, karakterlerinin geçmişini ve deprem sonrası yaşamını keşfeder.",
-            "environment": "Karakter Tanıma",
+            "speaker": "Brad",
+            "text": "Benim adım Emre, sizinki nedir?",
+            "subtitle": "",
+            "characterImage": "/characters/Brad.png",
+            "environment": "Tanışma ve İlk Sosyal Etkileşim Alanı",
             "next": "s2_d1"
         },
         "s2_d1": {
             "id": "s2_d1",
             "type": "dialogue",
-            "speaker": "Brad",
-            "text": "Ben bir aile babasıyım, deprem öncesi işim ve aylim vardı, ama şimdi her şey değişti.",
-            "characterImage": "/characters/Brad.png",
+            "speaker": "Elif (Koordinatör)",
+            "text": "Ben de Ayşe. Nice tanıdığım için teşekkür ederim. Burada nasıl bir yardım çalışması planlıyoruz?",
+            "characterImage": "/characters/Ana_1.png",
             "next": "s2_d2"
         },
         "s2_d2": {
             "id": "s2_d2",
             "type": "dialogue",
-            "speaker": "Elif (Koordinatör)",
-            "text": "Oyunda, karakterinizin geçmişi ve deprem sonrası yaşamı arasındaki bağ, deprem sonrası yaşanan travmanın etkilerini anlamak için önemlidir.",
-            "characterImage": "/characters/Ana_1.png",
+            "speaker": "Brad",
+            "text": "\"Sen (İç Ses)\" beni hatırlatıyor, \"Koordinasyon çok önemli.\" Bu daher, birlikte çalışmamız gerekiyor.",
+            "subtitle": "\"Sen (İç Ses)\" beni hatırlatıyor, \"Koordinasyon çok önemli.\" Bu daher, birlikte çalışmamız gerekiyor.",
+            "characterImage": "/characters/Brad.png",
             "next": "s2_d3"
         },
         "s2_d3": {
             "id": "s2_d3",
             "type": "dialogue",
-            "speaker": "Brad",
-            "text": "Ancak, karakterimin geçmişi ve deprem sonrası yaşamı arasında nasıl bir bağ kurulabilir?",
-            "characterImage": "/characters/Brad.png",
+            "speaker": "Elif (Koordinatör)",
+            "text": "Kesinlikle, birlikte olduğumuz sürece her zorluğu aşabileceğiz. Deneyimlerimiz ve becerilerimiz birleştirerek en etkili sonuçları elde edebiliriz.",
+            "characterImage": "/characters/Ana_1.png",
             "next": "s2_choice"
         },
         "s2_choice": {
@@ -126,43 +115,37 @@
             "text": "",
             "choices": [
                 {
-                    "label": "Karakterinin geçmişini keşfetmek",
-                    "next": "s3_info",
-                    "struggleCategory": ""
+                    "label": "Acil yardım kaynaklarına odaklan",
+                    "next": "s4_info",
+                    "struggleCategory": "Acil Yardım"
                 },
                 {
-                    "label": "Deprem sonrası yaşamını keşfetmek",
-                    "next": "s3_info",
-                    "struggleCategory": ""
+                    "label": "Uzun vadeli yardım planlarını geliştir",
+                    "next": "s5_info",
+                    "struggleCategory": "Uzun Vadeli Çözümler"
                 },
                 {
-                    "label": "Karakterinin geçmişi ve deprem sonrası yaşamı arasındaki bağı anlamak için daha fazla zaman almak",
-                    "next": "s2_d4",
-                    "struggleCategory": "Anlama"
+                    "label": "Toplumsal desteği artırma çalışmaları yap",
+                    "next": "s6_info",
+                    "struggleCategory": "Toplumsal Destek"
                 }
             ]
-        },
-        "s2_d4": {
-            "id": "s2_d4",
-            "type": "dialogue",
-            "speaker": "Elif (Koordinatör)",
-            "text": "Oyunda, karakterinizin geçmişi ve deprem sonrası yaşamı arasındaki bağ, oyunda aldığınız kararlarla belirlenecektir.",
-            "characterImage": "/characters/Ana_1.png",
-            "next": "s2_choice"
         },
         "s3_info": {
             "id": "s3_info",
             "type": "dialogue",
             "speaker": "Elif (Koordinatör)",
-            "text": "Büyük Ayrım - Oyuncular, iki farklı yol arasında seçim yapmak zorundadır: Yol A (Toplumsal Dayanışma) veya Yol B (Bireysel Hayatta Kalma).",
-            "environment": "Büyük Ayrım",
+            "text": "Şimdi iki farklı yol arasında seçim yapma zamanı. Yol A için acil yardım ve barınma arayışı, Yol B için ise uzun vadeli yardım ve toplu yeniden inşa planı.",
+            "characterImage": "/characters/Ana_1.png",
+            "environment": "Büyük Ayrım Noktası",
             "next": "s3_d1"
         },
         "s3_d1": {
             "id": "s3_d1",
             "type": "dialogue",
             "speaker": "Brad",
-            "text": "Hangi yolu seçmeliyim? Toplumsal dayanışma mı, yoksa bireysel hayatta kalma mı?",
+            "text": "Hangi yolu seçersek daha etkili olur? \"Sen (İç Ses)\" bana iki tarafa da çekiliyor.",
+            "subtitle": "Hangi yolu seçersek daha etkili olur? \"Sen (İç Ses)\" bana iki tarafa da çekiliyor.",
             "characterImage": "/characters/Brad.png",
             "next": "s3_d2"
         },
@@ -170,16 +153,8 @@
             "id": "s3_d2",
             "type": "dialogue",
             "speaker": "Elif (Koordinatör)",
-            "text": "Her yolun kendi avantajları ve dezavantajları vardır. Oyuncular, kendi tercihlerine göre seçmelidir.",
+            "text": "Her iki yol da önemlidir, ancak kaynaklarımızı ve önceliklerimizi iyi değerlendirmeliyiz. birlikte çalışarak hangisinin daha uygun olduğuna karar verebiliriz.",
             "characterImage": "/characters/Ana_1.png",
-            "next": "s3_d3"
-        },
-        "s3_d3": {
-            "id": "s3_d3",
-            "type": "dialogue",
-            "speaker": "Brad",
-            "text": "Ancak, hangi yol daha güvenli ve daha çok kazandırır?",
-            "characterImage": "/characters/Brad.png",
             "next": "s3_choice"
         },
         "s3_choice": {
@@ -189,60 +164,38 @@
             "text": "",
             "choices": [
                 {
-                    "label": "Toplumsal Dayanışma",
+                    "label": "Yol A: Acil yardım ve barınma",
                     "next": "s4_info",
-                    "struggleCategory": ""
+                    "struggleCategory": "Acil Yardım"
                 },
                 {
-                    "label": "Bireysel Hayatta Kalma",
-                    "next": "s4_info",
-                    "struggleCategory": ""
+                    "label": "Yol B: Uzun vadeli yardım ve yeniden inşa",
+                    "next": "s5_info",
+                    "struggleCategory": "Uzun Vadeli Çözümler"
                 },
                 {
-                    "label": "Her iki yolun avantajları ve dezavantajlarını daha iyi anlamak için zaman almak",
-                    "next": "s3_d4",
-                    "struggleCategory": "Anlama"
+                    "label": "İki yolu birleştirmeye çalış",
+                    "next": "s8_info",
+                    "struggleCategory": "Esneklik"
                 }
             ]
-        },
-        "s3_d4": {
-            "id": "s3_d4",
-            "type": "dialogue",
-            "speaker": "Elif (Koordinatör)",
-            "text": "Oyunda, oyuncuların kendi tercihlerine göre seçeceği yol, deprem sonrası yaşanan travmanın etkilerini anlamak için önemlidir.",
-            "characterImage": "/characters/Ana_1.png",
-            "next": "s3_choice"
         },
         "s4_info": {
             "id": "s4_info",
             "type": "dialogue",
-            "speaker": "Elif (Koordinatör)",
-            "text": "Oyuncular, seçtikleri yolun ilk sonuçlarını görür ve küçük krizlerle yüzleşmek zorundadır. Yol A'da toplu yardım çalışması, Yol B'de ise kaynak bulma mücadelesi olur.",
-            "environment": "İlk Sonuçlar",
+            "speaker": "Brad",
+            "text": "Acil yardım kaynaklarını bulmak için ne gibi adımlar atabiliriz? \"Sen (İç Ses)\" bana hızlı olmak gerektiğini hatırlatıyor.",
+            "subtitle": "Acil yardım kaynaklarını bulmak için ne gibi adımlar atabiliriz? \"Sen (İç Ses)\" bana hızlı olmak gerektiğini hatırlatıyor.",
+            "characterImage": "/characters/Brad.png",
+            "environment": "Acil Yardım Kaynaklarını Keşfetme Alanı",
             "next": "s4_d1"
         },
         "s4_d1": {
             "id": "s4_d1",
             "type": "dialogue",
-            "speaker": "Brad",
-            "text": "Toplu yardım çalışması ile birlikte, daha fazla insanı yardımımıza çağırdık.",
-            "characterImage": "/characters/Brad.png",
-            "next": "s4_d2"
-        },
-        "s4_d2": {
-            "id": "s4_d2",
-            "type": "dialogue",
             "speaker": "Elif (Koordinatör)",
-            "text": "Oyunda, oyuncuların kendi tercihlerine göre seçeceği yol, deprem sonrası yaşanan travmanın etkilerini anlamak için önemlidir.",
+            "text": "Dil bariyeri ve iletişim sorunları nedeniyle zorlanabiliriz, ama birlikte çalışarak bu engelleri aşabiliriz. Ayrıca, yerel kaynakları ve networkü effectively kullanmalıyız.",
             "characterImage": "/characters/Ana_1.png",
-            "next": "s4_d3"
-        },
-        "s4_d3": {
-            "id": "s4_d3",
-            "type": "dialogue",
-            "speaker": "Brad",
-            "text": "Ancak, toplu yardım çalışması ile birlikte, daha fazla kaynak bulmak zorundayız.",
-            "characterImage": "/characters/Brad.png",
             "next": "s4_choice"
         },
         "s4_choice": {
@@ -252,59 +205,36 @@
             "text": "",
             "choices": [
                 {
-                    "label": "Toplu yardım çalışmasını devam etmek",
-                    "next": "s5_info",
-                    "struggleCategory": ""
+                    "label": "Dil bariyerini aşmak için yeni yöntemler geliştir",
+                    "next": "s6_info",
+                    "struggleCategory": "İletişim"
                 },
                 {
-                    "label": "Kaynak bulma mücadelesini sürdürmek",
-                    "next": "s5_info",
-                    "struggleCategory": ""
+                    "label": "İletişim sorunlarını öncelikle çöz",
+                    "next": "s6_info",
+                    "struggleCategory": "İletişim"
                 },
                 {
-                    "label": "Her iki yolun avantajları ve dezavantajlarını daha iyi anlamak için zaman almak",
-                    "next": "s4_d4",
-                    "struggleCategory": "Anlama"
+                    "label": "Kaynak dağıtımını optimize et",
+                    "next": "s7_info",
+                    "struggleCategory": "Kaynak Yönetimi"
                 }
             ]
-        },
-        "s4_d4": {
-            "id": "s4_d4",
-            "type": "dialogue",
-            "speaker": "Elif (Koordinatör)",
-            "text": "Oyunda, oyuncuların kendi tercihlerine göre seçeceği yol, deprem sonrası yaşanan travmanın etkilerini anlamak için önemlidir.",
-            "characterImage": "/characters/Ana_1.png",
-            "next": "s4_choice"
         },
         "s5_info": {
             "id": "s5_info",
             "type": "dialogue",
             "speaker": "Elif (Koordinatör)",
-            "text": "Oyuncular, günlük yaşamın zorluklarıyla başa çıkmaya çalışır. Yol A'da toplu güvenlik önlemleri, Yol B'de ise bireysel güvenlik önlemleri alır.",
-            "environment": "Günlük Yaşam",
+            "text": "Uzun vadeli yardım planları için kaynaklarımızı verimli kullanmalıyız. \"Sen (İç Ses)\" bana kaynakları hiệu quả kullanma konusunda uyarıyor.",
+            "characterImage": "/characters/Ana_1.png",
+            "environment": "Uzun Vadeli Yardım ve Yeniden İnşa Planı",
             "next": "s5_d1"
         },
         "s5_d1": {
             "id": "s5_d1",
             "type": "dialogue",
             "speaker": "Brad",
-            "text": "Toplu güvenlik önlemleri ile birlikte, daha güvende hissediyoruz.",
-            "characterImage": "/characters/Brad.png",
-            "next": "s5_d2"
-        },
-        "s5_d2": {
-            "id": "s5_d2",
-            "type": "dialogue",
-            "speaker": "Elif (Koordinatör)",
-            "text": "Oyunda, oyuncuların kendi tercihlerine göre seçeceği yol, deprem sonrası yaşanan travmanın etkilerini anlamak için önemlidir.",
-            "characterImage": "/characters/Ana_1.png",
-            "next": "s5_d3"
-        },
-        "s5_d3": {
-            "id": "s5_d3",
-            "type": "dialogue",
-            "speaker": "Brad",
-            "text": "Ancak, toplu güvenlik önlemleri ile birlikte, daha fazla kaynak bulmak zorundayız.",
+            "text": "Zaman yönetimi sorunları ve kaynak eksikliği nedeniyle zorlanıyoruz. Yeni stratejiler geliştirmeliyiz.",
             "characterImage": "/characters/Brad.png",
             "next": "s5_choice"
         },
@@ -315,60 +245,38 @@
             "text": "",
             "choices": [
                 {
-                    "label": "Toplu güvenlik önlemlerini devam etmek",
-                    "next": "s6_info",
-                    "struggleCategory": ""
+                    "label": "Kaynakları optimize etmek için yeni planlar geliştir",
+                    "next": "s7_info",
+                    "struggleCategory": "Kaynak Yönetimi"
                 },
                 {
-                    "label": "Bireysel güvenlik önlemlerini sürdürmek",
-                    "next": "s6_info",
-                    "struggleCategory": ""
+                    "label": "Motivasyonu artırmak için ekstra destek sağlamak",
+                    "next": "s7_info",
+                    "struggleCategory": "Motivasyon"
                 },
                 {
-                    "label": "Her iki yolun avantajları ve dezavantajlarını daha iyi anlamak için zaman almak",
-                    "next": "s5_d4",
-                    "struggleCategory": "Anlama"
+                    "label": "Topluluk katılımını tăngır",
+                    "next": "s8_info",
+                    "struggleCategory": "Topluluk Katılımı"
                 }
             ]
-        },
-        "s5_d4": {
-            "id": "s5_d4",
-            "type": "dialogue",
-            "speaker": "Elif (Koordinatör)",
-            "text": "Oyunda, oyuncuların kendi tercihlerine göre seçeceği yol, deprem sonrası yaşanan travmanın etkilerini anlamak için önemlidir.",
-            "characterImage": "/characters/Ana_1.png",
-            "next": "s5_choice"
         },
         "s6_info": {
             "id": "s6_info",
             "type": "dialogue",
-            "speaker": "Elif (Koordinatör)",
-            "text": "Oyuncular, sosyal ilişkilerinde zorluklarla karşılaşır. Yol A'da toplu destek grupları, Yol B'de ise yalnızlık hissi trải nghiệm edilir.",
-            "environment": "Sosyal İlişkiler",
+            "speaker": "Brad",
+            "text": "Acil yardım dağıtımında bazı gruplar arasında gerilim artıyor. Nasıl bir çözüm bulunabilir? \"Sen (İç Ses)\" bana sakin ve mantıklı olmam gerektiğini hatırlatıyor.",
+            "subtitle": "Acil yardım dağıtımında bazı gruplar arasında gerilim artıyor. Nasıl bir çözüm bulunabilir? \"Sen (İç Ses)\" bana sakin ve mantıklı olmam gerektiğini hatırlatıyor.",
+            "characterImage": "/characters/Brad.png",
+            "environment": "Acil Yardım Dağıtımında Zorluklar",
             "next": "s6_d1"
         },
         "s6_d1": {
             "id": "s6_d1",
             "type": "dialogue",
-            "speaker": "Brad",
-            "text": "Toplu destek grupları ile birlikte, birbirimize destek olabileceğiz.",
-            "characterImage": "/characters/Brad.png",
-            "next": "s6_d2"
-        },
-        "s6_d2": {
-            "id": "s6_d2",
-            "type": "dialogue",
             "speaker": "Elif (Koordinatör)",
-            "text": "Oyunda, oyuncuların kendi tercihlerine göre seçeceği yol, deprem sonrası yaşanan travmanın etkilerini anlamak için önemlidir.",
+            "text": "Birlikte çalışarak ve iletişim kurarak bu gerilimi azaltabiliriz. Ayrıca, açık ve şeffaf bir iletişim kanalı oluşturarak herkesin aynı bilgiye sahip olmasını sağlayabiliriz.",
             "characterImage": "/characters/Ana_1.png",
-            "next": "s6_d3"
-        },
-        "s6_d3": {
-            "id": "s6_d3",
-            "type": "dialogue",
-            "speaker": "Brad",
-            "text": "Ancak, toplu destek grupları ile birlikte, daha fazla kaynak bulmak zorundayız.",
-            "characterImage": "/characters/Brad.png",
             "next": "s6_choice"
         },
         "s6_choice": {
@@ -378,59 +286,36 @@
             "text": "",
             "choices": [
                 {
-                    "label": "Toplu destek gruplarını devam etmek",
-                    "next": "s7_info",
-                    "struggleCategory": ""
+                    "label": "Gruplar arasında iletişim kurmak",
+                    "next": "s8_info",
+                    "struggleCategory": "İletişim"
                 },
                 {
-                    "label": "Yalnızlık hissini sürdürmek",
-                    "next": "s7_info",
-                    "struggleCategory": ""
+                    "label": "Acil yardım dağıtımını yeniden organize etmek",
+                    "next": "s8_info",
+                    "struggleCategory": "Kaynak Yönetimi"
                 },
                 {
-                    "label": "Her iki yolun avantajları ve dezavantajlarını daha iyi anlamak için zaman almak",
-                    "next": "s6_d4",
-                    "struggleCategory": "Anlama"
+                    "label": "Topluluk liderleriyle işbirliği yapmak",
+                    "next": "s8_info",
+                    "struggleCategory": "Topluluk Katılımı"
                 }
             ]
-        },
-        "s6_d4": {
-            "id": "s6_d4",
-            "type": "dialogue",
-            "speaker": "Elif (Koordinatör)",
-            "text": "Oyunda, oyuncuların kendi tercihlerine göre seçeceği yol, deprem sonrası yaşanan travmanın etkilerini anlamak için önemlidir.",
-            "characterImage": "/characters/Ana_1.png",
-            "next": "s6_choice"
         },
         "s7_info": {
             "id": "s7_info",
             "type": "dialogue",
             "speaker": "Elif (Koordinatör)",
-            "text": "Oyuncular, seçtikleri yolda ilerledikçe daha büyük zorluklarla karşılaşırlar. Yol A'da toplu kaynak sorunları, Yol B'de ise bireysel hayatta kalma mücadelesi yoğunlaşır.",
-            "environment": "Büyük Zorluklar",
+            "text": "Kaynaklarımızı daha verimli kullanmak için yeni stratejiler geliştirmeliyiz. \"Sen (İç Ses)\" bana yaratıcı olmam gerektiğini hatırlatıyor.",
+            "characterImage": "/characters/Ana_1.png",
+            "environment": "Kaynakların Verimli Kullanılması",
             "next": "s7_d1"
         },
         "s7_d1": {
             "id": "s7_d1",
             "type": "dialogue",
             "speaker": "Brad",
-            "text": "Toplu kaynak sorunları ile birlikte, daha fazla kaynak bulmak zorundayız.",
-            "characterImage": "/characters/Brad.png",
-            "next": "s7_d2"
-        },
-        "s7_d2": {
-            "id": "s7_d2",
-            "type": "dialogue",
-            "speaker": "Elif (Koordinatör)",
-            "text": "Oyunda, oyuncuların kendi tercihlerine göre seçeceği yol, deprem sonrası yaşanan travmanın etkilerini anlamak için önemlidir.",
-            "characterImage": "/characters/Ana_1.png",
-            "next": "s7_d3"
-        },
-        "s7_d3": {
-            "id": "s7_d3",
-            "type": "dialogue",
-            "speaker": "Brad",
-            "text": "Ancak, toplu kaynak sorunları ile birlikte, daha fazla insanı yardımımıza çağırdık.",
+            "text": "Bazı oyuncuların motivasyonu düşüyor. Nasıl motive edebiliriz?",
             "characterImage": "/characters/Brad.png",
             "next": "s7_choice"
         },
@@ -441,60 +326,38 @@
             "text": "",
             "choices": [
                 {
-                    "label": "Toplu kaynak sorunlarını çözmek",
+                    "label": "Ekstra destek ve motivasyon araçları sağlamak",
                     "next": "s8_info",
-                    "struggleCategory": ""
+                    "struggleCategory": "Motivasyon"
                 },
                 {
-                    "label": "Bireysel hayatta kalma mücadelesini sürdürmek",
+                    "label": "Hedefleri yeniden belirlemek",
                     "next": "s8_info",
-                    "struggleCategory": ""
+                    "struggleCategory": "Hedef Belirleme"
                 },
                 {
-                    "label": "Her iki yolun avantajları ve dezavantajlarını daha iyi anlamak için zaman almak",
-                    "next": "s7_d4",
-                    "struggleCategory": "Anlama"
+                    "label": "Topluluk faaliyetleri organize etmek",
+                    "next": "s8_info",
+                    "struggleCategory": "Topluluk Katılımı"
                 }
             ]
-        },
-        "s7_d4": {
-            "id": "s7_d4",
-            "type": "dialogue",
-            "speaker": "Elif (Koordinatör)",
-            "text": "Oyunda, oyuncuların kendi tercihlerine göre seçeceği yol, deprem sonrası yaşanan travmanın etkilerini anlamak için önemlidir.",
-            "characterImage": "/characters/Ana_1.png",
-            "next": "s7_choice"
         },
         "s8_info": {
             "id": "s8_info",
             "type": "dialogue",
-            "speaker": "Elif (Koordinatör)",
-            "text": "Oyuncular, yeni krizlerle yüzleşir. Yol A'da toplu karar alma, Yol B'de ise bireysel risk alma trải nghiệm edilir.",
-            "environment": "Yeni Krizler",
+            "speaker": "Brad",
+            "text": "Her iki yolun deneyimleri birbirini tamamlıyor. Birlikte nasıl daha iyi bir yardım planı geliştirebiliriz? \"Sen (İç Ses)\" bana birlikte çalışmanın gücünü hatırlatıyor.",
+            "subtitle": "Her iki yolun deneyimleri birbirini tamamlıyor. Birlikte nasıl daha iyi bir yardım planı geliştirebiliriz? \"Sen (İç Ses)\" bana birlikte çalışmanın gücünü hatırlatıyor.",
+            "characterImage": "/characters/Brad.png",
+            "environment": "Birleşik Yardım Planı",
             "next": "s8_d1"
         },
         "s8_d1": {
             "id": "s8_d1",
             "type": "dialogue",
-            "speaker": "Brad",
-            "text": "Toplu karar alma ile birlikte, daha fazla insanı dahil edebiliriz.",
-            "characterImage": "/characters/Brad.png",
-            "next": "s8_d2"
-        },
-        "s8_d2": {
-            "id": "s8_d2",
-            "type": "dialogue",
             "speaker": "Elif (Koordinatör)",
-            "text": "Oyunda, oyuncuların kendi tercihlerine göre seçeceği yol, deprem sonrası yaşanan travmanın etkilerini anlamak için önemlidir.",
+            "text": "Birleşik bir yaklaşım geliştirerek daha etkili olabiliriz. Her iki yolun güçlü yanlarını birleştirebiliriz.",
             "characterImage": "/characters/Ana_1.png",
-            "next": "s8_d3"
-        },
-        "s8_d3": {
-            "id": "s8_d3",
-            "type": "dialogue",
-            "speaker": "Brad",
-            "text": "Ancak, toplu karar alma ile birlikte, daha fazla kaynak bulmak zorundayız.",
-            "characterImage": "/characters/Brad.png",
             "next": "s8_choice"
         },
         "s8_choice": {
@@ -504,59 +367,36 @@
             "text": "",
             "choices": [
                 {
-                    "label": "Toplu karar alma devam etmek",
+                    "label": "Birleşmiş bir yardım planı oluşturmak",
                     "next": "s9_info",
-                    "struggleCategory": ""
+                    "struggleCategory": "Birleşik Yardım"
                 },
                 {
-                    "label": "Bireysel risk alma sürdürmek",
+                    "label": "Her iki yolun güçlü yanlarını birleştirmek",
                     "next": "s9_info",
-                    "struggleCategory": ""
+                    "struggleCategory": "Esneklik"
                 },
                 {
-                    "label": "Her iki yolun avantajları ve dezavantajlarını daha iyi anlamak için zaman almak",
-                    "next": "s8_d4",
-                    "struggleCategory": "Anlama"
+                    "label": "Toplulukların deneyimlerine başvurmak",
+                    "next": "s9_info",
+                    "struggleCategory": "Topluluk Katılımı"
                 }
             ]
-        },
-        "s8_d4": {
-            "id": "s8_d4",
-            "type": "dialogue",
-            "speaker": "Elif (Koordinatör)",
-            "text": "Oyunda, oyuncuların kendi tercihlerine göre seçeceği yol, deprem sonrası yaşanan travmanın etkilerini anlamak için önemlidir.",
-            "characterImage": "/characters/Ana_1.png",
-            "next": "s8_choice"
         },
         "s9_info": {
             "id": "s9_info",
             "type": "dialogue",
             "speaker": "Elif (Koordinatör)",
-            "text": "Oyuncular, seçtikleri yolun uzun vadeli sonuçlarını görür ve son krizle yüzleşmek zorundadır. Yol A'da toplu başarı, Yol B'de ise bireysel kayıplar trảiмеж edilir.",
-            "environment": "Uzun Vadeli Sonuçlar",
+            "text": "Birleşik bir yardım planı oluşturduk, ancak son dakika engelleriyle karşılaşabiliriz. \"Sen (İç Ses)\" bana esnek olmam gerektiğini hatırlatıyor.",
+            "characterImage": "/characters/Ana_1.png",
+            "environment": "Son Dakika Engelleri",
             "next": "s9_d1"
         },
         "s9_d1": {
             "id": "s9_d1",
             "type": "dialogue",
             "speaker": "Brad",
-            "text": "Toplu başarı ile birlikte, daha fazla insanı yardımımıza çağırdık.",
-            "characterImage": "/characters/Brad.png",
-            "next": "s9_d2"
-        },
-        "s9_d2": {
-            "id": "s9_d2",
-            "type": "dialogue",
-            "speaker": "Elif (Koordinatör)",
-            "text": "Oyunda, oyuncuların kendi tercihlerine göre seçeceği yol, deprem sonrası yaşanan travmanın etkilerini anlamak için önemlidir.",
-            "characterImage": "/characters/Ana_1.png",
-            "next": "s9_d3"
-        },
-        "s9_d3": {
-            "id": "s9_d3",
-            "type": "dialogue",
-            "speaker": "Brad",
-            "text": "Ancak, toplu başarı ile birlikte, daha fazla kaynak bulmak zorundayız.",
+            "text": "Nasıl bir çözüm bulunabilir?",
             "characterImage": "/characters/Brad.png",
             "next": "s9_choice"
         },
@@ -567,86 +407,38 @@
             "text": "",
             "choices": [
                 {
-                    "label": "Toplu başarıyı devam etmek",
+                    "label": "Hızlı ve esnek çözümler geliştirmek",
                     "next": "s10_info",
-                    "struggleCategory": ""
+                    "struggleCategory": "Esneklik"
                 },
                 {
-                    "label": "Bireysel kayıpları sürdürmek",
+                    "label": "Planı yeniden değerlendirmek",
                     "next": "s10_info",
-                    "struggleCategory": ""
+                    "struggleCategory": "Planlama"
                 },
                 {
-                    "label": "Her iki yolun avantajları ve dezavantajlarını daha iyi anlamak için zaman almak",
-                    "next": "s9_d4",
-                    "struggleCategory": "Anlama"
+                    "label": "Topluluğu bilgilendirmek",
+                    "next": "s10_info",
+                    "struggleCategory": "İletişim"
                 }
             ]
-        },
-        "s9_d4": {
-            "id": "s9_d4",
-            "type": "dialogue",
-            "speaker": "Elif (Koordinatör)",
-            "text": "Oyunda, oyuncuların kendi tercihlerine göre seçeceği yol, deprem sonrası yaşanan travmanın etkilerini anlamak için önemlidir.",
-            "characterImage": "/characters/Ana_1.png",
-            "next": "s9_choice"
         },
         "s10_info": {
             "id": "s10_info",
             "type": "dialogue",
-            "speaker": "Elif (Koordinatör)",
-            "text": "Final ve Kapanış - Oyuncular, seçtikleri yolun sonuçlarını değerlendirir ve deprem sonrası yaşanan travmanın etkileri ve günlük yaşamı düzenleme konusundaki zorlukları yeniden düşünür.",
-            "environment": "Final",
-            "next": "s10_d1"
-        },
-        "s10_d1": {
-            "id": "s10_d1",
-            "type": "dialogue",
             "speaker": "Brad",
-            "text": "Hangi yolu seçerse seçelim, deprem sonrası yaşanan travmanın etkileri aynıdır.",
+            "text": "Toplu yardım planını uygulamaya koyduk. Artık sel afetinin yaralarını sarmaya başlıyoruz. \"Sen (İç Ses)\" bana işin sonunda geldiğini hatırlatıyor.",
+            "subtitle": "Toplu yardım planını uygulamaya koyduk. Artık sel afetinin yaralarını sarmaya başlıyoruz. \"Sen (İç Ses)\" bana işin sonunda geldiğini hatırlatıyor.",
             "characterImage": "/characters/Brad.png",
-            "next": "s10_d2"
-        },
-        "s10_d2": {
-            "id": "s10_d2",
-            "type": "dialogue",
-            "speaker": "Elif (Koordinatör)",
-            "text": "Oyunun amacı, deprem sonrası yaşanan travmanın toplum üzerindeki etkilerini keşfetmek ve günlük yaşamı düzenleme konusundaki zorlukları anlamaktır.",
-            "characterImage": "/characters/Ana_1.png",
-            "next": "s10_d3"
-        },
-        "s10_d3": {
-            "id": "s10_d3",
-            "type": "dialogue",
-            "speaker": "Brad",
-            "text": "Ancak, hangi yol daha güvenli ve daha çok kazandırır?",
-            "characterImage": "/characters/Brad.png",
-            "next": "s10_choice"
-        },
-        "s10_choice": {
-            "id": "s10_choice",
-            "type": "choice",
-            "speaker": "",
-            "text": "",
-            "choices": [
-                {
-                    "label": "Oyuna başlamak",
-                    "next": "s1_info",
-                    "struggleCategory": ""
-                },
-                {
-                    "label": "Oyundan çıkmak",
-                    "next": "ending",
-                    "struggleCategory": ""
-                }
-            ]
+            "environment": "Final ve Kapanış",
+            "next": "ending"
         },
         "ending": {
             "id": "ending",
             "type": "ending",
             "speaker": "",
             "text": "Simülasyon Tamamlandı.",
-            "next": ""
+            "environment": ""
         }
     }
 }

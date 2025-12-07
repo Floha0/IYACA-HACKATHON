@@ -1,37 +1,37 @@
 {
     "sahne_gorselleri": {
-        "s1_info": {
-            "ortam_prompt": "\"A devastated post-fire disaster relief assembly point, illuminated by a golden hour sunset casting long shadows, with warm orange hues and smoldering embers, surrounded by charred trees and debris, under a somber grey sky with thick smoke clouds, captured in cinematic lighting, 8k resolution, photorealistic, with 35mm film grain, wide shot, emphasizing the desolate atmosphere and textures of ash, soot, and damaged infrastructure.\""
+        "s1_d1": {
+            "ortam_prompt": "Create a cinematic scene with a warm, golden lighting, set in a large, high-ceilinged volunteer center with rows of wooden desks and chairs, filled with people of diverse ages and backgrounds, all engaged in various activities, with a subtle 35mm film grain, in 8k resolution, and photorealistic quality, capturing the atmosphere of collective purpose and community, with a wide shot perspective, emphasizing the textures of the wooden furniture, the vibrant colors of the volunteers' clothing, and the soft, natural light pouring in through the large windows."
         },
-        "s2_info": {
-            "ortam_prompt": "\"A devastated post-fire disaster zone at dusk, with cinematic lighting, 8k resolution, and photorealistic details, amidst a backdrop of charred ruins, smoldering embers, and smoke-filled skies, captured in a wide shot with 35mm film grain, conveying a sense of desolation and desperation.\""
+        "s2_d1": {
+            "ortam_prompt": "\"A dark, abandoned, and mystical warehouse at dusk, with faint, golden light seeping through grimy windows, casting long shadows across the dusty floor, while the walls, covered in old, peeling paint and rusty machinery, seem to whisper tales of the past, all captured in cinematic lighting, with an 8k resolution, photorealistic quality, and a subtle 35mm film grain texture.\""
         },
-        "s3_info": {
-            "ortam_prompt": "\"A dimly lit, dusty humanitarian aid center with faded white walls, worn wooden desks, and cluttered shelves, illuminated by soft, golden morning light pouring through grimy windows, casting long shadows and emphasizing the sense of desperation, with a mix of anxious and hopeful faces blurred in the background, captured in cinematic lighting, 8k resolution, photorealistic, with a subtle 35mm film grain, conveying a sense of urgency and disconnection amidst the chaos.\""
+        "s3_d1": {
+            "ortam_prompt": "A dimly lit, atmospheric conference room with a subtle 35mm film grain, captured in 8k resolution with cinematic lighting, featuring a wide shot of a diverse group of people from various cultural backgrounds gathered around a large, polished wooden table, surrounded by soft, warm beige walls and high ceilings, with large windows in the background filtering in gentle, natural light, casting a warm glow on the scene, with an emphasis on showcasing the textures of the wooden table, the patterns on the clothing, and the subtle reflections on the glass surfaces, all blending together to create a sense of unity and cooperation, with a color palette that ranges from muted earth tones to soft pastels, evoking a sense of calmness and intellectual curiosity."
         },
-        "s4_info": {
-            "ortam_prompt": "\"A dimly lit, eclectic room with warm, golden cinematic lighting, 8k resolution, photorealistic, and 35mm film grain, filled with a diverse group of people from different ethnic backgrounds, surrounded by maps, dictionaries, and language learning materials, with a mix of wooden, metallic, and fabric textures, and a sense of collaborative energy, set against a backdrop of earthy tones, with accents of vibrant colors, capturing the essence of a multicultural hub, where language barriers are being bridged.\""
+        "s4_d1": {
+            "ortam_prompt": "A dimly lit, rustic town hall with worn wooden accents, faded American flags, and vintage lanterns, illuminated by a warm, golden light pouring through the dusty windows, casting long shadows across the creaky floorboards, with a subtle, cinematic glow and a hint of 35mm film grain, in 8k resolution, photorealistic style, capturing the sense of community and desperation in the air."
         },
-        "s5_info": {
-            "ortam_prompt": "\"A vast, warmly lit community center with a mix of earthy tones and vibrant colors, filled with an assortment of donated goods and makeshift workstations, illuminated by soft natural light pouring through large windows, and accented with cinematic lighting, rendered in 8k resolution with photorealistic details and a subtle 35mm film grain, capturing the scene in a wide shot, with an atmosphere of bustling generosity and kindness.\""
+        "s5_d1": {
+            "ortam_prompt": "A dark and moody abandoned warehouse with faint, flickering fluorescent lights overhead, casting an eerie glow on the dusty, concrete floor, with worn, rusty machinery and old crates scattered about, the air thick with the smell of decay, as a sliver of daylight peeks through a grimy, barred window, illuminated by cinematic lighting, in 8k resolution, with photorealistic textures, and a subtle 35mm film grain, capturing the desolate atmosphere in a wide shot."
         },
-        "s6_info": {
-            "ortam_prompt": "\"A desolate, ravaged landscape stretches out in the distance, with ruins of crumbling buildings and debris-filled streets under a bleak, overcast sky with dark, foreboding clouds, illuminated by faint, eerie sunlight peeking through the gaps, casting long, ominous shadows, with a cinematic lighting, 8k resolution, photorealistic, 35mm film grain style.\""
+        "s6_d1": {
+            "ortam_prompt": "\"Create a cinematic and atmospheric wide shot of a dimly lit, abandoned room with worn, grey stone walls, faintly illuminated by a few, flickering fluorescent lights overhead, casting long shadows across the dusty, cracked concrete floor, with an eerie, golden glow seeping through the grimy, steel-framed windows, and a subtle, 35mm film grain texture, in 8k resolution, with photorealistic details, and a muted color palette of greys, blues, and yellows, evoking a sense of neglect and desolation.\""
         },
-        "s7_info": {
-            "ortam_prompt": "A devastated, war-torn landscape stretches out in the distance under a foreboding, grey sky with cinematic lighting, 8k resolution, and photorealistic details, accompanied by the subtle texture of 35mm film grain, as remnants of destroyed buildings and debris scatter the desolate terrain."
+        "s7_d1": {
+            "ortam_prompt": "\"A dark, abandoned, and mystical atmosphere, cinematic lighting with warm golden tones and deep shadows, set in a vast, empty, and dusty space with old, worn-out textures, 8k resolution, photorealistic, and 35mm film grain, with a wide shot perspective, capturing the eerie silence and stillness of the environment.\""
         },
-        "s8_info": {
-            "ortam_prompt": "\"A desolate, ravaged landscape with a haunting, cinematic glow, illuminated by an overcast sky with warm, golden light seeping through the clouds, casting long shadows across the rugged terrain, with a mix of dusty, barren earth and scattered debris, all captured in 8k resolution with photorealistic detail and a hint of 35mm film grain, as if the entire scene is frozen in a moment of eerie stillness.\""
+        "s8_d1": {
+            "ortam_prompt": "\"A darkened, abandoned warehouse with a vast, empty space, illuminated only by faint, flickering fluorescent lights overhead, casting an eerie glow on the dusty, concrete floor, with old, rusty machinery and crates scattered about, surrounded by worn, brick walls, and a sense of desolation, captured in cinematic lighting, with 8k resolution, photorealistic detail, and a hint of 35mm film grain, in a wide shot, devoid of human faces.\""
         },
-        "s9_info": {
-            "ortam_prompt": "A devastated, war-torn landscape with ruins and debris scattered everywhere, under a foreboding, overcast sky with dark, ominous clouds, illuminated by faint, golden hour light, with cinematic lighting, 8k resolution, photorealistic, and 35mm film grain, capturing the desolate atmosphere in a wide shot."
+        "s9_d1": {
+            "ortam_prompt": "A darkened, abandoned asylum hallway with peeling walls, flickering fluorescent lights overhead, and a sense of eerie silence, rendered in cinematic lighting, 8k resolution, photorealistic style with 35mm film grain, capturing the atmosphere in a wide shot with muted colors and contrasting shadows."
         },
-        "s10_info": {
-            "ortam_prompt": "Son bölgeye ulaşıldığında, yardım ekibinin ayak bastığı yer, umutsuzluğun ve yıkımın izlerini taşıyan bir manzaraya dönüşür. Çoğu yapı enkaz altında kalmış, yıkıntılar her yeri kaplamış ve yaşam belirtileri neredeyse yok olmuştur. Atmosfer, umutsuzluk ve yıkım hissiyle ağır basar. \n\nGörsel Prompt: \"A devastated, post-disaster landscape with rubble-filled streets, destroyed buildings, and debris scattered everywhere, under a bleak, overcast sky with cinematic lighting, 8k resolution, photorealistic, and 35mm film grain, capturing the desolate atmosphere in a wide shot.\""
+        "s10_d1": {
+            "ortam_prompt": "\"A darkened, abandoned theater with a worn, crimson-red carpet, faded golden accents, and a backdrop of tattered, black curtains, illuminated by a single, flickering spotlight, casting dramatic shadows on the walls, with a hint of dust and decay in the air, captured in cinematic lighting, 8k resolution, photorealistic, with a subtle 35mm film grain, in a wide shot, emphasizing the eerie atmosphere and neglect.\""
         },
         "ending": {
-            "ortam_prompt": "\"A dimly lit, futuristic laboratory with sleek, metallic surfaces and holographic interfaces, illuminated by soft, blue-green neon lights, with a hint of 35mm film grain, in 8k resolution, photorealistic, cinematic lighting, as the words 'Simülasyon Tamamlandı' appear on a massive screen in the background, with a subtle, cinematic glow, in a wide shot, capturing the entire room's atmosphere.\""
+            "ortam_prompt": "\"A vast, futuristic laboratory with sleek, metallic surfaces and towering servers, bathed in a soft, ethereal blue glow, as if the air itself is alive with code, with hints of neon lights reflecting off polished floors, cinematic lighting casting deep shadows, in 8k resolution, with a subtle 35mm film grain, photorealistic textures, and an atmosphere of eerie silence, as the simulation comes to a close.\""
         }
     }
 }

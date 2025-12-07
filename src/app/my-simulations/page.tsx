@@ -28,7 +28,7 @@ export default function MySimulationsPage() {
                     let allSourceSimulations = [...staticSimulations]; // Önce statikleri koy
 
                     try {
-                        const genRes = await fetch('/iyaca_frontend_ready.json');
+                        const genRes = await fetch('/ai/iyaca_frontend_ready.json');
                         if (genRes.ok) {
                             const genData = await genRes.json();
                             // Dizi mi tek obje mi kontrolü

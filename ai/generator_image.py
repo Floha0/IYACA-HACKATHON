@@ -158,7 +158,7 @@ class ImageGenerator:
                 node["image"] = scene_image_map[current_scene_prefix]
 
             # Karakter resmi alanını boş string olarak ayarla (Frontend hatası olmaması için)
-            node["characterImage"] = ""
+            # node["characterImage"] = ""
 
         scenario_data["nodes"] = nodes
 

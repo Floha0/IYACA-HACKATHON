@@ -1,40 +1,43 @@
 "use client";
 
 import { useState } from 'react';
-import { Wand2, Save, Loader2, Type } from 'lucide-react';
+import { Wand2, Save, Loader2, Type, FlaskConical, Zap } from 'lucide-react';
 
 export default function CreateSimulationPage() {
     const [title, setTitle] = useState('');
     const [prompt, setPrompt] = useState('');
-    const [loading, setLoading] = useState(false);
+
+    // Hangi butonun loading modunda olduğunu anlamak için string tutuyoruz
+    // null = yüklenmiyor, 'standard' = hızlı, 'experimental' = deneysel
+    const [loadingMode, setLoadingMode] = useState<null | 'standard' | 'experimental'>(null);
+
     const [message, setMessage] = useState('');
 
-    const handleGenerate = async () => {
-        // Hem başlık hem prompt girilmeden işlem yapma
+    const handleGenerate = async (mode: 'standard' | 'experimental') => {
         if (!prompt || !title) return;
 
-        setLoading(true);
+        setLoadingMode(mode); // Hangi butona basıldıysa onu yükleniyor yap
         setMessage('');
 
         try {
             const res = await fetch('/api/generate', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                // Route.ts'e title ve prompt'u gönderiyoruz
-                body: JSON.stringify({ title, prompt }),
+                // Backend'e hangi modda çalışacağını söylüyoruz
+                body: JSON.stringify({ title, prompt, mode }),
             });
 
             const data = await res.json();
 
             if (res.ok) {
-                setMessage('✅ Başlık ve Prompt kaydedildi, Python scripti çalıştırıldı!');
+                setMessage(`✅ ${mode === 'experimental' ? 'Tam Simülasyon (Görselli)' : 'Metin Senaryosu'} başarıyla oluşturuldu!`);
             } else {
                 setMessage(`❌ Hata: ${data.error}`);
             }
         } catch (error) {
             setMessage('❌ Bir bağlantı hatası oluştu.');
         } finally {
-            setLoading(false);
+            setLoadingMode(null); // Yükleme bitti
         }
     };
 
@@ -54,7 +57,7 @@ export default function CreateSimulationPage() {
 
                 <div className="flex flex-col gap-6">
 
-                    {/* 1. TEXT FIELD: BAŞLIK (Küçük Input) */}
+                    {/* 1. TEXT FIELD: BAŞLIK */}
                     <div className="flex flex-col gap-2">
                         <label className="font-bold text-gray-700 dark:text-gray-300 flex items-center gap-2 text-sm">
                             <Type size={16} />
@@ -69,7 +72,7 @@ export default function CreateSimulationPage() {
                         />
                     </div>
 
-                    {/* 2. TEXT FIELD: PROMPT (Büyük Textarea) */}
+                    {/* 2. TEXT FIELD: PROMPT */}
                     <div className="flex flex-col gap-2">
                         <label className="font-bold text-gray-700 dark:text-gray-300 text-sm">
                             Senaryo Detayı
@@ -82,22 +85,39 @@ export default function CreateSimulationPage() {
                         />
                     </div>
 
-                    {/* BUTON VE MESAJ ALANI */}
-                    <div className="flex justify-end pt-2">
+                    {/* BUTONLAR ALANI */}
+                    <div className="flex flex-col sm:flex-row justify-end gap-3 pt-2">
+
+                        {/* BUTON 1: HIZLI (STANDARD) */}
                         <button
-                            onClick={handleGenerate}
-                            disabled={loading || !prompt || !title}
-                            className="flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg shadow-purple-500/30"
+                            onClick={() => handleGenerate('standard')}
+                            disabled={!!loadingMode || !prompt || !title}
+                            className="flex items-center justify-center gap-2 bg-gray-100 hover:bg-gray-200 text-gray-700 font-bold py-3 px-6 rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                         >
-                            {loading ? (
+                            {loadingMode === 'standard' ? (
+                                <Loader2 size={20} className="animate-spin" />
+                            ) : (
+                                <Zap size={20} />
+                            )}
+                            Hızlı Oluştur (Sadece Metin)
+                        </button>
+
+                        {/* BUTON 2: DENEYSEL (EXPERIMENTAL) */}
+                        <button
+                            onClick={() => handleGenerate('experimental')}
+                            disabled={!!loadingMode || !prompt || !title}
+                            className="flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-bold py-3 px-6 rounded-xl transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg shadow-purple-500/30"
+                        >
+                            {loadingMode === 'experimental' ? (
                                 <>
                                     <Loader2 size={20} className="animate-spin" />
-                                    İşleniyor...
+                                    Pipeline İşleniyor...
                                 </>
                             ) : (
                                 <>
-                                    <Save size={20} />
-                                    Oluştur ve Kaydet
+                                    <FlaskConical size={20} />
+                                    Tam Simülasyon (Görselli)
+                                    <span className="bg-white/20 text-white text-[10px] py-0.5 px-2 rounded-full ml-1">Beta</span>
                                 </>
                             )}
                         </button>

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-import { scenarios as staticScenarios } from '@/data/scenarios'; // Statik veri
+import { scenarios as staticScenarios } from '@/data/scenarios';
 import { ArrowRight, PlayCircle, Home, ExternalLink, RotateCcw } from 'lucide-react';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
@@ -13,42 +13,32 @@ export default function PlaySimulationPage() {
     const rawId = Array.isArray(params.id) ? params.id[0] : params.id;
     const requestedId = parseInt(rawId || "1");
 
-    // STATE YÖNETİMİ
-    // Simülasyon verisi artık asenkron gelebileceği için state'e alıyoruz.
-    // Başlangıçta null, veri gelince dolacak.
     const [simulation, setSimulation] = useState<any>(null);
     const [currentNodeId, setCurrentNodeId] = useState<string>("");
     const [currentProgress, setCurrentProgress] = useState(0);
     const [loading, setLoading] = useState(true);
 
-    // 1. ADIM: DOĞRU SİMÜLASYON VERİSİNİ BUL (Statik mi? AI mı?)
+    // 1. ADIM: SİMÜLASYON VERİSİNİ YÜKLE
     useEffect(() => {
         const loadSimulationData = async () => {
-            // A. Önce statik dosyada var mı diye bak
             if (staticScenarios[requestedId]) {
                 setSimulation(staticScenarios[requestedId]);
                 setCurrentNodeId(staticScenarios[requestedId].startNodeId);
                 setLoading(false);
-            }
-            // B. Yoksa, AI tarafından üretilen JSON dosyasına bak
-            else {
+            } else {
                 try {
-                    const res = await fetch('/iyaca_frontend_ready.json');
+                    const res = await fetch('/ai/iyaca_frontend_ready.json');
                     if (res.ok) {
                         const aiSim = await res.json();
-
-                        // JSON içindeki ID, URL'deki ID ile eşleşiyor mu?
                         if (aiSim.id === requestedId) {
                             setSimulation(aiSim);
                             setCurrentNodeId(aiSim.startNodeId);
                         } else {
-                            // Eşleşmiyorsa (Eski link vb.) varsayılanı aç
                             console.warn("AI Simülasyon ID uyuşmazlığı, varsayılan açılıyor.");
                             setSimulation(staticScenarios[1]);
                             setCurrentNodeId(staticScenarios[1].startNodeId);
                         }
                     } else {
-                        // Dosya yoksa varsayılanı aç
                         setSimulation(staticScenarios[1]);
                         setCurrentNodeId(staticScenarios[1].startNodeId);
                     }
@@ -61,13 +51,12 @@ export default function PlaySimulationPage() {
                 }
             }
         };
-
         loadSimulationData();
     }, [requestedId]);
 
-    // 2. ADIM: VERİTABANINDAN KALDIĞI YERİ ÇEK (Sadece Kullanıcı Varsa)
+    // 2. ADIM: İLERLEME DURUMUNU ÇEK
     useEffect(() => {
-        if (user && simulation) { // Simülasyon verisi yüklendiyse çalışır
+        if (user && simulation) {
             fetch('/api/progress/get', {
                 method: 'POST',
                 body: JSON.stringify({ userId: user.id })
@@ -76,7 +65,6 @@ export default function PlaySimulationPage() {
                 .then(data => {
                     if (data.success) {
                         const mySave = data.data.find((s: any) => s.simulation_id === requestedId);
-                        // Eğer kayıtlı node, mevcut simülasyonda varsa oraya git
                         if (mySave && simulation.nodes[mySave.current_node_id]) {
                             setCurrentNodeId(mySave.current_node_id);
                             setCurrentProgress(mySave.progress);
@@ -87,7 +75,6 @@ export default function PlaySimulationPage() {
         }
     }, [user, requestedId, simulation]);
 
-    // YÜKLENİYOR EKRANI
     if (loading || !simulation || !currentNodeId) {
         return (
             <div className="h-screen flex items-center justify-center bg-black text-white gap-3">
@@ -99,7 +86,6 @@ export default function PlaySimulationPage() {
 
     const currentNode = simulation.nodes[currentNodeId];
 
-    // 3. ADIM: İLERLEME FONKSİYONU
     const handleNext = (nextId?: string, category?: string) => {
         if (nextId && simulation.nodes[nextId]) {
             const nextNode = simulation.nodes[nextId];
@@ -109,7 +95,7 @@ export default function PlaySimulationPage() {
             if (nextNode.type === 'ending') {
                 newProgress = 100;
             } else {
-                const steps = simulation.totalSteps || 10; // AI için varsayılan 10 adım
+                const steps = simulation.totalSteps || 10;
                 const increment = 100 / steps;
                 newProgress = Math.min(currentProgress + increment, 100);
             }
@@ -117,7 +103,6 @@ export default function PlaySimulationPage() {
             setCurrentProgress(newProgress);
 
             if (user) {
-                // İlerleme Kaydı
                 fetch('/api/progress/save', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
@@ -129,7 +114,6 @@ export default function PlaySimulationPage() {
                     })
                 });
 
-                // Zorluk Kaydı
                 if (category) {
                     fetch('/api/struggles/save', {
                         method: 'POST',
@@ -145,7 +129,6 @@ export default function PlaySimulationPage() {
         }
     };
 
-    // 4. ADIM: SIFIRLAMA FONKSİYONU
     const handleReset = () => {
         if (confirm("Başa dönmek istediğine emin misin?")) {
             setCurrentNodeId(simulation.startNodeId);
@@ -186,7 +169,7 @@ export default function PlaySimulationPage() {
                         </div>
                     )}
 
-                    {/* Karakter */}
+                    {/* Karakter (Sadece image varsa göster) */}
                     {currentNode.characterImage && (
                         <div className="absolute bottom-0 left-0 md:left-10 h-[60%] md:h-[70%] z-10 transition-all duration-500">
                             <img
@@ -198,17 +181,31 @@ export default function PlaySimulationPage() {
                         </div>
                     )}
 
-                    {/* Baloncuk */}
-                    {currentNode.characterImage && currentNode.text && (
-                        <div className="absolute bottom-[65%] left-[30%] md:left-[25%] max-w-[60%] md:max-w-[50%] z-30 animate-pop-in">
-                            <div className="bg-white/95 text-gray-900 p-5 rounded-2xl rounded-bl-none shadow-xl border border-gray-100 relative">
-                                <div className="text-primary font-bold text-xs uppercase mb-1 tracking-wide opacity-80">
-                                    {currentNode.speaker}
-                                </div>
-                                <p className="text-base md:text-lg font-medium leading-relaxed text-gray-800">
+                    {/* DÜZELTME: Karakter yokken (else) kutuyu kesin olarak ortalamak için inset-x-0 ve mx-auto kullanıldı */}
+                    {currentNode.text && (
+                        <div className={`
+                            absolute z-30 animate-pop-in
+                            ${currentNode.characterImage
+                            ? 'bottom-[65%] left-[30%] md:left-[25%] max-w-[60%] md:max-w-[50%] text-left' // Karakter VARSA: Solda konuşma balonu
+                            : 'top-[15%] left-0 right-0 mx-auto w-[90%] md:w-[70%] text-center' // Karakter YOKSA: Üstte, tam ortada, kenarlardan boşluklu
+                        }
+                        `}>
+                            <div className="bg-white/95 text-gray-900 p-6 rounded-2xl shadow-2xl border border-gray-100 relative inline-block backdrop-blur-sm">
+
+                                {currentNode.speaker && (
+                                    <div className={`text-primary font-bold text-xs uppercase mb-2 tracking-wide opacity-80 ${!currentNode.characterImage && 'justify-center flex'}`}>
+                                        {currentNode.speaker}
+                                    </div>
+                                )}
+
+                                <p className="text-base md:text-xl font-medium leading-relaxed text-gray-800">
                                     &quot;{currentNode.text}&quot;
                                 </p>
-                                <div className="absolute -bottom-2 -left-2 w-5 h-5 bg-white/95 transform rotate-[20deg] skew-x-12"></div>
+
+                                {/* Konuşma baloncuğu ucu SADECE karakter varsa görünsün */}
+                                {currentNode.characterImage && (
+                                    <div className="absolute -bottom-2 -left-2 w-6 h-6 bg-white/95 transform rotate-[20deg] skew-x-12 rounded-bl-md border-b border-l border-gray-100"></div>
+                                )}
                             </div>
                         </div>
                     )}
@@ -227,7 +224,6 @@ export default function PlaySimulationPage() {
 
                 {/* SAĞ TARAF (KONTROL PANELİ) */}
                 <div className="w-full md:w-[35%] h-[50%] md:h-full bg-white dark:bg-gray-900 flex flex-col z-20 border-l border-gray-800">
-
                     <div className="flex justify-between items-center p-6 border-b border-gray-100 dark:border-gray-800 shrink-0 bg-gray-50 dark:bg-gray-900">
                         <div className="flex items-center gap-2 text-gray-500 font-bold text-xs uppercase tracking-wider">
                             <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
@@ -250,7 +246,6 @@ export default function PlaySimulationPage() {
                     </div>
 
                     <div className="p-6 bg-gray-50 dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800 shrink-0 shadow-[0_-10px_40px_rgba(0,0,0,0.1)]">
-
                         {currentNode.videoLink && (
                             <button
                                 onClick={() => window.open(currentNode.videoLink?.url, '_blank')}
@@ -306,7 +301,6 @@ export default function PlaySimulationPage() {
                                 </button>
                             </Link>
                         )}
-
                     </div>
                 </div>
             </div>
