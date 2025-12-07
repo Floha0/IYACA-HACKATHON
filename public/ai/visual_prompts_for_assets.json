@@ -1,0 +1,37 @@
+{
+    "sahne_gorselleri": {
+        "s1_info": {
+            "ortam_prompt": "\"A sun-drenched auditorium filled with warm, golden light, where a crowd of young volunteers mingle and interact, set against a backdrop of vibrant colors and textures, with cinematic lighting, 8k resolution, photorealistic details, and a subtle 35mm film grain, capturing the energetic atmosphere of a volunteer camp opening ceremony.\""
+        },
+        "s2_info": {
+            "ortam_prompt": "\"Cinematic lighting illuminates a grand conference hall with 8k resolution, photorealistic details, and 35mm film grain, where a sea of volunteers fills the room, surrounded by sleek, modern architecture, with warm, golden tones and deep shadows, as IYACA representatives stand at the forefront, set against a backdrop of expansive windows, filtering in soft, natural light, casting a sense of optimism and unity.\""
+        },
+        "s3_info": {
+            "ortam_prompt": "\"A dimly lit, high-ceilinged hallway with two diverging pathways, one lined with rows of sleek, modern computers and the other with vibrant, colorful posters, under cinematic lighting with warm tones, 8k resolution, photorealistic textures, and a subtle 35mm film grain, capturing the atmosphere of a pivotal crossroads.\""
+        },
+        "s4_info": {
+            "ortam_prompt": "\"A wide shot of a conference room with a group of volunteers seated, cinematic lighting with warm tones and sharp shadows, 8k resolution, photorealistic textures, and 35mm film grain, with a neutral color palette and subtle natural light pouring in through the windows, emphasizing the sense of community and learning.\""
+        },
+        "s5_info": {
+            "ortam_prompt": "\"A warm, golden light casts a sense of community over a bustling volunteer gathering on Road B, with a mix of vibrant colors and textures from diverse cultural backgrounds, yet a subtle haze of uncertainty and social anxiety lingers in the air, as if the language barrier and personal struggles are whispering in the shadows, captured in cinematic lighting, 8k resolution, photorealistic, with a hint of 35mm film grain, in a wide shot that encompasses the entire scene, conveying the emotional depth of human connection amidst challenges.\""
+        },
+        "s6_info": {
+            "ortam_prompt": "\"A dark and chaotic scene of a volunteer departure, set in a dimly lit, rustic community center with worn wooden floors and faded humanitarian posters on the walls, where a sense of panic and desperation fills the air as the remaining volunteers scramble in distress, captured in cinematic lighting with warm golden hues and deep shadows, in 8k resolution with a subtle 35mm film grain, conveying a sense of urgency and chaos.\""
+        },
+        "s7_info": {
+            "ortam_prompt": "\"Wide shot of a dimly lit, rustic community center on Road A, with warm golden lighting spilling from vintage lanterns, casting long shadows across worn wooden floors, as soft, muted colors of volunteer posters and notices adorn the walls, amidst a hint of cinematic film grain, in 8k resolution, with photorealistic textures, evoking a sense of determination and resilience.\""
+        },
+        "s8_info": {
+            "ortam_prompt": "A dimly lit, rustic community center on Route B, warm golden lighting casting long shadows on worn wooden floors, with an air of creative chaos, colorful murals and eclectic furniture, yet an undercurrent of tension and distrust palpable in the subdued atmosphere, cinematic lighting, 8k resolution, photorealistic, 35mm film grain."
+        },
+        "s9_info": {
+            "ortam_prompt": "\"A dimly lit, rustic community center with warm, golden lighting, surrounded by earthy tones and natural textures, filled with a diverse group of people gathered in a large, open space, with cinematic lighting casting long shadows, 8k resolution, photorealistic, and subtle 35mm film grain, capturing the essence of a collective, wide-shot moment of communal discussion and problem-solving.\""
+        },
+        "s10_info": {
+            "ortam_prompt": "\"A warm, golden light fills a spacious, modern community center, with volunteers of diverse ages and backgrounds gathered together, surrounded by inspirational quotes and vibrant colorful murals, as they engage in lively discussions and collaborative activities, with a sense of camaraderie and empowerment, cinematic lighting, 8k resolution, photorealistic, 35mm film grain.\""
+        },
+        "ending": {
+            "ortam_prompt": "\"A darkened, futuristic laboratory with sleek, metallic surfaces and pulsing blue neon lights, illuminated by a faint, cinematic glow, with subtle, 35mm film grain textures, in 8k resolution, photorealistic detail, and a wide shot perspective, capturing the eerie atmosphere of a simulation's completion.\""
+        }
+    }
+}

@@ -1,0 +1,635 @@
+{
+    "id": 1765091220,
+    "title": "Gönüllülükte Zorluklar",
+    "coord": "Ana",
+    "description": "Bir gönüllü kampında genç gönüllülerin zorluklarını ve nasıl başa çıkacaklarını keşfeder.",
+    "difficulty": "Zor",
+    "estimatedTime": "30 dk",
+    "startNodeId": "s1_info",
+    "totalSteps": 51,
+    "nodes": {
+        "s1_info": {
+            "id": "s1_info",
+            "type": "dialogue",
+            "speaker": "",
+            "text": "ORTAM: Bir gönüllü kampı açılış töreni, güneş ışığıyla dolu bir salon, genç gönüllüler heyecanla birbirlerini tanıyorlar.",
+            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s1.png",
+            "characterImage": "",
+            "next": "s1_d1",
+            "environment": "Bir gönüllü kampı açılış töreni, güneş ışığıyla dolu bir salon, genç gönüllüler heyecanla birbirlerini tanıyorlar."
+        },
+        "s1_d1": {
+            "id": "s1_d1",
+            "type": "dialogue",
+            "speaker": "Ana Gönüllü Lider",
+            "text": "Hoş geldiniz, genç gönüllüler! Bugün burada IYACA'nın misyonuna katkıda bulunmak için bir araya geldik. Kendinizi tanıtmaya başladığınızda, birbirinizin yeteneklerini keşfedeceksiniz.",
+            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s1.png",
+            "characterImage": "",
+            "next": "s1_d2",
+            "environment": "Bir gönüllü kampı açılış töreni, güneş ışığıyla dolu bir salon, genç gönüllüler heyecanla birbirlerini tanıyorlar."
+        },
+        "s1_d2": {
+            "id": "s1_d2",
+            "type": "dialogue",
+            "speaker": "Yeni Gönüllü",
+            "text": "Merhaba, ben Ayşe. Benim ana ilgi alanım çevre korumadır. Sizinle çalışıp bir şeyler başarmaktan heyecan duyuyorum.",
+            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s1.png",
+            "characterImage": "",
+            "next": "s1_d3",
+            "environment": "Bir gönüllü kampı açılış töreni, güneş ışığıyla dolu bir salon, genç gönüllüler heyecanla birbirlerini tanıyorlar."
+        },
+        "s1_d3": {
+            "id": "s1_d3",
+            "type": "dialogue",
+            "speaker": "Diğer Gönüllü",
+            "text": "Ben de Emre, ben sosyal medya yönetiminde uzmanım. İnsanları bilgilendirmek ve topluluğa katkıda bulunmak istiyorum.",
+            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s1.png",
+            "characterImage": "",
+            "next": "s1_choice",
+            "environment": "Bir gönüllü kampı açılış töreni, güneş ışığıyla dolu bir salon, genç gönüllüler heyecanla birbirlerini tanıyorlar."
+        },
+        "s1_choice": {
+            "id": "s1_choice",
+            "type": "choice",
+            "speaker": "Sen (İç Ses)",
+            "text": "Acaba ben de burada doğru yerimi bulmuş muyum? Bir şeyler başarmak için yeterli yeteneklere sahip miyim?",
+            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s1.png",
+            "characterImage": "",
+            "choices": [
+                {
+                    "label": "Tanışmalarına devam etmek, herkesin birbirini daha iyi tanımasını sağlamak.",
+                    "next": "s2_info",
+                    "struggleCategory": "Sosyal"
+                },
+                {
+                    "label": "IYACA'nın misyonunu daha ayrıntılı olarak öğrenmek, beklentilerini anlamak.",
+                    "next": "s2_info",
+                    "struggleCategory": "Bilgi"
+                }
+            ],
+            "environment": "Bir gönüllü kampı açılış töreni, güneş ışığıyla dolu bir salon, genç gönüllüler heyecanla birbirlerini tanıyorlar."
+        },
+        "s2_info": {
+            "id": "s2_info",
+            "type": "dialogue",
+            "speaker": "",
+            "text": "ORTAM: Bir konferans salonu, IYACA temsilcileri gönüllülere organizasyonun amaçlarını ve hedeflerini anlatıyor.",
+            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s2.png",
+            "characterImage": "",
+            "next": "s2_d1",
+            "environment": "Bir konferans salonu, IYACA temsilcileri gönüllülere organizasyonun amaçlarını ve hedeflerini anlatıyor."
+        },
+        "s2_d1": {
+            "id": "s2_d1",
+            "type": "dialogue",
+            "speaker": "IYACA Temsilcisi",
+            "text": "IYACA, gençleri toplum için daha fazla şey yapma konusunda desteklemek ve onlara gerekli araçları sağlamak nhằmaktadır. Bizim ana hedefimiz, genç gönüllülerin potansiyellerini ortaya çıkarmak ve topluma katkılarını artırmaktır.",
+            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s2.png",
+            "characterImage": "",
+            "next": "s2_d2",
+            "environment": "Bir konferans salonu, IYACA temsilcileri gönüllülere organizasyonun amaçlarını ve hedeflerini anlatıyor."
+        },
+        "s2_d2": {
+            "id": "s2_d2",
+            "type": "dialogue",
+            "speaker": "Gönüllü",
+            "text": "Bu gerçekten ilham verici. Nasıl bir yol izleyerek bu hedeflere ulaşabiliriz?",
+            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s2.png",
+            "characterImage": "",
+            "next": "s2_d3",
+            "environment": "Bir konferans salonu, IYACA temsilcileri gönüllülere organizasyonun amaçlarını ve hedeflerini anlatıyor."
+        },
+        "s2_d3": {
+            "id": "s2_d3",
+            "type": "dialogue",
+            "speaker": "Diğer Gönüllü",
+            "text": "Ben de öğrenmek ve nasıl katkıda bulunabileceğimi anlamak istiyorum.",
+            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s2.png",
+            "characterImage": "",
+            "next": "s2_choice",
+            "environment": "Bir konferans salonu, IYACA temsilcileri gönüllülere organizasyonun amaçlarını ve hedeflerini anlatıyor."
+        },
+        "s2_choice": {
+            "id": "s2_choice",
+            "type": "choice",
+            "speaker": "Sen (İç Ses)",
+            "text": "Acaba ben bu süreçte başarılı olabilecek miyim? Başkalarına nasıl yardımcı olabilirim?",
+            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s2.png",
+            "characterImage": "",
+            "choices": [
+                {
+                    "label": "IYACA'nın misyonuna daha yakından bakmak, detayları öğrenmek.",
+                    "next": "s3_info",
+                    "struggleCategory": "Bilgi"
+                },
+                {
+                    "label": "Hemen gönüllü işlerine başlamak, ilk adımları atmaya çalışmak.",
+                    "next": "s3_info",
+                    "struggleCategory": "Eylem"
+                }
+            ],
+            "environment": "Bir konferans salonu, IYACA temsilcileri gönüllülere organizasyonun amaçlarını ve hedeflerini anlatıyor."
+        },
+        "s3_info": {
+            "id": "s3_info",
+            "type": "dialogue",
+            "speaker": "",
+            "text": "ORTAM: Grup, iki farklı yolun temsilcileri tarafından yönlendiriliyor: Yol A (eğitim odaklı) ve Yol B (sosyal faaliyet odaklı).",
+            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s3.png",
+            "characterImage": "",
+            "next": "s3_d1",
+            "environment": "Grup, iki farklı yolun temsilcileri tarafından yönlendiriliyor: Yol A (eğitim odaklı) ve Yol B (sosyal faaliyet odaklı)."
+        },
+        "s3_d1": {
+            "id": "s3_d1",
+            "type": "dialogue",
+            "speaker": "Yol A Lideri",
+            "text": "Yol A'da, zaman yönetimi ve organizasyon becerileri üzerinde odaklanacağız. Bu beceriler, projelerinizi başarılı bir şekilde yürütmek için çok önemlidir.",
+            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s3.png",
+            "characterImage": "",
+            "next": "s3_d2",
+            "environment": "Grup, iki farklı yolun temsilcileri tarafından yönlendiriliyor: Yol A (eğitim odaklı) ve Yol B (sosyal faaliyet odaklı)."
+        },
+        "s3_d2": {
+            "id": "s3_d2",
+            "type": "dialogue",
+            "speaker": "Yol B Lideri",
+            "text": "Yol B'de ise, sosyal faaliyetlere odaklanacağız. İnsanların bir araya gelerek birbirlerini tanımaları ve birlikte çalışarak güçlü bir topluluk oluşturmaları çok önemlidir.",
+            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s3.png",
+            "characterImage": "",
+            "next": "s3_d3",
+            "environment": "Grup, iki farklı yolun temsilcileri tarafından yönlendiriliyor: Yol A (eğitim odaklı) ve Yol B (sosyal faaliyet odaklı)."
+        },
+        "s3_d3": {
+            "id": "s3_d3",
+            "type": "dialogue",
+            "speaker": "Diğer Gönüllü",
+            "text": "Ben sosyal faaliyetleri tercih ediyorum, insanlarla iletişim kurmayı seviyorum.",
+            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s3.png",
+            "characterImage": "",
+            "next": "s3_choice",
+            "environment": "Grup, iki farklı yolun temsilcileri tarafından yönlendiriliyor: Yol A (eğitim odaklı) ve Yol B (sosyal faaliyet odaklı)."
+        },
+        "s3_choice": {
+            "id": "s3_choice",
+            "type": "choice",
+            "speaker": "Sen (İç Ses)",
+            "text": "Hangi yolu seçmeliyim? Hangisi bana daha uygun geliyor?",
+            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s3.png",
+            "characterImage": "",
+            "choices": [
+                {
+                    "label": "Yol A'yı seçmek, eğitim ve kişisel gelişim üzerinde odaklanmak.",
+                    "next": "s4_info",
+                    "struggleCategory": "Eğitim"
+                },
+                {
+                    "label": "Yol B'yi seçmek, sosyal faaliyetlere ve topluluk oluşturmaya odaklanmak.",
+                    "next": "s5_info",
+                    "struggleCategory": "Sosyal"
+                },
+                {
+                    "label": "Her iki yolun karışımını seçmek, dengeli bir yaklaşım uygulamak.",
+                    "next": "s4_info",
+                    "struggleCategory": "Denge"
+                }
+            ],
+            "environment": "Grup, iki farklı yolun temsilcileri tarafından yönlendiriliyor: Yol A (eğitim odaklı) ve Yol B (sosyal faaliyet odaklı)."
+        },
+        "s4_info": {
+            "id": "s4_info",
+            "type": "dialogue",
+            "speaker": "",
+            "text": "ORTAM: Yol A'da gönüllüler, zaman yönetimi ve organizasyon becerileri hakkında eğitim almaya başlıyorlar.",
+            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s4.png",
+            "characterImage": "",
+            "next": "s4_d1",
+            "environment": "Yol A'da gönüllüler, zaman yönetimi ve organizasyon becerileri hakkında eğitim almaya başlıyorlar."
+        },
+        "s4_d1": {
+            "id": "s4_d1",
+            "type": "dialogue",
+            "speaker": "Eğitmen",
+            "text": "Zamanı etkili yönetmek, projelerinizi başarılı bir şekilde tamamlamanız için çok önemlidir. Bugün, size bazı etkili zaman yönetimi teknikleri göstereceğiz.",
+            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s4.png",
+            "characterImage": "",
+            "next": "s4_d2",
+            "environment": "Yol A'da gönüllüler, zaman yönetimi ve organizasyon becerileri hakkında eğitim almaya başlıyorlar."
+        },
+        "s4_d2": {
+            "id": "s4_d2",
+            "type": "dialogue",
+            "speaker": "Gönüllü",
+            "text": "Bu gerçekten zor görünüyor. Acaba gerçekten başarılı olabilir miyim?",
+            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s4.png",
+            "characterImage": "",
+            "next": "s4_d3",
+            "environment": "Yol A'da gönüllüler, zaman yönetimi ve organizasyon becerileri hakkında eğitim almaya başlıyorlar."
+        },
+        "s4_d3": {
+            "id": "s4_d3",
+            "type": "dialogue",
+            "speaker": "Diğer Gönüllü",
+            "text": "Tabii ki olabilirsin, birlikte çalışarak öğreniriz.",
+            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s4.png",
+            "characterImage": "",
+            "next": "s4_choice",
+            "environment": "Yol A'da gönüllüler, zaman yönetimi ve organizasyon becerileri hakkında eğitim almaya başlıyorlar."
+        },
+        "s4_choice": {
+            "id": "s4_choice",
+            "type": "choice",
+            "speaker": "Sen (İç Ses)",
+            "text": "Acaba bu eğitimlerden yeterli düzeyde yararlanabilecek miyim? Başkaları gibi başarılı olabilir miyim?",
+            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s4.png",
+            "characterImage": "",
+            "choices": [
+                {
+                    "label": "Eğitimlere devam etmek, öğrenmeye devam etmek.",
+                    "next": "s7_info",
+                    "struggleCategory": "Eğitim"
+                },
+                {
+                    "label": "Kendi başına çalışma yöntemlerini denemek, bağımsız olarak ilerlemek.",
+                    "next": "s7_info",
+                    "struggleCategory": "Bağımsızlık"
+                }
+            ],
+            "environment": "Yol A'da gönüllüler, zaman yönetimi ve organizasyon becerileri hakkında eğitim almaya başlıyorlar."
+        },
+        "s5_info": {
+            "id": "s5_info",
+            "type": "dialogue",
+            "speaker": "",
+            "text": "ORTAM: Yol B'de gönüllüler, sosyal faaliyetlere katılıyorlar ancak dil bariyeri ve sosyal kaygılar iletişim sorunlarına yol açıyor.",
+            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s5.png",
+            "characterImage": "",
+            "next": "s5_d1",
+            "environment": "Yol B'de gönüllüler, sosyal faaliyetlere katılıyorlar ancak dil bariyeri ve sosyal kaygılar iletişim sorunlarına yol açıyor."
+        },
+        "s5_d1": {
+            "id": "s5_d1",
+            "type": "dialogue",
+            "speaker": "Gönüllü 1",
+            "text": "Merhaba, ben Türkçe konuşuyorum. Acaba siz de Türkçe konuşuyor musunuz?",
+            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s5.png",
+            "characterImage": "",
+            "next": "s5_d2",
+            "environment": "Yol B'de gönüllüler, sosyal faaliyetlere katılıyorlar ancak dil bariyeri ve sosyal kaygılar iletişim sorunlarına yol açıyor."
+        },
+        "s5_d2": {
+            "id": "s5_d2",
+            "type": "dialogue",
+            "speaker": "Gönüllü 2",
+            "text": "Hayır, ben İngilizce konuşuyorum. Biraz zorlanıyoruz gibi görünüyor.",
+            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s5.png",
+            "characterImage": "",
+            "next": "s5_d3",
+            "environment": "Yol B'de gönüllüler, sosyal faaliyetlere katılıyorlar ancak dil bariyeri ve sosyal kaygılar iletişim sorunlarına yol açıyor."
+        },
+        "s5_d3": {
+            "id": "s5_d3",
+            "type": "dialogue",
+            "speaker": "Diğer Gönüllü",
+            "text": "Ben biraz İngilizce biliyorum, tercümanlık yapabilirim.",
+            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s5.png",
+            "characterImage": "",
+            "next": "s5_choice",
+            "environment": "Yol B'de gönüllüler, sosyal faaliyetlere katılıyorlar ancak dil bariyeri ve sosyal kaygılar iletişim sorunlarına yol açıyor."
+        },
+        "s5_choice": {
+            "id": "s5_choice",
+            "type": "choice",
+            "speaker": "Sen (İç Ses)",
+            "text": "Dil bariyerini nasıl aşabilirim? İletişim sorunlarını nasıl çözebilirim?",
+            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s5.png",
+            "characterImage": "",
+            "choices": [
+                {
+                    "label": "Dil bariyerini aşmaya çalışmak, ortak bir dil bulmak.",
+                    "next": "s8_info",
+                    "struggleCategory": "İletişim"
+                },
+                {
+                    "label": "Farklı bir sosyal faaliyet denemek, daha rahat hissedebileceğiniz bir.activity seçmek.",
+                    "next": "s8_info",
+                    "struggleCategory": "Sosyal"
+                }
+            ],
+            "environment": "Yol B'de gönüllüler, sosyal faaliyetlere katılıyorlar ancak dil bariyeri ve sosyal kaygılar iletişim sorunlarına yol açıyor."
+        },
+        "s6_info": {
+            "id": "s6_info",
+            "type": "dialogue",
+            "speaker": "",
+            "text": "ORTAM: Bir gönüllü, istikrarsızlık nedeniyle grubunu terk ediyor ve diğer gönüllüler arasında panik başlıyor.",
+            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s6.png",
+            "characterImage": "",
+            "next": "s6_d1",
+            "environment": "Bir gönüllü, istikrarsızlık nedeniyle grubunu terk ediyor ve diğer gönüllüler arasında panik başlıyor."
+        },
+        "s6_d1": {
+            "id": "s6_d1",
+            "type": "dialogue",
+            "speaker": "Terk Eden Gönüllü",
+            "text": "Üzgünüm, ancak ben bu grupta çalışamayacağım. Başka bir şeylere odaklanmam gerekiyor.",
+            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s6.png",
+            "characterImage": "",
+            "next": "s6_d2",
+            "environment": "Bir gönüllü, istikrarsızlık nedeniyle grubunu terk ediyor ve diğer gönüllüler arasında panik başlıyor."
+        },
+        "s6_d2": {
+            "id": "s6_d2",
+            "type": "dialogue",
+            "speaker": "Diğer Gönüllü",
+            "text": "Oh no, bu kötü. Acaba biz de bırakmalı mıyız?",
+            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s6.png",
+            "characterImage": "",
+            "next": "s6_d3",
+            "environment": "Bir gönüllü, istikrarsızlık nedeniyle grubunu terk ediyor ve diğer gönüllüler arasında panik başlıyor."
+        },
+        "s6_d3": {
+            "id": "s6_d3",
+            "type": "dialogue",
+            "speaker": "Grup Lideri",
+            "text": "Hayır, biz birbirimize destek olmalıyız. Daha güçlü bir topluluk için birlikte çalışmaya devam edeceğiz.",
+            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s6.png",
+            "characterImage": "",
+            "next": "s6_choice",
+            "environment": "Bir gönüllü, istikrarsızlık nedeniyle grubunu terk ediyor ve diğer gönüllüler arasında panik başlıyor."
+        },
+        "s6_choice": {
+            "id": "s6_choice",
+            "type": "choice",
+            "speaker": "Sen (İç Ses)",
+            "text": "Acaba ben de grubu terk etmeli miyim? Ya da birlikte çalışmaya devam etmeli miyim?",
+            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s6.png",
+            "characterImage": "",
+            "choices": [
+                {
+                    "label": "Grubun moralsini yükseltmeye çalışmak, birbirlerine destek olmak.",
+                    "next": "s9_info",
+                    "struggleCategory": "Sosyal"
+                },
+                {
+                    "label": "Terk eden gönüllüye destek olmak, onun kararını anlamaya çalışmak.",
+                    "next": "s9_info",
+                    "struggleCategory": "Empati"
+                }
+            ],
+            "environment": "Bir gönüllü, istikrarsızlık nedeniyle grubunu terk ediyor ve diğer gönüllüler arasında panik başlıyor."
+        },
+        "s7_info": {
+            "id": "s7_info",
+            "type": "dialogue",
+            "speaker": "",
+            "text": "ORTAM: Yol A'da gönüllüler, zaman yönetimi konusunda küçük başarılar elde etmeye başlıyorlar ancak yeni zorluklar ortaya çıkıyor.",
+            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s7.png",
+            "characterImage": "",
+            "next": "s7_d1",
+            "environment": "Yol A'da gönüllüler, zaman yönetimi konusunda küçük başarılar elde etmeye başlıyorlar ancak yeni zorluklar ortaya çıkıyor."
+        },
+        "s7_d1": {
+            "id": "s7_d1",
+            "type": "dialogue",
+            "speaker": "Eğitmen",
+            "text": "Gördüğünüz gibi, zamanı etkili yönetmek mümkün. Ancak şimdi, daha besar projelerle karşı karşıyasınız.",
+            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s7.png",
+            "characterImage": "",
+            "next": "s7_d2",
+            "environment": "Yol A'da gönüllüler, zaman yönetimi konusunda küçük başarılar elde etmeye başlıyorlar ancak yeni zorluklar ortaya çıkıyor."
+        },
+        "s7_d2": {
+            "id": "s7_d2",
+            "type": "dialogue",
+            "speaker": "Gönüllü",
+            "text": "Bu gerçekten zor görünüyor. Ancak çalışarak başarabileceğimize inanıyorum.",
+            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s7.png",
+            "characterImage": "",
+            "next": "s7_d3",
+            "environment": "Yol A'da gönüllüler, zaman yönetimi konusunda küçük başarılar elde etmeye başlıyorlar ancak yeni zorluklar ortaya çıkıyor."
+        },
+        "s7_d3": {
+            "id": "s7_d3",
+            "type": "dialogue",
+            "speaker": "Diğer Gönüllü",
+            "text": "Beraber çalışırsak, daha büyük projeleri de başarabiliriz.",
+            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s7.png",
+            "characterImage": "",
+            "next": "s7_choice",
+            "environment": "Yol A'da gönüllüler, zaman yönetimi konusunda küçük başarılar elde etmeye başlıyorlar ancak yeni zorluklar ortaya çıkıyor."
+        },
+        "s7_choice": {
+            "id": "s7_choice",
+            "type": "choice",
+            "speaker": "Sen (İç Ses)",
+            "text": "Acaba ben bu yeni zorlukları aşabilecek miyim? Başkaları gibi başarılı olabilir miyim?",
+            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s7.png",
+            "characterImage": "",
+            "choices": [
+                {
+                    "label": "Projelere devam etmek, yeni zorlukları aşmaya çalışmak.",
+                    "next": "s9_info",
+                    "struggleCategory": "Eylem"
+                },
+                {
+                    "label": "Yeni stratejiler geliştirmek, farklı bir yaklaşım denemek.",
+                    "next": "s9_info",
+                    "struggleCategory": "Strateji"
+                }
+            ],
+            "environment": "Yol A'da gönüllüler, zaman yönetimi konusunda küçük başarılar elde etmeye başlıyorlar ancak yeni zorluklar ortaya çıkıyor."
+        },
+        "s8_info": {
+            "id": "s8_info",
+            "type": "dialogue",
+            "speaker": "",
+            "text": "ORTAM: Yol B'de sosyal faaliyetler, yaratıcı çözümler ile daha etkili hale geliyor ancak bazı gönüllüler arasında güvensizlik artıyor.",
+            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s8.png",
+            "characterImage": "",
+            "next": "s8_d1",
+            "environment": "Yol B'de sosyal faaliyetler, yaratıcı çözümler ile daha etkili hale geliyor ancak bazı gönüllüler arasında güvensizlik artıyor."
+        },
+        "s8_d1": {
+            "id": "s8_d1",
+            "type": "dialogue",
+            "speaker": "Gönüllü Lider",
+            "text": "Gördüğünüz gibi, birlikte çalışarak çok şey başarmak mümkün. Ancak bazı arkadaşlarımız güvensizlik yaşanıyor.",
+            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s8.png",
+            "characterImage": "",
+            "next": "s8_d2",
+            "environment": "Yol B'de sosyal faaliyetler, yaratıcı çözümler ile daha etkili hale geliyor ancak bazı gönüllüler arasında güvensizlik artıyor."
+        },
+        "s8_d2": {
+            "id": "s8_d2",
+            "type": "dialogue",
+            "speaker": "Gönüllü",
+            "text": "Evet, bana da böyle geliyor. Acaba nasıl güvensizliği aşabiliriz?",
+            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s8.png",
+            "characterImage": "",
+            "next": "s8_d3",
+            "environment": "Yol B'de sosyal faaliyetler, yaratıcı çözümler ile daha etkili hale geliyor ancak bazı gönüllüler arasında güvensizlik artıyor."
+        },
+        "s8_d3": {
+            "id": "s8_d3",
+            "type": "dialogue",
+            "speaker": "Diğer Gönüllü",
+            "text": "Birbirimize daha açık ve dürüst davranarak güvensizliği aşabiliriz.",
+            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s8.png",
+            "characterImage": "",
+            "next": "s8_choice",
+            "environment": "Yol B'de sosyal faaliyetler, yaratıcı çözümler ile daha etkili hale geliyor ancak bazı gönüllüler arasında güvensizlik artıyor."
+        },
+        "s8_choice": {
+            "id": "s8_choice",
+            "type": "choice",
+            "speaker": "Sen (İç Ses)",
+            "text": "Güvensizliği nasıl aşabilirim? İnsanların bana güvenmesini nasıl sağlayabilirim?",
+            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s8.png",
+            "characterImage": "",
+            "choices": [
+                {
+                    "label": "Güvensizliği aşmak için çalışmak, açık ve dürüst iletişim kurmaya odaklanmak.",
+                    "next": "s9_info",
+                    "struggleCategory": "İletişim"
+                },
+                {
+                    "label": "Farklı bir sosyal faaliyet denemek, daha rahat hissedebileceğiniz bir.activity seçmek.",
+                    "next": "s9_info",
+                    "struggleCategory": "Sosyal"
+                }
+            ],
+            "environment": "Yol B'de sosyal faaliyetler, yaratıcı çözümler ile daha etkili hale geliyor ancak bazı gönüllüler arasında güvensizlik artıyor."
+        },
+        "s9_info": {
+            "id": "s9_info",
+            "type": "dialogue",
+            "speaker": "",
+            "text": "ORTAM: Her iki yolun gönüllüleri bir araya geliyor ve yaşanan sorunları açıkça tartışıyor, çözüm yolları aramaya başlıyorlar.",
+            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s9.png",
+            "characterImage": "",
+            "next": "s9_d1",
+            "environment": "Her iki yolun gönüllüleri bir araya geliyor ve yaşanan sorunları açıkça tartışıyor, çözüm yolları aramaya başlıyorlar."
+        },
+        "s9_d1": {
+            "id": "s9_d1",
+            "type": "dialogue",
+            "speaker": "Yol A Lideri",
+            "text": "Gördüğümüz gibi, her iki yol da zorluklar yaşadı. Ancak birlikte çalışarak çok şey başarmak mümkün.",
+            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s9.png",
+            "characterImage": "",
+            "next": "s9_d2",
+            "environment": "Her iki yolun gönüllüleri bir araya geliyor ve yaşanan sorunları açıkça tartışıyor, çözüm yolları aramaya başlıyorlar."
+        },
+        "s9_d2": {
+            "id": "s9_d2",
+            "type": "dialogue",
+            "speaker": "Yol B Lideri",
+            "text": "Evet, birlikte çalışarak güvensizliği aşabilir ve daha güçlü bir topluluk oluşturabiliriz.",
+            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s9.png",
+            "characterImage": "",
+            "next": "s9_d3",
+            "environment": "Her iki yolun gönüllüleri bir araya geliyor ve yaşanan sorunları açıkça tartışıyor, çözüm yolları aramaya başlıyorlar."
+        },
+        "s9_d3": {
+            "id": "s9_d3",
+            "type": "dialogue",
+            "speaker": "Diğer Gönüllü",
+            "text": "Birlikte çalışarak, birbirimize destek olarak daha başarılı olabiliriz.",
+            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s9.png",
+            "characterImage": "",
+            "next": "s9_choice",
+            "environment": "Her iki yolun gönüllüleri bir araya geliyor ve yaşanan sorunları açıkça tartışıyor, çözüm yolları aramaya başlıyorlar."
+        },
+        "s9_choice": {
+            "id": "s9_choice",
+            "type": "choice",
+            "speaker": "Sen (İç Ses)",
+            "text": "Acaba gerçekten birlikte çalışarak başarılı olabilir miyiz? Birbirimize nasıl destek olabiliriz?",
+            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s9.png",
+            "characterImage": "",
+            "choices": [
+                {
+                    "label": "Birlikte çalışmaya devam etmek, ortak bir çözüm bulmaya çalışmak.",
+                    "next": "s10_info",
+                    "struggleCategory": "İşbirliği"
+                },
+                {
+                    "label": "Farklı bir yol denemek, birbirinden bağımsız olarak ilerlemek.",
+                    "next": "s10_info",
+                    "struggleCategory": "Bağımsızlık"
+                }
+            ],
+            "environment": "Her iki yolun gönüllüleri bir araya geliyor ve yaşanan sorunları açıkça tartışıyor, çözüm yolları aramaya başlıyorlar."
+        },
+        "s10_info": {
+            "id": "s10_info",
+            "type": "dialogue",
+            "speaker": "",
+            "text": "ORTAM: Gönüllüler, IYACA'nın misyonuna uygun olarak potansiyellerini ortaya çıkarmaya başlıyor ve birbirlerine destek olmayı öğreniyorlar.",
+            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s10.png",
+            "characterImage": "",
+            "next": "s10_d1",
+            "environment": "Gönüllüler, IYACA'nın misyonuna uygun olarak potansiyellerini ortaya çıkarmaya başlıyor ve birbirlerine destek olmayı öğreniyorlar."
+        },
+        "s10_d1": {
+            "id": "s10_d1",
+            "type": "dialogue",
+            "speaker": "Ana Gönüllü Lider",
+            "text": "Gördüğünüz gibi, birlikte çalışarak çok şey başarmak mümkün. IYACA'nın misyonuna uygun olarak, birbirimize destek olmayı öğrendik.",
+            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s10.png",
+            "characterImage": "",
+            "next": "s10_d2",
+            "environment": "Gönüllüler, IYACA'nın misyonuna uygun olarak potansiyellerini ortaya çıkarmaya başlıyor ve birbirlerine destek olmayı öğreniyorlar."
+        },
+        "s10_d2": {
+            "id": "s10_d2",
+            "type": "dialogue",
+            "speaker": "Gönüllü",
+            "text": "Evet, gerçekten çok şey öğrendim. Bu deneyim bana çok şey kazandırdı.",
+            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s10.png",
+            "characterImage": "",
+            "next": "s10_d3",
+            "environment": "Gönüllüler, IYACA'nın misyonuna uygun olarak potansiyellerini ortaya çıkarmaya başlıyor ve birbirlerine destek olmayı öğreniyorlar."
+        },
+        "s10_d3": {
+            "id": "s10_d3",
+            "type": "dialogue",
+            "speaker": "Diğer Gönüllü",
+            "text": "Ben de çok şey öğrendim. Birlikte çalışarak daha güçlü bir topluluk oluşturduk.",
+            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s10.png",
+            "characterImage": "",
+            "next": "s10_choice",
+            "environment": "Gönüllüler, IYACA'nın misyonuna uygun olarak potansiyellerini ortaya çıkarmaya başlıyor ve birbirlerine destek olmayı öğreniyorlar."
+        },
+        "s10_choice": {
+            "id": "s10_choice",
+            "type": "choice",
+            "speaker": "Sen (İç Ses)",
+            "text": "Acaba ben de bu deneyimi başka insanlarla paylaşabilir miyim? Başkalarına nasıl yardımcı olabilirim?",
+            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s10.png",
+            "characterImage": "",
+            "choices": [
+                {
+                    "label": "IYACA'nın misyonuna devam etmek, başka projelerde çalışmak.",
+                    "next": "ending",
+                    "struggleCategory": "Sürdürülebilirlik"
+                },
+                {
+                    "label": "Yeni bir gönüllü projesi başlatmak, başka bir alanda çalışmak.",
+                    "next": "ending",
+                    "struggleCategory": "Girişimcilik"
+                }
+            ],
+            "environment": "Gönüllüler, IYACA'nın misyonuna uygun olarak potansiyellerini ortaya çıkarmaya başlıyor ve birbirlerine destek olmayı öğreniyorlar."
+        },
+        "ending": {
+            "id": "ending",
+            "type": "ending",
+            "speaker": "",
+            "text": "Simülasyon Tamamlandı.",
+            "image": "/ai/assets/gonullulukte_zorluklar/scenes/ending.png",
+            "characterImage": ""
+        }
+    }
+}

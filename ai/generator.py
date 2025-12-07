@@ -30,6 +30,8 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 OUTPUT_FILE = os.path.join(BASE_DIR, "..", "public", "iyaca_frontend_ready.json")
 # OUTPUT_FILE = "../public/iyaca_frontend_ready.json"
 
+with open("../public/user_prompt.txt") as f:
+    konu_girdisi = f.read()
 
 class MultiAgentGenerator:
     def __init__(self):
@@ -63,7 +65,7 @@ class MultiAgentGenerator:
     # --- 0. ADIM: CONTEXT BUILDER ---
     def agent_context_builder(self, user_topic):
         self.log("Context Builder", "Derinlikli tema ve karakterler oluşturuluyor...")
-        coord_name = random.choice(["Elif", "Hakan", "Zeynep", "Mert", "Leyla"])
+        coord_name = "Ana"
         system_prompt = "Sen IYACA Stratejistisin. Sadece JSON döndür."
         user_prompt = f"""
         KONU: "{user_topic}"
@@ -164,7 +166,6 @@ class MultiAgentGenerator:
         {rich_text}
 
         KOORDİNATÖR ADI: {coord_name}
-        GÖNÜLLÜ ADI: Brad
 
         HEDEF ŞEMA (TypeScript):
         type ScenarioNode = {{
@@ -172,41 +173,27 @@ class MultiAgentGenerator:
             type: 'dialogue' | 'choice' | 'ending';
             speaker: string; ("Sen (İç Ses)", "Sen", "{coord_name} (Koordinatör)", "")
             text: string; (Metni aynen al)
-            subtitle?: "",
-            image: "";
-            characterImage?: "";
-            environment?: "";
+            image: ""; 
+            characterImage: "";
             next?: string;
             choices?: [ {{ "label": "...", "next": "...", "struggleCategory": "..." }} ]
         }}
 
         KRİTİK KURALLAR:
         1. **NODE ZİNCİRİ:** Her sahneyi parçala:
-           - Sahne 1 Dialogue 1 -> Sahne 1 Dialogue 2 -> ... -> Choice -> (Sonraki Sahne Dialogu 1).
+           - Info (Ortam) -> Dialogue 1 -> Dialogue 2 -> ... -> Choice -> (Sonraki Sahne Info).
            - Sahneleri birbirine `next` ile bağla. Zinciri koparma.
-           - Environment hikayedeki mekan olacak. Kısa mekan ve/veya gün isimleri yaz. Örnek: Ofis - Gün 5
 
-        2. **KARAKTERLER:**
-           - En fazla 1 gönüllü ve 1 kordinator olucak.
-           - characterImage kısmını konuşan karakter eğer gönüllü ise /characters/x.png (x şunlardan biri olmalı: Brad, Elena, Bella) ile doldur.
-           - characterImage kısmını konuşan karakter eğer kordinator ise /characters/Ana_1.png ile doldur.
-           - image kısmını ise /scenarios/x.png (x yerine şunlardan birini seç, bir sahnenin bütün nodeları aynı olmalı: background_airport.png, background_class.png, background_kids.png, background_office.png, background_dirty_room.png) yaz
-
-        3. **SAHNE SAYISI:** Metinde 10 sahne var. JSON çıktısında da 10 sahne olmalı.
+        2. **SAHNE SAYISI:** Metinde 10 sahne var. JSON çıktısında da 10 sahne olmalı.
            - s1_... den başlayıp s10_... a kadar git.
 
-        4. **SEÇİMLER (CHOICE):**
+        3. **SEÇİMLER (CHOICE):**
            - `choices` dizisi EN AZ 2 seçenek içermeli.
            - Tek seçenek varsa, sen mantıklı bir "Vazgeç/Risk Al" seçeneği uydur.
-           - eğer cevap düzgün bir cevap ise struggleCategory ekleme, değil ise ekle.
 
-        5. **BİTİŞ (ENDING):**
+        4. **BİTİŞ (ENDING):**
            - 10. Sahne bittikten sonra MUTLAKA `id: "ending"` olan, `type: "ending"` bir node ekle.
            - Son diyalog bu "ending" node'una bağlanmalı (`next: "ending"`).
-
-        6. **TEXT VS SUBTITLE:**
-           - Eğer speaker biz veya bizim iç sesimiz ise text'teki metin subtitle'da olmalı, text boş kalmalı.
-           - Eğer konuşan kişi kordinator ya da gönüllü ise subtitle'a gerek yok.
 
         ÇIKTI FORMATI:
         {{
@@ -228,22 +215,43 @@ class MultiAgentGenerator:
     # --- 5. ADIM: EDİTÖR ---
     def agent_editor(self, text, context_data):
         self.log("Editör", "Metadata belirleniyor...")
-        if not text: return {"title": "Hata"}
+        if not text: return {"title": "Hata", "description": "İçerik yok.", "difficulty": "Orta",
+                             "estimatedTime": "10 dk"}
 
-        theme = context_data.get('scenario_theme', '')
+        theme = context_data.get('scenario_theme', 'Genel')
+
+        system_prompt = "Sen bir JSON veritabanı asistanısın. Sadece istenen JSON formatını döndürürsün. Yorum yapmazsın."
+
         user_prompt = f"""
-        Metni ve temayı ({theme}) analiz et.
-        JSON ver: {{ "title": "Çarpıcı Başlık", "description": "Merak uyandırıcı özet", "difficulty": "Zor", "estimatedTime": "20 dk" }}
-        METİN: {text[:4000]}
+        Aşağıdaki metni analiz et ve SADECE şu JSON yapısını doldur:
+        {{
+            "title": "...", (Kısa, çarpıcı bir başlık)
+            "description": "...", (1-2 cümlelik özet)
+            "difficulty": "...", ("Kolay", "Orta" veya "Zor")
+            "estimatedTime": "..." (Örn: "15 dk")
+        }}
+
+        HİKAYE TEMA: {theme}
+        METİN ÖZETİ: {text[:2000]}
         """
-        response = self.call_groq("llama-3.1-8b-instant", user_prompt, "Asistan", json_mode=True, temperature=0.6)
-        return self.extract_json_from_text(response)
+
+        # JSON Mode açık ama hata verirse yukarıdaki call_groq bunu kurtaracak
+        response = self.call_groq("llama-3.1-8b-instant", user_prompt, system_prompt, json_mode=True,
+                                  temperature=0.5)
+
+        # Gelen yanıtı parse et
+        parsed_json = self.extract_json_from_text(response)
+
+        # Eğer yine de None dönerse varsayılan obje döndür (Çökmemesi için)
+        if not parsed_json:
+            return {"title": "Yeni Simülasyon", "description": "Açıklama bulunamadı.", "difficulty": "Orta",
+                    "estimatedTime": "15 dk"}
+
+        return parsed_json
 
     def run_pipeline(self):
         start_time = time.time()
         print(f"🚀 IYACA PRO SCENE ENGINE (True Branching Logic)")
-
-        konu_girdisi = "Gönüllülükte yaşanan zorluklar"
 
         # 0. Context
         context = self.agent_context_builder(konu_girdisi)
@@ -277,6 +285,7 @@ class MultiAgentGenerator:
         final_simulation = {
             "id": int(time.time()),
             "title": metadata.get("title", "Yeni Simülasyon"),
+            "coord": context.get('coordinator_name'),
             "description": metadata.get("description", ""),
             "difficulty": metadata.get("difficulty", "Orta"),
             "estimatedTime": metadata.get("estimatedTime", "15 dk"),
@@ -286,11 +295,35 @@ class MultiAgentGenerator:
         }
 
         with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-            json.dump(final_simulation, f, indent=4, ensure_ascii=False)
+            final_simulation_env_added = add_env_field(final_simulation)
+            json.dump(final_simulation_env_added, f, indent=4, ensure_ascii=False)
 
         print(f"\n✅ DOSYA HAZIR: {OUTPUT_FILE}")
         print(f"Toplam Node: {len(nodes_record)}")
         print(f"⏱️ Süre: {time.time() - start_time:.2f} saniye")
+
+def add_env_field(data):
+    nodes = data.get("nodes", {})
+
+    environments = {}
+
+    for key, node in nodes.items():
+        if key.endswith("_info"):
+            prefix = key.split("_")[0]
+            text = node.get("text")
+
+            if "ORTAM: " in text:
+                env_text = text.split("ORTAM: ")[1].strip()
+                environments[prefix] = env_text
+
+    for key, node in nodes.items():
+        if "_" in key:
+            prefix = key.split("_")[0]
+
+            if prefix in environments:
+                node["environment"] = environments[prefix]
+
+    return data
 
 
 if __name__ == "__main__":
