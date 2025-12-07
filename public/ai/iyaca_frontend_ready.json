@@ -1,69 +1,73 @@
 {
-    "id": 1765103788,
-    "title": "Fakir köye yolculuk",
+    "id": 1765104100,
+    "title": "Deprem",
     "coord": "Zeynep",
-    "description": "Fakir bir köye yardım etmek için gönüllü olarak çalışmak isteyen kişinin zorlukları ve seçimleri",
+    "description": "Depremden etkilenenlere yardım etmek isteyen gönüllüler, yardım faaliyetlerinin organizasyonunu konuşurken karşılaşılan psikolojik engelleri incelemektedir.",
     "difficulty": "Orta",
     "estimatedTime": "30 dk",
     "startNodeId": "s1_d1",
-    "totalSteps": 54,
+    "totalSteps": 58,
     "nodes": {
         "s1_d1": {
             "id": "s1_d1",
             "type": "dialogue",
-            "speaker": "Brad",
-            "text": "Merhaba, ben Zeynep. Köyde gönüllü olarak çalışmak için buradayım. Yardım faaliyetlerimizin amaçlarını açıklamak isterim.",
+            "speaker": "Gönüllü",
+            "text": "Depremden etkilenenleri desteklemek için buradayız. Hep birlikte neler yapabileceğimizi konuşalım.",
+            "environment": "Topluluk Merkezi",
             "characterImage": "",
-            "environment": "Köyde gönüllülerle tanışma töreni",
             "next": "s1_d2",
-            "image": "/ai/assets/fakir_koye_yolculuk/scenes/s1.png"
+            "image": "/ai/assets/deprem/scenes/s1.png"
         },
         "s1_d2": {
             "id": "s1_d2",
             "type": "dialogue",
-            "speaker": "Sen (İç Ses)",
-            "text": "",
-            "subtitle": "Acaba köy halkı bize karşı nasıl bir tutum takınacak? Biraz endişeliyim.",
+            "speaker": "Koordinator",
+            "text": "İlk olarak, elimizdeki kaynakları ve ihtiyaçları değerlendireceğiz. Herkesin fikirlerini paylaşmasını bekliyorum.",
+            "environment": "Topluluk Merkezi",
+            "characterImage": "",
             "next": "s1_d3",
-            "image": "/ai/assets/fakir_koye_yolculuk/scenes/s1.png",
-            "characterImage": ""
+            "image": "/ai/assets/deprem/scenes/s1.png"
         },
         "s1_d3": {
             "id": "s1_d3",
             "type": "dialogue",
-            "speaker": "Brad",
-            "text": "EDUCasyon ve altyapı alanlarında çalışabileceğimiz iki farklı yol var.",
-            "characterImage": "",
+            "speaker": "Zeynep (İç Ses)",
+            "text": "",
+            "subtitle": "Acaba gerçekten bir şeyler yapabilecek miyim? Yardımlar gerçekten ihtiyaç sahiplerine ulaşacak mı?",
+            "environment": "Topluluk Merkezi",
             "next": "s1_d4",
-            "image": "/ai/assets/fakir_koye_yolculuk/scenes/s1.png"
+            "image": "/ai/assets/deprem/scenes/s1.png",
+            "characterImage": ""
         },
         "s1_d4": {
             "id": "s1_d4",
             "type": "dialogue",
-            "speaker": "Zeynep (Koordinatör)",
-            "text": "Evet, bu iki alan kritik öneme sahip. Eğitim grubu çocukların eğitimine odaklanırken, altyapı grubu köyün fiziksel koşullarının iyileştirilmesine odaklanacak.",
+            "speaker": "Koordinator",
+            "text": "Kaynaklarımızı ve ihtiyaçları değerlendirirken, herkesin katılımını değerlendireceğiz.",
+            "environment": "Topluluk Merkezi",
             "characterImage": "",
             "next": "s1_d5",
-            "image": "/ai/assets/fakir_koye_yolculuk/scenes/s1.png"
+            "image": "/ai/assets/deprem/scenes/s1.png"
         },
         "s1_d5": {
             "id": "s1_d5",
             "type": "dialogue",
-            "speaker": "Brad",
-            "text": "Peki, bu iki gruptan hangisine katılmak daha iyi olur?",
+            "speaker": "Gönüllü",
+            "text": "Peki, kaynaklarımızın yeterli olup olmadığını nasıl belirleyeceğiz?",
+            "environment": "Topluluk Merkezi",
             "characterImage": "",
             "next": "s1_d6",
-            "image": "/ai/assets/fakir_koye_yolculuk/scenes/s1.png"
+            "image": "/ai/assets/deprem/scenes/s1.png"
         },
         "s1_d6": {
             "id": "s1_d6",
             "type": "dialogue",
-            "speaker": "Sen (İç Ses)",
-            "text": "",
-            "subtitle": "Belki eğitim grubuna katılmak daha iyi olur, çocuklarla çalışmak daha keyifli olabilir.",
+            "speaker": "Koordinator",
+            "text": "Bunu birlikte değerlendireceğiz ve kaynaklarımızı en efektif şekilde kullanacağız.",
+            "environment": "Topluluk Merkezi",
+            "characterImage": "",
             "next": "s1_choice",
-            "image": "/ai/assets/fakir_koye_yolculuk/scenes/s1.png",
-            "characterImage": ""
+            "image": "/ai/assets/deprem/scenes/s1.png"
         },
         "s1_choice": {
             "id": "s1_choice",
@@ -72,79 +76,74 @@
             "text": "",
             "choices": [
                 {
-                    "label": "Eğitim faaliyetlerine odaklanmak",
+                    "label": "Kaynakların hızlı dağıtımı",
                     "next": "s2_d1",
-                    "struggleCategory": ""
+                    "struggleCategory": "Kaynak Yönetimi"
                 },
                 {
-                    "label": "Altyapı çalışalarına odaklanmak",
+                    "label": "Etkilenen bölgelerde daha fazla yardım ekibi göndermek",
                     "next": "s2_d1",
-                    "struggleCategory": ""
+                    "struggleCategory": "Kaynak Yönetimi"
                 },
                 {
-                    "label": "Her iki grupta da çalışmak istemek",
+                    "label": "Kaynakların ve ihtiyaçların detaylı bir şekilde analiz edilmesi",
                     "next": "s2_d1",
-                    "struggleCategory": ""
+                    "struggleCategory": "Kaynak Yönetimi"
                 }
             ],
-            "image": "/ai/assets/fakir_koye_yolculuk/scenes/s1.png",
+            "image": "/ai/assets/deprem/scenes/s1.png",
             "characterImage": ""
         },
         "s2_d1": {
             "id": "s2_d1",
             "type": "dialogue",
-            "speaker": "Zeynep (Koordinatör)",
-            "text": "Merhaba herkes, bugün köy halkıyla tanışıp yardım faaliyetlerimizin beklentilerini tartışacağız.",
+            "speaker": "Gönüllü",
+            "text": "Her birimizin bu yardım faaliyetlerine katılması çok önemli. Birlikte daha fazlasını başarmak için neler yapabileceğimizi tartışalım.",
+            "environment": "Topluluk Merkezi",
             "characterImage": "",
-            "environment": "Köyün ortak alanında tanışma ve beklentiler tartışması",
             "next": "s2_d2",
-            "image": "/ai/assets/fakir_koye_yolculuk/scenes/s2.png"
+            "image": "/ai/assets/deprem/scenes/s2.png"
         },
         "s2_d2": {
             "id": "s2_d2",
             "type": "dialogue",
-            "speaker": "Brad",
-            "text": "Ben dil bariyeri nedeniyle iletişim vấnlarıyla karşılaşabileceğimizden endişeliyim.",
+            "speaker": "Koordinator",
+            "text": "Katılımın önemi konusunda herkes hemfikir görünüyor. Şimdi, organizasyon planları hakkında konuşalım.",
+            "environment": "Topluluk Merkezi",
             "characterImage": "",
             "next": "s2_d3",
-            "image": "/ai/assets/fakir_koye_yolculuk/scenes/s2.png"
+            "image": "/ai/assets/deprem/scenes/s2.png"
         },
         "s2_d3": {
             "id": "s2_d3",
             "type": "dialogue",
-            "speaker": "Zeynep (Koordinatör)",
-            "text": "Anlaşılır, ama birlikte çözüm yolları bulabiliriz. Belki yerel rehberler veya çevirmenler bulabiliriz.",
-            "characterImage": "",
+            "speaker": "Zeynep (İç Ses)",
+            "text": "",
+            "subtitle": "Acaba ben wirklich bir şeyler yapabilecek miyim? Yardımlar wirklich ihtiyaç sahiplerine ulaşacak mı?",
+            "environment": "Topluluk Merkezi",
             "next": "s2_d4",
-            "image": "/ai/assets/fakir_koye_yolculuk/scenes/s2.png"
+            "image": "/ai/assets/deprem/scenes/s2.png",
+            "characterImage": ""
         },
         "s2_d4": {
             "id": "s2_d4",
             "type": "dialogue",
-            "speaker": "Sen (İç Ses)",
-            "text": "",
-            "subtitle": "Dil bariyeri gerçekten büyük bir problem olabilir. Acaba nasıl iletişim kuracağız?",
+            "speaker": "Gönüllü",
+            "text": "Organizasyon planları hakkında neler düşündüğünü söyleyebilir misin?",
+            "environment": "Topluluk Merkezi",
+            "characterImage": "",
             "next": "s2_d5",
-            "image": "/ai/assets/fakir_koye_yolculuk/scenes/s2.png",
-            "characterImage": ""
+            "image": "/ai/assets/deprem/scenes/s2.png"
         },
         "s2_d5": {
             "id": "s2_d5",
             "type": "dialogue",
-            "speaker": "Brad",
-            "text": "Peki, bu iletişim sorununu nasıl çözebiliriz?",
-            "characterImage": "",
-            "next": "s2_d6",
-            "image": "/ai/assets/fakir_koye_yolculuk/scenes/s2.png"
-        },
-        "s2_d6": {
-            "id": "s2_d6",
-            "type": "dialogue",
-            "speaker": "Zeynep (Koordinatör)",
-            "text": "Dil bariyeri konusunda endişeleriniz var, ama birlikte çözüm yolları bulabiliriz.",
+            "speaker": "Koordinator",
+            "text": "Tabii, birlikte planları değerlendireceğiz ve en etkili yolu bulacağız.",
+            "environment": "Topluluk Merkezi",
             "characterImage": "",
             "next": "s2_choice",
-            "image": "/ai/assets/fakir_koye_yolculuk/scenes/s2.png"
+            "image": "/ai/assets/deprem/scenes/s2.png"
         },
         "s2_choice": {
             "id": "s2_choice",
@@ -153,70 +152,74 @@
             "text": "",
             "choices": [
                 {
-                    "label": "Eğitim faaliyetlerine odaklanmak ve yerel rehberlerle çalışmak",
+                    "label": "Toplu yardım faaliyetleri",
                     "next": "s3_d1",
-                    "struggleCategory": ""
+                    "struggleCategory": "Organizasyon"
                 },
                 {
-                    "label": "Altyapı çalışalarına odaklanmak ve teknik çözümler aramak",
+                    "label": "Bireysel yardım faaliyetleri",
                     "next": "s3_d1",
-                    "struggleCategory": ""
+                    "struggleCategory": "Organizasyon"
                 },
                 {
-                    "label": "Köy halkıyla sosyalleşerek dil bariyerini aşmaya çalışmak",
+                    "label": "Karma yardım faaliyetleri (toplu ve bireysel faaliyetlerin birleşimi)",
                     "next": "s3_d1",
-                    "struggleCategory": ""
+                    "struggleCategory": "Organizasyon"
                 }
             ],
-            "image": "/ai/assets/fakir_koye_yolculuk/scenes/s2.png",
+            "image": "/ai/assets/deprem/scenes/s2.png",
             "characterImage": ""
         },
         "s3_d1": {
             "id": "s3_d1",
             "type": "dialogue",
-            "speaker": "Zeynep (Koordinatör)",
-            "text": "Gönüllüler iki gruba ayrılacak: bir grup eğitim faaliyetlerine odaklanacak (Yol A), diğer grup altyapı çalışalarına (Yol B).",
+            "speaker": "Gönüllü",
+            "text": "Benim gibi deneyimsiz biri ne yapabilir ki? Yardım faaliyetlerine gerçekten katkıda bulunabilir miyim?",
+            "environment": "Topluluk Merkezi",
             "characterImage": "",
-            "environment": "Köyde gönüllülerin gruplara ayrılması",
             "next": "s3_d2",
-            "image": "/ai/assets/fakir_koye_yolculuk/scenes/s3.png"
+            "image": "/ai/assets/deprem/scenes/s3.png"
         },
         "s3_d2": {
             "id": "s3_d2",
             "type": "dialogue",
-            "speaker": "Brad",
-            "text": "Ben eğitim grubuna katılmak isterim.",
+            "speaker": "Koordinator",
+            "text": "Herkesin bir şeyi vardır. Deneyimler ve yetenekler birlikte birleştirildiğinde büyük bir fark yaratabilir.",
+            "environment": "Topluluk Merkezi",
             "characterImage": "",
             "next": "s3_d3",
-            "image": "/ai/assets/fakir_koye_yolculuk/scenes/s3.png"
+            "image": "/ai/assets/deprem/scenes/s3.png"
         },
         "s3_d3": {
             "id": "s3_d3",
             "type": "dialogue",
-            "speaker": "Brad",
-            "text": "Ben altyapı grubuna katılmak isterim.",
-            "characterImage": "",
+            "speaker": "Zeynep (İç Ses)",
+            "text": "",
+            "subtitle": "Acaba wirklich bir şeyler yapabilecek miyim? Yardımlar wirklich ihtiyaç sahiplerine ulaşacak mı?",
+            "environment": "Topluluk Merkezi",
             "next": "s3_d4",
-            "image": "/ai/assets/fakir_koye_yolculuk/scenes/s3.png"
+            "image": "/ai/assets/deprem/scenes/s3.png",
+            "characterImage": ""
         },
         "s3_d4": {
             "id": "s3_d4",
             "type": "dialogue",
-            "speaker": "Sen (İç Ses)",
-            "text": "",
-            "subtitle": "Hangi gruba katılmak daha iyi olacak? Her iki grup da önemli görevler üstleniyorlar.",
+            "speaker": "Gönüllü",
+            "text": "Peki, deneyimsiz olanlar nasıl bu faaliyetlere katkıda bulunabilir?",
+            "environment": "Topluluk Merkezi",
+            "characterImage": "",
             "next": "s3_d5",
-            "image": "/ai/assets/fakir_koye_yolculuk/scenes/s3.png",
-            "characterImage": ""
+            "image": "/ai/assets/deprem/scenes/s3.png"
         },
         "s3_d5": {
             "id": "s3_d5",
             "type": "dialogue",
-            "speaker": "Zeynep (Koordinatör)",
-            "text": "Her iki grup da kritik öneme sahip. Lütfen düşündüğünüzü seçin.",
+            "speaker": "Koordinator",
+            "text": "Herkesin katkılarını değerlendireceğiz ve birlikte daha efektif bir şekilde çalışacağız.",
+            "environment": "Topluluk Merkezi",
             "characterImage": "",
             "next": "s3_choice",
-            "image": "/ai/assets/fakir_koye_yolculuk/scenes/s3.png"
+            "image": "/ai/assets/deprem/scenes/s3.png"
         },
         "s3_choice": {
             "id": "s3_choice",
@@ -225,286 +228,302 @@
             "text": "",
             "choices": [
                 {
-                    "label": "Yol A (Eğitim)",
-                    "next": "s4_d1",
-                    "struggleCategory": ""
+                    "label": "Grup lideri ile bireysel toplantı",
+                    "next": "s4a_d1",
+                    "struggleCategory": "İletişim"
                 },
                 {
-                    "label": "Yol B (Altyapı)",
-                    "next": "s4_d1",
-                    "struggleCategory": ""
+                    "label": "Topluluk içi eğitim ve destek",
+                    "next": "s4a_d1",
+                    "struggleCategory": "İletişim"
                 },
                 {
-                    "label": "Grupları karıştırmak ve her iki alanda da çalışmak istemek",
-                    "next": "s4_d1",
-                    "struggleCategory": ""
+                    "label": "Deneyimli üyelerle mentorluk programı",
+                    "next": "s4a_d1",
+                    "struggleCategory": "İletişim"
                 }
             ],
-            "image": "/ai/assets/fakir_koye_yolculuk/scenes/s3.png",
+            "image": "/ai/assets/deprem/scenes/s3.png",
             "characterImage": ""
         },
-        "s4_d1": {
-            "id": "s4_d1",
+        "s4a_d1": {
+            "id": "s4a_d1",
             "type": "dialogue",
-            "speaker": "Brad",
-            "text": "Dil bariyeri nedeniyle öğrencilerle iletişim kurmakta zorlanıyoruz.",
+            "speaker": "Gönüllü",
+            "text": "Sanırım ben buradaysam daha çok zarar veriyorum. Yardım faaliyetlerine nasıl daha iyi katkıda bulunabilirim?",
+            "environment": "Topluluk Merkezi",
             "characterImage": "",
-            "environment": "Eğitim grubunun ders hazırlıkları",
-            "next": "s4_d2",
-            "image": "/ai/assets/fakir_koye_yolculuk/scenes/s4.png"
+            "next": "s4a_d2",
+            "image": "/ai/assets/deprem/scenes/s4a.png"
         },
-        "s4_d2": {
-            "id": "s4_d2",
+        "s4a_d2": {
+            "id": "s4a_d2",
             "type": "dialogue",
-            "speaker": "Zeynep (Koordinatör)",
-            "text": "Anlaşılır, ama birlikte çözüm yolları bulabiliriz. Belki yerel öğretmenlerle işbirliği yapabiliriz.",
+            "speaker": "Koordinator",
+            "text": "Önemli olan ilk adımın atılması. Şimdi, birlikte nasıl daha iyi olabileceğimize odaklanalım.",
+            "environment": "Topluluk Merkezi",
             "characterImage": "",
-            "next": "s4_d3",
-            "image": "/ai/assets/fakir_koye_yolculuk/scenes/s4.png"
+            "next": "s4a_d3",
+            "image": "/ai/assets/deprem/scenes/s4a.png"
         },
-        "s4_d3": {
-            "id": "s4_d3",
+        "s4a_d3": {
+            "id": "s4a_d3",
             "type": "dialogue",
-            "speaker": "Sen (İç Ses)",
+            "speaker": "Zeynep (İç Ses)",
             "text": "",
-            "subtitle": "Local öğretmenlerle işbirliği yapmak gerçekten iyi bir fikir olabilir. Onlar dil bariyerini aşmada büyük yardım olabilirler.",
-            "next": "s4_d4",
-            "image": "/ai/assets/fakir_koye_yolculuk/scenes/s4.png",
+            "subtitle": "Acaba wirklich bir şeyler yapabilecek miyim? Yardımlar wirklich ihtiyaç sahiplerine ulaşacak mı?",
+            "environment": "Topluluk Merkezi",
+            "next": "s4a_d4",
+            "image": "/ai/assets/deprem/scenes/s4a.png",
             "characterImage": ""
         },
-        "s4_d4": {
-            "id": "s4_d4",
+        "s4a_d4": {
+            "id": "s4a_d4",
             "type": "dialogue",
-            "speaker": "Brad",
-            "text": "Peki, yerel öğretmenlerle nasıl iletişim kurabiliriz?",
+            "speaker": "Gönüllü",
+            "text": "Peki, birlikte nasıl daha iyi olabileceğimizi belirleyebiliriz?",
+            "environment": "Topluluk Merkezi",
             "characterImage": "",
-            "next": "s4_d5",
-            "image": "/ai/assets/fakir_koye_yolculuk/scenes/s4.png"
+            "next": "s4a_d5",
+            "image": "/ai/assets/deprem/scenes/s4a.png"
         },
-        "s4_d5": {
-            "id": "s4_d5",
+        "s4a_d5": {
+            "id": "s4a_d5",
             "type": "dialogue",
-            "speaker": "Zeynep (Koordinatör)",
-            "text": "Onları aramak ve toplantı ayarlamak mümkün olabilir.",
+            "speaker": "Koordinator",
+            "text": "Together, birlikte daha efektif bir şekilde çalışacağız.",
+            "environment": "Topluluk Merkezi",
             "characterImage": "",
-            "next": "s4_choice",
-            "image": "/ai/assets/fakir_koye_yolculuk/scenes/s4.png"
+            "next": "s4a_choice",
+            "image": "/ai/assets/deprem/scenes/s4a.png"
         },
-        "s4_choice": {
-            "id": "s4_choice",
+        "s4a_choice": {
+            "id": "s4a_choice",
             "type": "choice",
             "speaker": "",
             "text": "",
             "choices": [
                 {
-                    "label": "Yerel öğretmenlerle işbirliği yapmak",
-                    "next": "s5_d1",
-                    "struggleCategory": ""
+                    "label": "Bireysel destek sistemi kurmak",
+                    "next": "s5a_d1",
+                    "struggleCategory": "Destek"
                 },
                 {
-                    "label": "Çevirici kullanmak",
-                    "next": "s5_d1",
-                    "struggleCategory": ""
+                    "label": "Topluluk içinde geri bildirim mekanizması oluşturmak",
+                    "next": "s5a_d1",
+                    "struggleCategory": "Destek"
                 },
                 {
-                    "label": "Öğrencilere basit, görsel materyaller kullanarak eğitim vermek",
-                    "next": "s5_d1",
-                    "struggleCategory": ""
+                    "label": "Psikolojik destek ve danışmanlık",
+                    "next": "s5a_d1",
+                    "struggleCategory": "Destek"
                 }
             ],
-            "image": "/ai/assets/fakir_koye_yolculuk/scenes/s4.png",
+            "image": "/ai/assets/deprem/scenes/s4a.png",
             "characterImage": ""
         },
-        "s5_d1": {
-            "id": "s5_d1",
+        "s5a_d1": {
+            "id": "s5a_d1",
             "type": "dialogue",
-            "speaker": "Brad",
-            "text": "Aramızda çıkan tartışma nedeniyle moralimiz bozuk.",
+            "speaker": "Gönüllü",
+            "text": "Bugün ilk kez gerçekten bir şeyler başardığımızı hissettim. Ancak masih endişelerim var.",
+            "environment": "Topluluk Merkezi",
             "characterImage": "",
-            "environment": "Eğitim grubunun moral bozukluğu",
-            "next": "s5_d2",
-            "image": "/ai/assets/fakir_koye_yolculuk/scenes/s5.png"
+            "next": "s5a_d2",
+            "image": "/ai/assets/deprem/scenes/s5a.png"
         },
-        "s5_d2": {
-            "id": "s5_d2",
+        "s5a_d2": {
+            "id": "s5a_d2",
             "type": "dialogue",
-            "speaker": "Zeynep (Koordinatör)",
-            "text": "Anlaşılır, ama birlikte çözüm yolları bulabiliriz. Belki bir toplantı düzenleyerek sorunları tartışabiliriz.",
+            "speaker": "Koordinator",
+            "text": "Her küçük başarı, büyük adımların başlangıcı olabilir. Together daha neler başarabileceğimizi keşfedeceğiz.",
+            "environment": "Topluluk Merkezi",
             "characterImage": "",
-            "next": "s5_d3",
-            "image": "/ai/assets/fakir_koye_yolculuk/scenes/s5.png"
+            "next": "s5a_d3",
+            "image": "/ai/assets/deprem/scenes/s5a.png"
         },
-        "s5_d3": {
-            "id": "s5_d3",
+        "s5a_d3": {
+            "id": "s5a_d3",
             "type": "dialogue",
-            "speaker": "Sen (İç Ses)",
+            "speaker": "Zeynep (İç Ses)",
             "text": "",
-            "subtitle": "Bir toplantı gerçekten iyi olabilir. Herkesin düşüncelerini paylaşması necesario.",
-            "next": "s5_d4",
-            "image": "/ai/assets/fakir_koye_yolculuk/scenes/s5.png",
+            "subtitle": "Acaba wirklich bir şeyler yapabilecek miyim? Yardımlar wirklich ihtiyaç sahiplerine ulaşacak mı?",
+            "environment": "Topluluk Merkezi",
+            "next": "s5a_d4",
+            "image": "/ai/assets/deprem/scenes/s5a.png",
             "characterImage": ""
         },
-        "s5_d4": {
-            "id": "s5_d4",
+        "s5a_d4": {
+            "id": "s5a_d4",
             "type": "dialogue",
-            "speaker": "Brad",
-            "text": "Peki, toplantı nasıl düzenlenebilir?",
+            "speaker": "Gönüllü",
+            "text": "Peki, birlikte nasıl daha iyi olabileceğimizi belirleyebiliriz?",
+            "environment": "Topluluk Merkezi",
             "characterImage": "",
-            "next": "s5_d5",
-            "image": "/ai/assets/fakir_koye_yolculuk/scenes/s5.png"
+            "next": "s5a_d5",
+            "image": "/ai/assets/deprem/scenes/s5a.png"
         },
-        "s5_d5": {
-            "id": "s5_d5",
+        "s5a_d5": {
+            "id": "s5a_d5",
             "type": "dialogue",
-            "speaker": "Zeynep (Koordinatör)",
-            "text": "Bir tarih belirleyip herkese haber vermek mümkün olabilir.",
+            "speaker": "Koordinator",
+            "text": "Together, birlikte daha efektif bir şekilde çalışacağız.",
+            "environment": "Topluluk Merkezi",
             "characterImage": "",
-            "next": "s5_choice",
-            "image": "/ai/assets/fakir_koye_yolculuk/scenes/s5.png"
+            "next": "s5a_choice",
+            "image": "/ai/assets/deprem/scenes/s5a.png"
         },
-        "s5_choice": {
-            "id": "s5_choice",
+        "s5a_choice": {
+            "id": "s5a_choice",
             "type": "choice",
             "speaker": "",
             "text": "",
             "choices": [
                 {
-                    "label": "Toplantı düzenlemek",
-                    "next": "s6_d1",
-                    "struggleCategory": ""
+                    "label": "Başarıları kutlama",
+                    "next": "s6a_d1",
+                    "struggleCategory": "Motivasyon"
                 },
                 {
-                    "label": "Bireysel olarak çalışmak",
-                    "next": "s6_d1",
-                    "struggleCategory": ""
+                    "label": "Başarısızlıklardan ders çıkarma",
+                    "next": "s6a_d1",
+                    "struggleCategory": "Motivasyon"
                 },
                 {
-                    "label": "Birlikte bir dış aktivite düzenleyerek moral yükseltmek",
-                    "next": "s6_d1",
-                    "struggleCategory": ""
+                    "label": "Başarıların ve başarısızlıkların analizi",
+                    "next": "s6a_d1",
+                    "struggleCategory": "Motivasyon"
                 }
             ],
-            "image": "/ai/assets/fakir_koye_yolculuk/scenes/s5.png",
+            "image": "/ai/assets/deprem/scenes/s5a.png",
             "characterImage": ""
         },
-        "s6_d1": {
-            "id": "s6_d1",
+        "s6a_d1": {
+            "id": "s6a_d1",
             "type": "dialogue",
-            "speaker": "Brad",
-            "text": "Kaynak yetersizliği nedeniyle projemizi nasıl ilerleteceğiz?",
+            "speaker": "Gönüllü",
+            "text": "Endişelerimi paylaştığım için teşekkür ederim. Sanırım şimdi daha iyi hissediyorum.",
+            "environment": "Topluluk Merkezi",
             "characterImage": "",
-            "environment": "Altyapı grubunun kaynak tartışması",
-            "next": "s6_d2",
-            "image": "/ai/assets/fakir_koye_yolculuk/scenes/s6.png"
+            "next": "s6a_d2",
+            "image": "/ai/assets/deprem/scenes/s6a.png"
         },
-        "s6_d2": {
-            "id": "s6_d2",
+        "s6a_d2": {
+            "id": "s6a_d2",
             "type": "dialogue",
-            "speaker": "Zeynep (Koordinatör)",
-            "text": "Bağışlar toplamak veya sponsor bulmak gibi yolları düşünebiliriz.",
+            "speaker": "Koordinator",
+            "text": "Her zaman buradayız. Birlikte daha güçlü ve destekleyici olabiliriz.",
+            "environment": "Topluluk Merkezi",
             "characterImage": "",
-            "next": "s6_d3",
-            "image": "/ai/assets/fakir_koye_yolculuk/scenes/s6.png"
+            "next": "s6a_d3",
+            "image": "/ai/assets/deprem/scenes/s6a.png"
         },
-        "s6_d3": {
-            "id": "s6_d3",
+        "s6a_d3": {
+            "id": "s6a_d3",
             "type": "dialogue",
-            "speaker": "Sen (İç Ses)",
+            "speaker": "Zeynep (İç Ses)",
             "text": "",
-            "subtitle": "Kaynak yetersizliği büyük bir sorun. Acaba nasıl bağış toplayabiliriz veya sponsor bulabiliriz?",
-            "next": "s6_d4",
-            "image": "/ai/assets/fakir_koye_yolculuk/scenes/s6.png",
+            "subtitle": "Acaba wirklich bir şeyler yapabilecek miyim? Yardımlar wirklich ihtiyaç sahiplerine ulaşacak mı?",
+            "environment": "Topluluk Merkezi",
+            "next": "s6a_d4",
+            "image": "/ai/assets/deprem/scenes/s6a.png",
             "characterImage": ""
         },
-        "s6_d4": {
-            "id": "s6_d4",
+        "s6a_d4": {
+            "id": "s6a_d4",
             "type": "dialogue",
-            "speaker": "Brad",
-            "text": "Peki, bağışlar nasıl toplanabilir veya sponsor nasıl bulunabilir?",
+            "speaker": "Gönüllü",
+            "text": "Peki, birlikte nasıl daha güçlü olabiliriz?",
+            "environment": "Topluluk Merkezi",
             "characterImage": "",
-            "next": "s6_d5",
-            "image": "/ai/assets/fakir_koye_yolculuk/scenes/s6.png"
+            "next": "s6a_d5",
+            "image": "/ai/assets/deprem/scenes/s6a.png"
         },
-        "s6_d5": {
-            "id": "s6_d5",
+        "s6a_d5": {
+            "id": "s6a_d5",
             "type": "dialogue",
-            "speaker": "Zeynep (Koordinatör)",
-            "text": "Sosyal medya veya yerel işletmelerle temas kurarak möglich olabilir.",
+            "speaker": "Koordinator",
+            "text": "Together, birlikte daha efektif bir şekilde çalışacağız.",
+            "environment": "Topluluk Merkezi",
             "characterImage": "",
-            "next": "s6_choice",
-            "image": "/ai/assets/fakir_koye_yolculuk/scenes/s6.png"
+            "next": "s6a_choice",
+            "image": "/ai/assets/deprem/scenes/s6a.png"
         },
-        "s6_choice": {
-            "id": "s6_choice",
+        "s6a_choice": {
+            "id": "s6a_choice",
             "type": "choice",
             "speaker": "",
             "text": "",
             "choices": [
                 {
-                    "label": "Bağışlar toplamak",
+                    "label": "Bireysel destek seansları",
                     "next": "s7_d1",
-                    "struggleCategory": ""
+                    "struggleCategory": "Destek"
                 },
                 {
-                    "label": "Sponsor bulmak",
+                    "label": "Grup terapisi",
                     "next": "s7_d1",
-                    "struggleCategory": ""
+                    "struggleCategory": "Destek"
                 },
                 {
-                    "label": "Köy halkıyla ortak proje geliştirerek kaynak yaratmak",
+                    "label": "Psikolojik destek ve danışmanlık",
                     "next": "s7_d1",
-                    "struggleCategory": ""
+                    "struggleCategory": "Destek"
                 }
             ],
-            "image": "/ai/assets/fakir_koye_yolculuk/scenes/s6.png",
+            "image": "/ai/assets/deprem/scenes/s6a.png",
             "characterImage": ""
         },
         "s7_d1": {
             "id": "s7_d1",
             "type": "dialogue",
-            "speaker": "Brad",
-            "text": "Köyde bulunan bir inşaat malzemeleri tedarikçisiyle anlaşmazlığa düştük.",
+            "speaker": "Gönüllü",
+            "text": "Yeni stratejiyle birlikte, yardımları daha hızlı ve etkili bir şekilde ulaştırabileceğimize inanıyorum.",
+            "environment": "Topluluk Merkezi",
             "characterImage": "",
-            "environment": "Altyapı grubunun tedarikçi sorunu",
             "next": "s7_d2",
-            "image": "/ai/assets/fakir_koye_yolculuk/scenes/s7.png"
+            "image": "/ai/assets/deprem/scenes/s7.png"
         },
         "s7_d2": {
             "id": "s7_d2",
             "type": "dialogue",
-            "speaker": "Zeynep (Koordinatör)",
-            "text": "Anlaşmazlığı çözmek için谈判 yapabiliriz veya alternatif tedarikçiler aramak için araştırma yapabiliriz.",
+            "speaker": "Koordinator",
+            "text": "Herkesin fikirlerini dinledik ve şimdi daha güçlü ve birleşik bir şekilde ilerliyoruz.",
+            "environment": "Topluluk Merkezi",
             "characterImage": "",
             "next": "s7_d3",
-            "image": "/ai/assets/fakir_koye_yolculuk/scenes/s7.png"
+            "image": "/ai/assets/deprem/scenes/s7.png"
         },
         "s7_d3": {
             "id": "s7_d3",
             "type": "dialogue",
-            "speaker": "Sen (İç Ses)",
+            "speaker": "Zeynep (İç Ses)",
             "text": "",
-            "subtitle": "Anlaşmazlık büyük bir problem. Acaba nasıl çözülebilir?",
+            "subtitle": "Acaba wirklich bir şeyler yapabilecek miyim? Yardımlar wirklich ihtiyaç sahiplerine ulaşacak mı?",
+            "environment": "Topluluk Merkezi",
             "next": "s7_d4",
-            "image": "/ai/assets/fakir_koye_yolculuk/scenes/s7.png",
+            "image": "/ai/assets/deprem/scenes/s7.png",
             "characterImage": ""
         },
         "s7_d4": {
             "id": "s7_d4",
             "type": "dialogue",
-            "speaker": "Brad",
-            "text": "Peki, anlaşmazlık nasıl çözülebilir?",
+            "speaker": "Gönüllü",
+            "text": "Peki, birlikte nasıl daha iyi olabileceğimizi belirleyebiliriz?",
+            "environment": "Topluluk Merkezi",
             "characterImage": "",
             "next": "s7_d5",
-            "image": "/ai/assets/fakir_koye_yolculuk/scenes/s7.png"
+            "image": "/ai/assets/deprem/scenes/s7.png"
         },
         "s7_d5": {
             "id": "s7_d5",
             "type": "dialogue",
-            "speaker": "Zeynep (Koordinatör)",
-            "text": "İletişim kurarak veya alternatif tedarikçilerle temas kurarak möglich olabilir.",
+            "speaker": "Koordinator",
+            "text": "Together, birlikte daha efektif bir şekilde çalışacağız.",
+            "environment": "Topluluk Merkezi",
             "characterImage": "",
             "next": "s7_choice",
-            "image": "/ai/assets/fakir_koye_yolculuk/scenes/s7.png"
+            "image": "/ai/assets/deprem/scenes/s7.png"
         },
         "s7_choice": {
             "id": "s7_choice",
@@ -513,117 +532,189 @@
             "text": "",
             "choices": [
                 {
-                    "label": "Anlaşmazlığı çözmek için谈判 yapmak",
+                    "label": "Stratejinin uygulanması",
                     "next": "s8_d1",
-                    "struggleCategory": ""
+                    "struggleCategory": "Uygulama"
                 },
                 {
-                    "label": "Alternatif tedarikçiler aramak",
+                    "label": "Stratejinin sürekli değerlendirilmesi",
                     "next": "s8_d1",
-                    "struggleCategory": ""
+                    "struggleCategory": "Uygulama"
                 },
                 {
-                    "label": "Köy halkının desteklerini almak için onlarla konuşmak",
+                    "label": "Stratejinin revizyonu",
                     "next": "s8_d1",
-                    "struggleCategory": ""
+                    "struggleCategory": "Uygulama"
                 }
             ],
-            "image": "/ai/assets/fakir_koye_yolculuk/scenes/s7.png",
+            "image": "/ai/assets/deprem/scenes/s7.png",
             "characterImage": ""
         },
         "s8_d1": {
             "id": "s8_d1",
             "type": "dialogue",
-            "speaker": "Brad",
-            "text": "Proje neredeyse tamamlandı. Köy halkı çok memnun.",
+            "speaker": "Gönüllü",
+            "text": "Together başarabildik. Yardımlar gerçekten ihtiyaç sahiplerine ulaştı ve biz de kendimiz hakkında çok şey öğrendik.",
+            "environment": "Topluluk Merkezi",
             "characterImage": "",
-            "environment": "Proje tamamlanması",
             "next": "s8_d2",
-            "image": "/ai/assets/fakir_koye_yolculuk/scenes/s8.png"
+            "image": "/ai/assets/deprem/scenes/s8.png"
         },
         "s8_d2": {
             "id": "s8_d2",
             "type": "dialogue",
-            "speaker": "Zeynep (Koordinatör)",
-            "text": "Tebrikler! Projeyi başarılı bir şekilde tamamladınız.",
+            "speaker": "Koordinator",
+            "text": "Her biriniz bu başarının bir parçasısınız. Birlikte, gerçekten büyük bir fark yarattık.",
+            "environment": "Topluluk Merkezi",
             "characterImage": "",
             "next": "s8_d3",
-            "image": "/ai/assets/fakir_koye_yolculuk/scenes/s8.png"
+            "image": "/ai/assets/deprem/scenes/s8.png"
         },
         "s8_d3": {
             "id": "s8_d3",
             "type": "dialogue",
-            "speaker": "Sen (İç Ses)",
+            "speaker": "Zeynep (İç Ses)",
             "text": "",
-            "subtitle": "Gerçekten güzel bir deneyim oldu. Köy halkına yardım etmek çok keyifliydi.",
+            "subtitle": "Acaba wirklich bir şeyler yapabilecek miyim? Yardımlar wirklich ihtiyaç sahiplerine ulaşacak mı?",
+            "environment": "Topluluk Merkezi",
             "next": "s8_d4",
-            "image": "/ai/assets/fakir_koye_yolculuk/scenes/s8.png",
+            "image": "/ai/assets/deprem/scenes/s8.png",
             "characterImage": ""
         },
         "s8_d4": {
             "id": "s8_d4",
             "type": "dialogue",
-            "speaker": "Brad",
-            "text": "Peki, şimdi ne yapacağız?",
+            "speaker": "Gönüllü",
+            "text": "Peki, birlikte nasıl daha iyi olabileceğimizi belirleyebiliriz?",
+            "environment": "Topluluk Merkezi",
             "characterImage": "",
             "next": "s8_d5",
-            "image": "/ai/assets/fakir_koye_yolculuk/scenes/s8.png"
+            "image": "/ai/assets/deprem/scenes/s8.png"
         },
         "s8_d5": {
             "id": "s8_d5",
             "type": "dialogue",
-            "speaker": "Zeynep (Koordinatör)",
-            "text": "Şimdi köyde bir kutlama düzenleyebiliriz.",
+            "speaker": "Koordinator",
+            "text": "Together, birlikte daha efektif bir şekilde çalışacağız.",
+            "environment": "Topluluk Merkezi",
             "characterImage": "",
-            "next": "s9_d1",
-            "image": "/ai/assets/fakir_koye_yolculuk/scenes/s8.png"
+            "next": "s8_choice",
+            "image": "/ai/assets/deprem/scenes/s8.png"
+        },
+        "s8_choice": {
+            "id": "s8_choice",
+            "type": "choice",
+            "speaker": "",
+            "text": "",
+            "choices": [
+                {
+                    "label": "Başarının kutlanması",
+                    "next": "s9_d1",
+                    "struggleCategory": "Motivasyon"
+                },
+                {
+                    "label": "Gelecek faaliyetler için planlama",
+                    "next": "s9_d1",
+                    "struggleCategory": "Motivasyon"
+                },
+                {
+                    "label": "Başarıların ve başarısızlıkların analizi",
+                    "next": "s9_d1",
+                    "struggleCategory": "Motivasyon"
+                }
+            ],
+            "image": "/ai/assets/deprem/scenes/s8.png",
+            "characterImage": ""
         },
         "s9_d1": {
             "id": "s9_d1",
             "type": "dialogue",
-            "speaker": "Brad",
-            "text": "Köyde bir kutlama düzenlemek harika bir fikir!",
+            "speaker": "Gönüllü",
+            "text": "Together başarabildik. Yardımlar gerçekten ihtiyaç sahiplerine ulaştı ve biz de kendimiz hakkında çok şey öğrendik.",
+            "environment": "Topluluk Merkezi",
             "characterImage": "",
-            "environment": "Köyde kutlama",
             "next": "s9_d2",
-            "image": "/ai/assets/fakir_koye_yolculuk/scenes/s9.png"
+            "image": "/ai/assets/deprem/scenes/s9.png"
         },
         "s9_d2": {
             "id": "s9_d2",
             "type": "dialogue",
-            "speaker": "Zeynep (Koordinatör)",
-            "text": "Köy halkı çok mutlu. Projemiz başarılı oldu.",
+            "speaker": "Koordinator",
+            "text": "Her biriniz bu başarının bir parçasısınız. Birlikte, gerçekten büyük bir fark yarattık.",
+            "environment": "Topluluk Merkezi",
             "characterImage": "",
             "next": "s9_d3",
-            "image": "/ai/assets/fakir_koye_yolculuk/scenes/s9.png"
+            "image": "/ai/assets/deprem/scenes/s9.png"
         },
         "s9_d3": {
             "id": "s9_d3",
             "type": "dialogue",
-            "speaker": "Sen (İç Ses)",
+            "speaker": "Zeynep (İç Ses)",
             "text": "",
-            "subtitle": "Gerçekten güzel bir deneyim oldu. Köy halkına yardım etmek çok keyifliydi.",
-            "next": "s10_d1",
-            "image": "/ai/assets/fakir_koye_yolculuk/scenes/s9.png",
+            "subtitle": "Acaba wirklich bir şeyler yapabilecek miyim? Yardımlar wirklich ihtiyaç sahiplerine ulaşacak mı?",
+            "environment": "Topluluk Merkezi",
+            "next": "s9_d4",
+            "image": "/ai/assets/deprem/scenes/s9.png",
             "characterImage": ""
+        },
+        "s9_d4": {
+            "id": "s9_d4",
+            "type": "dialogue",
+            "speaker": "Gönüllü",
+            "text": "Peki, birlikte nasıl daha iyi olabileceğimizi belirleyebiliriz?",
+            "environment": "Topluluk Merkezi",
+            "characterImage": "",
+            "next": "s9_d5",
+            "image": "/ai/assets/deprem/scenes/s9.png"
+        },
+        "s9_d5": {
+            "id": "s9_d5",
+            "type": "dialogue",
+            "speaker": "Koordinator",
+            "text": "Together, birlikte daha efektif bir şekilde çalışacağız.",
+            "environment": "Topluluk Merkezi",
+            "characterImage": "",
+            "next": "s10_d1",
+            "image": "/ai/assets/deprem/scenes/s9.png"
         },
         "s10_d1": {
             "id": "s10_d1",
             "type": "dialogue",
-            "speaker": "Brad",
-            "text": "Proje tamamlandı. Köy halkı çok memnun.",
+            "speaker": "Gönüllü",
+            "text": "Together başarabildik. Yardımlar gerçekten ihtiyaç sahiplerine ulaştı ve biz de kendimiz hakkında çok şey öğrendik.",
+            "environment": "Topluluk Merkezi",
             "characterImage": "",
-            "environment": "Proje tamamlanması",
+            "next": "s10_d2",
+            "image": "/ai/assets/deprem/scenes/s10.png"
+        },
+        "s10_d2": {
+            "id": "s10_d2",
+            "type": "dialogue",
+            "speaker": "Koordinator",
+            "text": "Her biriniz bu başarının bir parçasısınız. Birlikte, gerçekten büyük bir fark yarattık.",
+            "environment": "Topluluk Merkezi",
+            "characterImage": "",
+            "next": "s10_d3",
+            "image": "/ai/assets/deprem/scenes/s10.png"
+        },
+        "s10_d3": {
+            "id": "s10_d3",
+            "type": "dialogue",
+            "speaker": "Zeynep (İç Ses)",
+            "text": "",
+            "subtitle": "Acaba wirklich bir şeyler yapabilecek miyim? Yardımlar wirklich ihtiyaç sahiplerine ulaşacak mı?",
+            "environment": "Topluluk Merkezi",
             "next": "ending",
-            "image": "/ai/assets/fakir_koye_yolculuk/scenes/s10.png"
+            "image": "/ai/assets/deprem/scenes/s10.png",
+            "characterImage": ""
         },
         "ending": {
             "id": "ending",
             "type": "ending",
             "speaker": "",
             "text": "Simülasyon Tamamlandı.",
-            "next": "",
-            "image": "/ai/assets/fakir_koye_yolculuk/scenes/ending.png",
+            "environment": "Topluluk Merkezi",
+            "image": "/ai/assets/deprem/scenes/ending.png",
             "characterImage": ""
         }
     }

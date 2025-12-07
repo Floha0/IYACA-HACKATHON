@@ -1,2 +1,2 @@
-Fakir köye yolculuk
-Fakir bir köye gidip yardım eden gönüllülerin simülasyonu
+Deprem
+Deprem sonrası yardımlara gönüllülük hakkında simülasyon

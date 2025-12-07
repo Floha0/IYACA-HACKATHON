@@ -1,37 +1,37 @@
 {
     "sahne_gorselleri": {
         "s1_d1": {
-            "ortam_prompt": "\"A serene, rural village landscape at sunset, with warm golden light casting long shadows across the rolling hills and verdant fields, surrounded by rustic wooden houses and trees, under a soft, pastel-colored sky with wispy clouds, as the atmosphere is filled with a sense of tranquility and community, with people subtly present in the distance, engaged in volunteer work, amidst the gentle rustle of leaves and the faint sound of nature.\""
+            "ortam_prompt": "\"A devastated post-earthquake landscape with crumbling buildings, rubble-filled streets, and debris scattered everywhere, under a somber grey sky with clouds of dust and smoke, illuminated by faint, warm sunlight peeking through the clouds, casting long shadows across the desolate terrain, with a general sense of destruction and chaos, yet a hint of hope and resilience in the air.\""
         },
         "s2_d1": {
-            "ortam_prompt": "Village town hall with rustic wooden beams, earthy tones, and warm golden lighting, surrounded by lush greenery, with a gentle misty atmosphere, and a sense of community and gathering, wide shot."
+            "ortam_prompt": "\"A dimly lit, expansive community center with a high ceiling, filled with rows of wooden tables and chairs, warm beige walls, and large windows that allow soft, golden natural light to pour in, illuminating a sea of diverse individuals gathered together, their faces indistinct in the crowd, as they engage in discussions and activities, surrounded by vibrant, motivational posters and banners, with a sense of warmth, inclusivity, and collective purpose emanating from the atmosphere.\""
         },
         "s3_d1": {
-            "ortam_prompt": "A large, open community center with two separate areas, one filled with rows of tables and chairs for educational activities, and the other with toolboxes, ladders, and construction materials for infrastructure work, illuminated by warm, natural light pouring in through large windows, with a mix of beige and gray tones, and an atmosphere of collaboration and productivity."
+            "ortam_prompt": "\"A vast, dimly lit, atmospheric landscape with a mix of warm and cool tones, illuminated by soft, ethereal light, with gentle, whispery textures and an ambiance of contemplation and self-doubt, set against a backdrop of a serene, misty horizon.\""
         },
-        "s4_d1": {
-            "ortam_prompt": "A dimly lit, worn-out language classroom with faded white walls, old wooden desks, and chairs, filled with an air of frustration and disconnection, soft gray light pouring through the grimy windows, illuminating the disappointed faces of students and teachers, amidst a backdrop of dusty language textbooks and scattered notes, with a sense of isolation and misunderstanding hanging heavily in the atmosphere."
+        "s4a_d1": {
+            "ortam_prompt": "\"A desolate, war-torn landscape with ruins of buildings in the background, under a bleak, overcast sky with dark grey clouds, illuminated by a faint, cold light, with debris and rubble scattered all around, and a general sense of devastation and hopelessness, with muted colors and rough textures, in a wide shot.\""
         },
-        "s5_d1": {
-            "ortam_prompt": "\"A dimly lit, melancholic room with muted colors, faded textures, and an atmosphere of palpable tension, where the air is thick with unspoken words and unresolved emotions, with a sense of heavy-heartedness lingering in every corner.\""
+        "s5a_d1": {
+            "ortam_prompt": "Create a wide-shot scene of a dimly lit, atmospheric environment with a mix of warm and cool tones, where the air is thick with a sense of uncertainty, with soft, muted colors and gentle lighting that casts long shadows, evoking a feeling of cautious optimism and lingering unease."
         },
-        "s6_d1": {
-            "ortam_prompt": "\"A dimly lit, worn conference room with faded grey walls, a large wooden table at its center, and a few scattered chairs, illuminated only by a single, flickering fluorescent light overhead, casting an air of desperation and uncertainty, with shades of beige and pale blue dominating the color palette, and a sense of stagnation hanging in the air.\""
+        "s6a_d1": {
+            "ortam_prompt": "A serene and calming environment with a warm, beige-colored interior, soft, golden light pouring in through large windows, and a subtle, gradient blue sky visible in the background, with gentle, white clouds drifting lazily across it, as the atmosphere is filled with a sense of relief and comfort, with plush, cream-colored furniture and natural, earthy textures, such as woven baskets and potted plants, adding to the cozy and soothing ambiance."
         },
         "s7_d1": {
-            "ortam_prompt": "\"a rustic village setting with a worn, earthy tone, surrounded by wooden crates and piles of construction materials, with a hint of tension in the air, warm sunlight casting long shadows across the dusty ground, and a backdrop of traditional village houses with terracotta rooftops, amidst a flurry of activity with people milling about in the distance\""
+            "ortam_prompt": "Maalesef, verdiğiniz metinde \"environment\" keyinin karşılığını betimlemeye yeterli bilgi bulunmuyor. Ancak, genel bir yaklaşım olarak, bir ortamı veya atmosferi betimlemek için aşağıdaki gibi bir görsel prompt oluşturulabilir:\n\n\"Create a wide shot of a modern, sleek conference room with large windows, filled with natural light, and a cityscape view in the background, where the atmosphere is professional and optimistic, with warm beige and blue tones, and subtle textures of wood and glass, conveying a sense of innovation and forward thinking.\""
         },
         "s8_d1": {
-            "ortam_prompt": "A serene and vibrant rural village scene at sunset, with warm golden light casting long shadows across the thatched roofs of the cottages, surrounded by lush green fields and trees, under a clear blue sky with a few wispy clouds, capturing the joyful atmosphere of a close-knit community, with people milling about in the distance, their faces indistinct, as the air is filled with a sense of satisfaction and completion."
+            "ortam_prompt": "Prompt metninde verilen ortamın betimlenmesi için sahne metninde herhangi bir ortam bilgisi bulunmamaktadır. Bu nedenle, genel bir yardım ve başarı atmosferini yansıtan bir görsel prompt oluşturmak nécessaire olacaktır:\n\n\"A warm, golden light illuminates a vast, open space with a subtle gradient of pastel colors, symbolizing hope and unity, with gentle shadows and soft textures, evoking a sense of accomplishment and community, as if the entirety of the scene is bathed in a feeling of collective success and fulfillment.\""
         },
         "s9_d1": {
-            "ortam_prompt": "\"A vibrant, sun-drenched village square with colorful lanterns and streamers hanging from rustic wooden beams, surrounded by lush green trees and quaint stone cottages, warm golden light casting a joyful atmosphere, with a soft, blurred focus on the revelers in the distance, emphasizing the lively, festive environment.\""
+            "ortam_prompt": "Bir sahne metni verilmediği için, verilen metne göre bir görsel prompt oluşturmak zor görünüyor. Ancak, verilen metni bir bağış veya yardım organizasyonunun başarısını vurgulayan bir sahne olarak yorumlayabiliriz. Bu bağlamda, aşağıdaki görsel prompt oluşturulabilir:\n\n\"A warm and uplifting scene of a crowded community center with a backdrop of vibrant colors, filled with people from diverse backgrounds, surrounded by tables laden with donated goods, and banners with inspirational quotes, bathed in a soft, golden light that emanates a sense of hope and unity, with a blurred focus on individual faces to emphasize the collective effort and camaraderie.\""
         },
         "s10_d1": {
-            "ortam_prompt": "\"A serene and vibrant village scene at sunset, with warm golden light casting long shadows across the thatched roofs of the cottages, surrounded by lush green trees and blooming wildflowers, under a clear blue sky with a few wispy clouds, capturing the joyful atmosphere of a community coming together, with people milling about in the distance, their faces indistinct, as the overall mood is one of peaceful celebration and contentment.\""
+            "ortam_prompt": "\"A warm, golden light fills a spacious, modern community center with high ceilings and large windows, where people of diverse backgrounds and ages are gathered, surrounded by vibrant colors and textures of donated goods, furniture, and emotional posters, conveying a sense of hope, unity, and collective accomplishment, with a soft focus on the crowd and a shallow depth of field, emphasizing the atmosphere of togetherness and shared triumph.\""
         },
         "ending": {
-            "ortam_prompt": "\"A vast, futuristic laboratory with sleek, metallic walls and floors, illuminated by a kaleidoscope of neon lights and holographic projections, as a massive, spherical simulation chamber dominates the center of the room, emitting a mesmerizing, pulsating glow that reflects off the surrounding surfaces, casting an otherworldly ambiance.\""
+            "ortam_prompt": "\"A futuristic, neon-lit virtual reality chamber with a vast, dark blue dome above, surrounded by a lattice of glowing circuitry and pulsing fibers, as a massive, holographic display flickers with code and data streams, casting an ethereal, blue-purple glow across the sleek, metallic walls and floor, with rows of humming servers and computer terminals lining the perimeter, amidst a misty, eerie atmosphere of anticipation and technological advancement.\""
         }
     }
 }
