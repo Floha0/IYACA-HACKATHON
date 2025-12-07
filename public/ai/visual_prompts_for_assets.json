@@ -1,37 +1,37 @@
 {
     "sahne_gorselleri": {
         "s1_info": {
-            "ortam_prompt": "\"A sun-drenched auditorium filled with warm, golden light, where a crowd of young volunteers mingle and interact, set against a backdrop of vibrant colors and textures, with cinematic lighting, 8k resolution, photorealistic details, and a subtle 35mm film grain, capturing the energetic atmosphere of a volunteer camp opening ceremony.\""
+            "ortam_prompt": "\"A vast, smoldering relief hub, set against a backdrop of charred remains, with warm golden light of sunset casting long shadows, amidst a haze of smoke and dust, where makeshift tents and rescue equipment stand, under a somber grey sky with cinematic lighting, in 8k resolution, photorealistic, with 35mm film grain, wide shot capturing the entire scene.\""
         },
         "s2_info": {
-            "ortam_prompt": "\"Cinematic lighting illuminates a grand conference hall with 8k resolution, photorealistic details, and 35mm film grain, where a sea of volunteers fills the room, surrounded by sleek, modern architecture, with warm, golden tones and deep shadows, as IYACA representatives stand at the forefront, set against a backdrop of expansive windows, filtering in soft, natural light, casting a sense of optimism and unity.\""
+            "ortam_prompt": "\"A devastated disaster zone after a catastrophic fire, with rescue efforts about to commence, under a somber, overcast sky with thick grey clouds, illuminated by the faint, warm glow of setting sun, casting long shadows across the charred, blackened landscape, with rescue vehicles and equipment scattered throughout, amidst a haze of smoke and ash, captured in cinematic lighting, 8k resolution, photorealistic, with 35mm film grain, in a wide shot, emphasizing the vastness of the destruction.\""
         },
         "s3_info": {
-            "ortam_prompt": "\"A dimly lit, high-ceilinged hallway with two diverging pathways, one lined with rows of sleek, modern computers and the other with vibrant, colorful posters, under cinematic lighting with warm tones, 8k resolution, photorealistic textures, and a subtle 35mm film grain, capturing the atmosphere of a pivotal crossroads.\""
+            "ortam_prompt": "\"A dimly lit, rustic humanitarian aid tent, with warm, golden light spilling from lanterns, casting long shadows across the crowded, chaotic space, where people from diverse backgrounds mingle, their faces a blur of concern and desperation, as the air is thick with the weight of unspoken words, amidst a cacophony of unfamiliar languages, with a cinematic, 8k resolution, photorealistic quality, infused with a subtle, 35mm film grain, evoking a sense of urgent, emotional connection, in a wide shot, with muted, earthy tones, and an atmosphere of frustration and longing.\""
         },
         "s4_info": {
-            "ortam_prompt": "\"A wide shot of a conference room with a group of volunteers seated, cinematic lighting with warm tones and sharp shadows, 8k resolution, photorealistic textures, and 35mm film grain, with a neutral color palette and subtle natural light pouring in through the windows, emphasizing the sense of community and learning.\""
+            "ortam_prompt": "\"A vast, dimly lit language laboratory with rows of sleek, modern computers and scattered papers, warm golden lighting casting long shadows on the walls, a sense of determination and focus filling the air, cinematic lighting, 8k resolution, photorealistic, with a subtle 35mm film grain, wide shot capturing the entire room.\""
         },
         "s5_info": {
-            "ortam_prompt": "\"A warm, golden light casts a sense of community over a bustling volunteer gathering on Road B, with a mix of vibrant colors and textures from diverse cultural backgrounds, yet a subtle haze of uncertainty and social anxiety lingers in the air, as if the language barrier and personal struggles are whispering in the shadows, captured in cinematic lighting, 8k resolution, photorealistic, with a hint of 35mm film grain, in a wide shot that encompasses the entire scene, conveying the emotional depth of human connection amidst challenges.\""
+            "ortam_prompt": "\"A vast, warmly-lit community center with cinematic lighting, 8k resolution, and photorealistic details, featuring a diverse group of volunteers in the background, with a mix of earthy tones and vibrant colors, surrounded by natural textures, and a subtle 35mm film grain, capturing the essence of a humanitarian hub in a wide shot.\""
         },
         "s6_info": {
-            "ortam_prompt": "\"A dark and chaotic scene of a volunteer departure, set in a dimly lit, rustic community center with worn wooden floors and faded humanitarian posters on the walls, where a sense of panic and desperation fills the air as the remaining volunteers scramble in distress, captured in cinematic lighting with warm golden hues and deep shadows, in 8k resolution with a subtle 35mm film grain, conveying a sense of urgency and chaos.\""
+            "ortam_prompt": "A devastated, war-torn area with ruins of buildings, debris-filled streets, and a gray, overcast sky, illuminated by a faint, diffused light, with cinematic lighting, 8k resolution, photorealistic, and 35mm film grain, capturing the desolate atmosphere in a wide shot."
         },
         "s7_info": {
-            "ortam_prompt": "\"Wide shot of a dimly lit, rustic community center on Road A, with warm golden lighting spilling from vintage lanterns, casting long shadows across worn wooden floors, as soft, muted colors of volunteer posters and notices adorn the walls, amidst a hint of cinematic film grain, in 8k resolution, with photorealistic textures, evoking a sense of determination and resilience.\""
+            "ortam_prompt": "\"A desolate, ravaged landscape stretches out under a somber, overcast sky, with remnants of destroyed buildings and debris scattered everywhere, illuminated by a faint, eerie glow, captured in cinematic lighting, with 8k resolution, photorealistic details, and a subtle 35mm film grain texture, conveying a sense of devastation and hopelessness.\""
         },
         "s8_info": {
-            "ortam_prompt": "A dimly lit, rustic community center on Route B, warm golden lighting casting long shadows on worn wooden floors, with an air of creative chaos, colorful murals and eclectic furniture, yet an undercurrent of tension and distrust palpable in the subdued atmosphere, cinematic lighting, 8k resolution, photorealistic, 35mm film grain."
+            "ortam_prompt": "\"A devastated, war-torn area with rubble-strewn streets, shattered glass, and crumbling buildings, illuminated by a faint, golden hour glow, with long shadows cast across the desolate landscape, cinematic lighting, 8k resolution, photorealistic, 35mm film grain, wide shot, muted color palette with accents of dusty earth tones and faded signage.\""
         },
         "s9_info": {
-            "ortam_prompt": "\"A dimly lit, rustic community center with warm, golden lighting, surrounded by earthy tones and natural textures, filled with a diverse group of people gathered in a large, open space, with cinematic lighting casting long shadows, 8k resolution, photorealistic, and subtle 35mm film grain, capturing the essence of a collective, wide-shot moment of communal discussion and problem-solving.\""
+            "ortam_prompt": "\"A devastated, post-apocalyptic landscape at dusk, with a rescue team's vehicles and equipment scattered in the distance, under a ominous, cloudy sky with warm, golden cinematic lighting, 8k resolution, photorealistic, and a hint of 35mm film grain, capturing the scene in a wide shot, with muted colors and contrasting shadows, emphasizing the desolate atmosphere and sense of urgency.\""
         },
         "s10_info": {
-            "ortam_prompt": "\"A warm, golden light fills a spacious, modern community center, with volunteers of diverse ages and backgrounds gathered together, surrounded by inspirational quotes and vibrant colorful murals, as they engage in lively discussions and collaborative activities, with a sense of camaraderie and empowerment, cinematic lighting, 8k resolution, photorealistic, 35mm film grain.\""
+            "ortam_prompt": "\"A desolate, ravaged landscape at dusk, with a rescue team's vehicles and equipment scattered in the distance, under a somber, orange-tinged sky with thick, grey clouds, illuminated by the faint, golden light of a setting sun, with deep shadows and misty atmosphere, cinematic lighting, 8k resolution, photorealistic, 35mm film grain.\""
         },
         "ending": {
-            "ortam_prompt": "\"A darkened, futuristic laboratory with sleek, metallic surfaces and pulsing blue neon lights, illuminated by a faint, cinematic glow, with subtle, 35mm film grain textures, in 8k resolution, photorealistic detail, and a wide shot perspective, capturing the eerie atmosphere of a simulation's completion.\""
+            "ortam_prompt": "\"A dimly lit, futuristic laboratory with sleek, metallic surfaces and holographic screens, bathed in a soft, ethereal blue glow, as the words 'Simülasyon Tamamlandı' emblazoned on a massive screen in bold, neon letters, with cinematic lighting, 8k resolution, photorealistic textures, and a hint of 35mm film grain, capturing the atmosphere in a wide shot, with an air of anticipation and technological advancement.\""
         }
     }
 }

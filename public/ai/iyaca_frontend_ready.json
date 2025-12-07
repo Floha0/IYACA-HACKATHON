@@ -1,634 +1,998 @@
 {
-    "id": 1765091220,
-    "title": "Gönüllülükte Zorluklar",
+    "id": 1765093004,
+    "title": "Yangın Sonrası Yardım Çalışmaları: Gönüllülerin Karşılaştığı Zorluklar",
     "coord": "Ana",
-    "description": "Bir gönüllü kampında genç gönüllülerin zorluklarını ve nasıl başa çıkacaklarını keşfeder.",
-    "difficulty": "Zor",
+    "description": "Yangın sonrası yardım çalışmalarında gönüllülerin karşılaştığı sosyal ve psikolojik zorluklar ve bu zorluklara nasıl çözüm bulunabileceği",
+    "difficulty": "Orta",
     "estimatedTime": "30 dk",
     "startNodeId": "s1_info",
-    "totalSteps": 51,
+    "totalSteps": 89,
     "nodes": {
         "s1_info": {
             "id": "s1_info",
             "type": "dialogue",
             "speaker": "",
-            "text": "ORTAM: Bir gönüllü kampı açılış töreni, güneş ışığıyla dolu bir salon, genç gönüllüler heyecanla birbirlerini tanıyorlar.",
-            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s1.png",
+            "text": "ORTAM: Yardım çalışmalarının başlangıç noktası, bir yangın sonrası yardım ekibi toplanma alanı.",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s1.png",
             "characterImage": "",
             "next": "s1_d1",
-            "environment": "Bir gönüllü kampı açılış töreni, güneş ışığıyla dolu bir salon, genç gönüllüler heyecanla birbirlerini tanıyorlar."
+            "environment": "Yardım çalışmalarının başlangıç noktası, bir yangın sonrası yardım ekibi toplanma alanı."
         },
         "s1_d1": {
             "id": "s1_d1",
             "type": "dialogue",
-            "speaker": "Ana Gönüllü Lider",
-            "text": "Hoş geldiniz, genç gönüllüler! Bugün burada IYACA'nın misyonuna katkıda bulunmak için bir araya geldik. Kendinizi tanıtmaya başladığınızda, birbirinizin yeteneklerini keşfedeceksiniz.",
-            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s1.png",
+            "speaker": "Ana",
+            "text": "Merhaba, ben de gönüllü olmak istiyorum. Nasıl yardım edebilirim?",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s1.png",
             "characterImage": "",
             "next": "s1_d2",
-            "environment": "Bir gönüllü kampı açılış töreni, güneş ışığıyla dolu bir salon, genç gönüllüler heyecanla birbirlerini tanıyorlar."
+            "environment": "Yardım çalışmalarının başlangıç noktası, bir yangın sonrası yardım ekibi toplanma alanı."
         },
         "s1_d2": {
             "id": "s1_d2",
             "type": "dialogue",
-            "speaker": "Yeni Gönüllü",
-            "text": "Merhaba, ben Ayşe. Benim ana ilgi alanım çevre korumadır. Sizinle çalışıp bir şeyler başarmaktan heyecan duyuyorum.",
-            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s1.png",
+            "speaker": "Gönüllü Lider",
+            "text": "Hoş geldin! Sana gerekli malzemeleri ve görevleri anlatacağız. Diğer gönüllülerle tanışarak başlayabilirsin.",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s1.png",
             "characterImage": "",
             "next": "s1_d3",
-            "environment": "Bir gönüllü kampı açılış töreni, güneş ışığıyla dolu bir salon, genç gönüllüler heyecanla birbirlerini tanıyorlar."
+            "environment": "Yardım çalışmalarının başlangıç noktası, bir yangın sonrası yardım ekibi toplanma alanı."
         },
         "s1_d3": {
             "id": "s1_d3",
             "type": "dialogue",
-            "speaker": "Diğer Gönüllü",
-            "text": "Ben de Emre, ben sosyal medya yönetiminde uzmanım. İnsanları bilgilendirmek ve topluluğa katkıda bulunmak istiyorum.",
-            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s1.png",
+            "speaker": "Ana",
+            "text": "Peki, hangi malzemelere ihtiyacımız var?",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s1.png",
+            "characterImage": "",
+            "next": "s1_d4",
+            "environment": "Yardım çalışmalarının başlangıç noktası, bir yangın sonrası yardım ekibi toplanma alanı."
+        },
+        "s1_d4": {
+            "id": "s1_d4",
+            "type": "dialogue",
+            "speaker": "Gönüllü Lider",
+            "text": "İlk olarak, temel yardım malzemeleri gibi su, gıda ve tıbbi malzemelere ihtiyacımız var.",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s1.png",
+            "characterImage": "",
+            "next": "s1_d5",
+            "environment": "Yardım çalışmalarının başlangıç noktası, bir yangın sonrası yardım ekibi toplanma alanı."
+        },
+        "s1_d5": {
+            "id": "s1_d5",
+            "type": "dialogue",
+            "speaker": "Ana",
+            "text": "Anladım, peki nasıl teslim edeceğiz?",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s1.png",
+            "characterImage": "",
+            "next": "s1_d6",
+            "environment": "Yardım çalışmalarının başlangıç noktası, bir yangın sonrası yardım ekibi toplanma alanı."
+        },
+        "s1_d6": {
+            "id": "s1_d6",
+            "type": "dialogue",
+            "speaker": "Gönüllü Lider",
+            "text": "Önce bölgeyi değerlendireceğiz, sonra yardıma ihtiyacı olan insanlara ulaşacağız.",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s1.png",
             "characterImage": "",
             "next": "s1_choice",
-            "environment": "Bir gönüllü kampı açılış töreni, güneş ışığıyla dolu bir salon, genç gönüllüler heyecanla birbirlerini tanıyorlar."
+            "environment": "Yardım çalışmalarının başlangıç noktası, bir yangın sonrası yardım ekibi toplanma alanı."
         },
         "s1_choice": {
             "id": "s1_choice",
             "type": "choice",
-            "speaker": "Sen (İç Ses)",
-            "text": "Acaba ben de burada doğru yerimi bulmuş muyum? Bir şeyler başarmak için yeterli yeteneklere sahip miyim?",
-            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s1.png",
+            "speaker": "",
+            "text": "SEÇİM: ",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s1.png",
             "characterImage": "",
             "choices": [
                 {
-                    "label": "Tanışmalarına devam etmek, herkesin birbirini daha iyi tanımasını sağlamak.",
+                    "label": "Ana, gönüllü ekibe katılır ve yardım çalışmalarına başlar.",
                     "next": "s2_info",
-                    "struggleCategory": "Sosyal"
+                    "struggleCategory": "Gönüllü Olma"
                 },
                 {
-                    "label": "IYACA'nın misyonunu daha ayrıntılı olarak öğrenmek, beklentilerini anlamak.",
-                    "next": "s2_info",
-                    "struggleCategory": "Bilgi"
+                    "label": "Ana, daha fazla bilgi almak için gönüllü liderle konuşmaya devam eder.",
+                    "next": "s1_d7",
+                    "struggleCategory": "Bilgi Toplama"
                 }
             ],
-            "environment": "Bir gönüllü kampı açılış töreni, güneş ışığıyla dolu bir salon, genç gönüllüler heyecanla birbirlerini tanıyorlar."
+            "environment": "Yardım çalışmalarının başlangıç noktası, bir yangın sonrası yardım ekibi toplanma alanı."
+        },
+        "s1_d7": {
+            "id": "s1_d7",
+            "type": "dialogue",
+            "speaker": "Ana",
+            "text": "Acaba gerçekten yardım edebilecek miyim? Başarılı olabilir miyim?",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s1.png",
+            "characterImage": "",
+            "next": "s2_info",
+            "environment": "Yardım çalışmalarının başlangıç noktası, bir yangın sonrası yardım ekibi toplanma alanı."
         },
         "s2_info": {
             "id": "s2_info",
             "type": "dialogue",
             "speaker": "",
-            "text": "ORTAM: Bir konferans salonu, IYACA temsilcileri gönüllülere organizasyonun amaçlarını ve hedeflerini anlatıyor.",
-            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s2.png",
+            "text": "ORTAM: Yangın后的 yardım çalışmalarının başlayacağı bölge.",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s2.png",
             "characterImage": "",
             "next": "s2_d1",
-            "environment": "Bir konferans salonu, IYACA temsilcileri gönüllülere organizasyonun amaçlarını ve hedeflerini anlatıyor."
+            "environment": "Yangın后的 yardım çalışmalarının başlayacağı bölge."
         },
         "s2_d1": {
             "id": "s2_d1",
             "type": "dialogue",
-            "speaker": "IYACA Temsilcisi",
-            "text": "IYACA, gençleri toplum için daha fazla şey yapma konusunda desteklemek ve onlara gerekli araçları sağlamak nhằmaktadır. Bizim ana hedefimiz, genç gönüllülerin potansiyellerini ortaya çıkarmak ve topluma katkılarını artırmaktır.",
-            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s2.png",
+            "speaker": "Ana",
+            "text": "Burada ne gibi yardımlara ihtiyaç var?",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s2.png",
             "characterImage": "",
             "next": "s2_d2",
-            "environment": "Bir konferans salonu, IYACA temsilcileri gönüllülere organizasyonun amaçlarını ve hedeflerini anlatıyor."
+            "environment": "Yangın后的 yardım çalışmalarının başlayacağı bölge."
         },
         "s2_d2": {
             "id": "s2_d2",
             "type": "dialogue",
-            "speaker": "Gönüllü",
-            "text": "Bu gerçekten ilham verici. Nasıl bir yol izleyerek bu hedeflere ulaşabiliriz?",
-            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s2.png",
+            "speaker": "Gönüllü Lider",
+            "text": "İlk olarak bölgeyi değerlendireceğiz. Sonra yardıma ihtiyacı olan insanlara ulaşacağız.",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s2.png",
             "characterImage": "",
             "next": "s2_d3",
-            "environment": "Bir konferans salonu, IYACA temsilcileri gönüllülere organizasyonun amaçlarını ve hedeflerini anlatıyor."
+            "environment": "Yangın后的 yardım çalışmalarının başlayacağı bölge."
         },
         "s2_d3": {
             "id": "s2_d3",
             "type": "dialogue",
-            "speaker": "Diğer Gönüllü",
-            "text": "Ben de öğrenmek ve nasıl katkıda bulunabileceğimi anlamak istiyorum.",
-            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s2.png",
+            "speaker": "Ana",
+            "text": "Peki, hangi yardımlar öncelikli?",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s2.png",
+            "characterImage": "",
+            "next": "s2_d4",
+            "environment": "Yangın后的 yardım çalışmalarının başlayacağı bölge."
+        },
+        "s2_d4": {
+            "id": "s2_d4",
+            "type": "dialogue",
+            "speaker": "Gönüllü Lider",
+            "text": "Öncelikle, acil durumda olan insanlara yardım etmek zorundayız.",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s2.png",
+            "characterImage": "",
+            "next": "s2_d5",
+            "environment": "Yangın后的 yardım çalışmalarının başlayacağı bölge."
+        },
+        "s2_d5": {
+            "id": "s2_d5",
+            "type": "dialogue",
+            "speaker": "Ana",
+            "text": "Anladım, peki nasıl belirleyeceğiz?",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s2.png",
+            "characterImage": "",
+            "next": "s2_d6",
+            "environment": "Yangın后的 yardım çalışmalarının başlayacağı bölge."
+        },
+        "s2_d6": {
+            "id": "s2_d6",
+            "type": "dialogue",
+            "speaker": "Gönüllü Lider",
+            "text": "Bölgeyi dolaşarak, insanlarla konuşarak belirleyeceğiz.",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s2.png",
             "characterImage": "",
             "next": "s2_choice",
-            "environment": "Bir konferans salonu, IYACA temsilcileri gönüllülere organizasyonun amaçlarını ve hedeflerini anlatıyor."
+            "environment": "Yangın后的 yardım çalışmalarının başlayacağı bölge."
         },
         "s2_choice": {
             "id": "s2_choice",
             "type": "choice",
-            "speaker": "Sen (İç Ses)",
-            "text": "Acaba ben bu süreçte başarılı olabilecek miyim? Başkalarına nasıl yardımcı olabilirim?",
-            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s2.png",
+            "speaker": "",
+            "text": "SEÇİM: ",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s2.png",
             "characterImage": "",
             "choices": [
                 {
-                    "label": "IYACA'nın misyonuna daha yakından bakmak, detayları öğrenmek.",
+                    "label": "Ana ve takım, yardım çalışmalarına başlar.",
                     "next": "s3_info",
-                    "struggleCategory": "Bilgi"
+                    "struggleCategory": "Gönüllü Olma"
                 },
                 {
-                    "label": "Hemen gönüllü işlerine başlamak, ilk adımları atmaya çalışmak.",
-                    "next": "s3_info",
-                    "struggleCategory": "Eylem"
+                    "label": "Ana, bölgeyi daha detaylı incelemek için zaman ister.",
+                    "next": "s2_d7",
+                    "struggleCategory": "Bilgi Toplama"
                 }
             ],
-            "environment": "Bir konferans salonu, IYACA temsilcileri gönüllülere organizasyonun amaçlarını ve hedeflerini anlatıyor."
+            "environment": "Yangın后的 yardım çalışmalarının başlayacağı bölge."
+        },
+        "s2_d7": {
+            "id": "s2_d7",
+            "type": "dialogue",
+            "speaker": "Ana",
+            "text": "Acaba yeterli donanıma sahip miyim? Yardıma ihtiyacı olan insanları gerçekten yardım edebilecek miyim?",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s2.png",
+            "characterImage": "",
+            "next": "s3_info",
+            "environment": "Yangın后的 yardım çalışmalarının başlayacağı bölge."
         },
         "s3_info": {
             "id": "s3_info",
             "type": "dialogue",
             "speaker": "",
-            "text": "ORTAM: Grup, iki farklı yolun temsilcileri tarafından yönlendiriliyor: Yol A (eğitim odaklı) ve Yol B (sosyal faaliyet odaklı).",
-            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s3.png",
+            "text": "ORTAM: Yardım ekibi, yardıma ihtiyacı olan insanlarla karşılaşır ancak dil bariyeri nedeniyle iletişim sorunları yaşar.",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s3.png",
             "characterImage": "",
             "next": "s3_d1",
-            "environment": "Grup, iki farklı yolun temsilcileri tarafından yönlendiriliyor: Yol A (eğitim odaklı) ve Yol B (sosyal faaliyet odaklı)."
+            "environment": "Yardım ekibi, yardıma ihtiyacı olan insanlarla karşılaşır ancak dil bariyeri nedeniyle iletişim sorunları yaşar."
         },
         "s3_d1": {
             "id": "s3_d1",
             "type": "dialogue",
-            "speaker": "Yol A Lideri",
-            "text": "Yol A'da, zaman yönetimi ve organizasyon becerileri üzerinde odaklanacağız. Bu beceriler, projelerinizi başarılı bir şekilde yürütmek için çok önemlidir.",
-            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s3.png",
+            "speaker": "Ana",
+            "text": "Dil bariyerini nasıl aşabiliriz?",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s3.png",
             "characterImage": "",
             "next": "s3_d2",
-            "environment": "Grup, iki farklı yolun temsilcileri tarafından yönlendiriliyor: Yol A (eğitim odaklı) ve Yol B (sosyal faaliyet odaklı)."
+            "environment": "Yardım ekibi, yardıma ihtiyacı olan insanlarla karşılaşır ancak dil bariyeri nedeniyle iletişim sorunları yaşar."
         },
         "s3_d2": {
             "id": "s3_d2",
             "type": "dialogue",
-            "speaker": "Yol B Lideri",
-            "text": "Yol B'de ise, sosyal faaliyetlere odaklanacağız. İnsanların bir araya gelerek birbirlerini tanımaları ve birlikte çalışarak güçlü bir topluluk oluşturmaları çok önemlidir.",
-            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s3.png",
+            "speaker": "Gönüllü",
+            "text": "Tercüman bulabiliriz belki.",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s3.png",
             "characterImage": "",
             "next": "s3_d3",
-            "environment": "Grup, iki farklı yolun temsilcileri tarafından yönlendiriliyor: Yol A (eğitim odaklı) ve Yol B (sosyal faaliyet odaklı)."
+            "environment": "Yardım ekibi, yardıma ihtiyacı olan insanlarla karşılaşır ancak dil bariyeri nedeniyle iletişim sorunları yaşar."
         },
         "s3_d3": {
             "id": "s3_d3",
             "type": "dialogue",
-            "speaker": "Diğer Gönüllü",
-            "text": "Ben sosyal faaliyetleri tercih ediyorum, insanlarla iletişim kurmayı seviyorum.",
-            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s3.png",
+            "speaker": "Ana",
+            "text": "Peki, nasıl bulacağız?",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s3.png",
+            "characterImage": "",
+            "next": "s3_d4",
+            "environment": "Yardım ekibi, yardıma ihtiyacı olan insanlarla karşılaşır ancak dil bariyeri nedeniyle iletişim sorunları yaşar."
+        },
+        "s3_d4": {
+            "id": "s3_d4",
+            "type": "dialogue",
+            "speaker": "Gönüllü",
+            "text": "Başkentte yaşayan gönüllülerden destek alabiliriz.",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s3.png",
+            "characterImage": "",
+            "next": "s3_d5",
+            "environment": "Yardım ekibi, yardıma ihtiyacı olan insanlarla karşılaşır ancak dil bariyeri nedeniyle iletişim sorunları yaşar."
+        },
+        "s3_d5": {
+            "id": "s3_d5",
+            "type": "dialogue",
+            "speaker": "Ana",
+            "text": "Anladım, peki nasıl iletişim kuracağız?",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s3.png",
+            "characterImage": "",
+            "next": "s3_d6",
+            "environment": "Yardım ekibi, yardıma ihtiyacı olan insanlarla karşılaşır ancak dil bariyeri nedeniyle iletişim sorunları yaşar."
+        },
+        "s3_d6": {
+            "id": "s3_d6",
+            "type": "dialogue",
+            "speaker": "Gönüllü",
+            "text": "El işaretleri ve basit cümleler kullanarak iletişim kurabiliriz.",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s3.png",
             "characterImage": "",
             "next": "s3_choice",
-            "environment": "Grup, iki farklı yolun temsilcileri tarafından yönlendiriliyor: Yol A (eğitim odaklı) ve Yol B (sosyal faaliyet odaklı)."
+            "environment": "Yardım ekibi, yardıma ihtiyacı olan insanlarla karşılaşır ancak dil bariyeri nedeniyle iletişim sorunları yaşar."
         },
         "s3_choice": {
             "id": "s3_choice",
             "type": "choice",
-            "speaker": "Sen (İç Ses)",
-            "text": "Hangi yolu seçmeliyim? Hangisi bana daha uygun geliyor?",
-            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s3.png",
+            "speaker": "",
+            "text": "SEÇİM: ",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s3.png",
             "characterImage": "",
             "choices": [
                 {
-                    "label": "Yol A'yı seçmek, eğitim ve kişisel gelişim üzerinde odaklanmak.",
+                    "label": "Dil bariyerini aşmaya çalışmak için gönüllü tercümanlarla birlikte çalışmak.",
                     "next": "s4_info",
-                    "struggleCategory": "Eğitim"
+                    "struggleCategory": "İletişim"
                 },
                 {
-                    "label": "Yol B'yi seçmek, sosyal faaliyetlere ve topluluk oluşturmaya odaklanmak.",
-                    "next": "s5_info",
-                    "struggleCategory": "Sosyal"
-                },
-                {
-                    "label": "Her iki yolun karışımını seçmek, dengeli bir yaklaşım uygulamak.",
-                    "next": "s4_info",
-                    "struggleCategory": "Denge"
+                    "label": "Farklı bir gruba yardım etmeye gitmek.",
+                    "next": "s3_d7",
+                    "struggleCategory": "Yardım"
                 }
             ],
-            "environment": "Grup, iki farklı yolun temsilcileri tarafından yönlendiriliyor: Yol A (eğitim odaklı) ve Yol B (sosyal faaliyet odaklı)."
+            "environment": "Yardım ekibi, yardıma ihtiyacı olan insanlarla karşılaşır ancak dil bariyeri nedeniyle iletişim sorunları yaşar."
+        },
+        "s3_d7": {
+            "id": "s3_d7",
+            "type": "dialogue",
+            "speaker": "Ana",
+            "text": "Dil bariyeri wirklich zor bir sorun. Acaba gerçekten aşabilecek miyim?",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s3.png",
+            "characterImage": "",
+            "next": "s4_info",
+            "environment": "Yardım ekibi, yardıma ihtiyacı olan insanlarla karşılaşır ancak dil bariyeri nedeniyle iletişim sorunları yaşar."
         },
         "s4_info": {
             "id": "s4_info",
             "type": "dialogue",
             "speaker": "",
-            "text": "ORTAM: Yol A'da gönüllüler, zaman yönetimi ve organizasyon becerileri hakkında eğitim almaya başlıyorlar.",
-            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s4.png",
+            "text": "ORTAM: Dil bariyerini aşmaya çalışan gönüllü ekibin bulunduğu yer.",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s4.png",
             "characterImage": "",
             "next": "s4_d1",
-            "environment": "Yol A'da gönüllüler, zaman yönetimi ve organizasyon becerileri hakkında eğitim almaya başlıyorlar."
+            "environment": "Dil bariyerini aşmaya çalışan gönüllü ekibin bulunduğu yer."
         },
         "s4_d1": {
             "id": "s4_d1",
             "type": "dialogue",
-            "speaker": "Eğitmen",
-            "text": "Zamanı etkili yönetmek, projelerinizi başarılı bir şekilde tamamlamanız için çok önemlidir. Bugün, size bazı etkili zaman yönetimi teknikleri göstereceğiz.",
-            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s4.png",
+            "speaker": "Ana",
+            "text": "Lütfen, yardımımıza ihtiyacınız var. Biz size yardım etmek istiyoruz.",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s4.png",
             "characterImage": "",
             "next": "s4_d2",
-            "environment": "Yol A'da gönüllüler, zaman yönetimi ve organizasyon becerileri hakkında eğitim almaya başlıyorlar."
+            "environment": "Dil bariyerini aşmaya çalışan gönüllü ekibin bulunduğu yer."
         },
         "s4_d2": {
             "id": "s4_d2",
             "type": "dialogue",
-            "speaker": "Gönüllü",
-            "text": "Bu gerçekten zor görünüyor. Acaba gerçekten başarılı olabilir miyim?",
-            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s4.png",
+            "speaker": "Aile Reisi",
+            "text": "Biz yardım istemiyoruz, teşekkür ederiz.",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s4.png",
             "characterImage": "",
             "next": "s4_d3",
-            "environment": "Yol A'da gönüllüler, zaman yönetimi ve organizasyon becerileri hakkında eğitim almaya başlıyorlar."
+            "environment": "Dil bariyerini aşmaya çalışan gönüllü ekibin bulunduğu yer."
         },
         "s4_d3": {
             "id": "s4_d3",
             "type": "dialogue",
-            "speaker": "Diğer Gönüllü",
-            "text": "Tabii ki olabilirsin, birlikte çalışarak öğreniriz.",
-            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s4.png",
+            "speaker": "Ana",
+            "text": "Peki, neden istemiyorsunuz? Yardıma gerçekten ihtiyacı var.",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s4.png",
+            "characterImage": "",
+            "next": "s4_d4",
+            "environment": "Dil bariyerini aşmaya çalışan gönüllü ekibin bulunduğu yer."
+        },
+        "s4_d4": {
+            "id": "s4_d4",
+            "type": "dialogue",
+            "speaker": "Aile Reisi",
+            "text": "Çünkü, yardımın gerçekten bize ulaşacağına inanmıyoruz.",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s4.png",
+            "characterImage": "",
+            "next": "s4_d5",
+            "environment": "Dil bariyerini aşmaya çalışan gönüllü ekibin bulunduğu yer."
+        },
+        "s4_d5": {
+            "id": "s4_d5",
+            "type": "dialogue",
+            "speaker": "Ana",
+            "text": "Anladım, peki nasıl yardımcı olabilirim?",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s4.png",
+            "characterImage": "",
+            "next": "s4_d6",
+            "environment": "Dil bariyerini aşmaya çalışan gönüllü ekibin bulunduğu yer."
+        },
+        "s4_d6": {
+            "id": "s4_d6",
+            "type": "dialogue",
+            "speaker": "Aile Reisi",
+            "text": "Sadece, bizimle birlikte kalın ve bize destek olun.",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s4.png",
             "characterImage": "",
             "next": "s4_choice",
-            "environment": "Yol A'da gönüllüler, zaman yönetimi ve organizasyon becerileri hakkında eğitim almaya başlıyorlar."
+            "environment": "Dil bariyerini aşmaya çalışan gönüllü ekibin bulunduğu yer."
         },
         "s4_choice": {
             "id": "s4_choice",
             "type": "choice",
-            "speaker": "Sen (İç Ses)",
-            "text": "Acaba bu eğitimlerden yeterli düzeyde yararlanabilecek miyim? Başkaları gibi başarılı olabilir miyim?",
-            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s4.png",
+            "speaker": "",
+            "text": "SEÇİM: ",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s4.png",
             "characterImage": "",
             "choices": [
                 {
-                    "label": "Eğitimlere devam etmek, öğrenmeye devam etmek.",
-                    "next": "s7_info",
-                    "struggleCategory": "Eğitim"
+                    "label": "Ana, familyanın isteksizliğine rağmen yardım etmekte ısrar eder.",
+                    "next": "s5_info",
+                    "struggleCategory": "İsrar"
                 },
                 {
-                    "label": "Kendi başına çalışma yöntemlerini denemek, bağımsız olarak ilerlemek.",
-                    "next": "s7_info",
-                    "struggleCategory": "Bağımsızlık"
+                    "label": "Ana, familyanın isteğini saygılar ve başka bir gruba yardım etmeye gider.",
+                    "next": "s4_d7",
+                    "struggleCategory": "Saygı"
                 }
             ],
-            "environment": "Yol A'da gönüllüler, zaman yönetimi ve organizasyon becerileri hakkında eğitim almaya başlıyorlar."
+            "environment": "Dil bariyerini aşmaya çalışan gönüllü ekibin bulunduğu yer."
+        },
+        "s4_d7": {
+            "id": "s4_d7",
+            "type": "dialogue",
+            "speaker": "Ana",
+            "text": "Aile wirklich zor bir durumda. Acaba gerçekten yardım edebilecek miyim?",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s4.png",
+            "characterImage": "",
+            "next": "s5_info",
+            "environment": "Dil bariyerini aşmaya çalışan gönüllü ekibin bulunduğu yer."
         },
         "s5_info": {
             "id": "s5_info",
             "type": "dialogue",
             "speaker": "",
-            "text": "ORTAM: Yol B'de gönüllüler, sosyal faaliyetlere katılıyorlar ancak dil bariyeri ve sosyal kaygılar iletişim sorunlarına yol açıyor.",
-            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s5.png",
+            "text": "ORTAM: Farklı bir gruba yardım eden gönüllü ekibin bulunduğu yer.",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s5.png",
             "characterImage": "",
             "next": "s5_d1",
-            "environment": "Yol B'de gönüllüler, sosyal faaliyetlere katılıyorlar ancak dil bariyeri ve sosyal kaygılar iletişim sorunlarına yol açıyor."
+            "environment": "Farklı bir gruba yardım eden gönüllü ekibin bulunduğu yer."
         },
         "s5_d1": {
             "id": "s5_d1",
             "type": "dialogue",
-            "speaker": "Gönüllü 1",
-            "text": "Merhaba, ben Türkçe konuşuyorum. Acaba siz de Türkçe konuşuyor musunuz?",
-            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s5.png",
+            "speaker": "Gönüllü",
+            "text": "Sizi buradan çıkarabiliriz, lütfen bize izin verin.",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s5.png",
             "characterImage": "",
             "next": "s5_d2",
-            "environment": "Yol B'de gönüllüler, sosyal faaliyetlere katılıyorlar ancak dil bariyeri ve sosyal kaygılar iletişim sorunlarına yol açıyor."
+            "environment": "Farklı bir gruba yardım eden gönüllü ekibin bulunduğu yer."
         },
         "s5_d2": {
             "id": "s5_d2",
             "type": "dialogue",
-            "speaker": "Gönüllü 2",
-            "text": "Hayır, ben İngilizce konuşuyorum. Biraz zorlanıyoruz gibi görünüyor.",
-            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s5.png",
+            "speaker": "Yardım Alan",
+            "text": "Teşekkür ederiz, çok minnettarız.",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s5.png",
             "characterImage": "",
             "next": "s5_d3",
-            "environment": "Yol B'de gönüllüler, sosyal faaliyetlere katılıyorlar ancak dil bariyeri ve sosyal kaygılar iletişim sorunlarına yol açıyor."
+            "environment": "Farklı bir gruba yardım eden gönüllü ekibin bulunduğu yer."
         },
         "s5_d3": {
             "id": "s5_d3",
             "type": "dialogue",
-            "speaker": "Diğer Gönüllü",
-            "text": "Ben biraz İngilizce biliyorum, tercümanlık yapabilirim.",
-            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s5.png",
+            "speaker": "Gönüllü",
+            "text": "Peki, nasıl yardımcı olabilirim?",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s5.png",
+            "characterImage": "",
+            "next": "s5_d4",
+            "environment": "Farklı bir gruba yardım eden gönüllü ekibin bulunduğu yer."
+        },
+        "s5_d4": {
+            "id": "s5_d4",
+            "type": "dialogue",
+            "speaker": "Yardım Alan",
+            "text": "Sadece, bizi buradan çıkarın ve güvende olmamızı sağlayın.",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s5.png",
+            "characterImage": "",
+            "next": "s5_d5",
+            "environment": "Farklı bir gruba yardım eden gönüllü ekibin bulunduğu yer."
+        },
+        "s5_d5": {
+            "id": "s5_d5",
+            "type": "dialogue",
+            "speaker": "Gönüllü",
+            "text": "Anladım, peki nasıl çıkarabiliriz?",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s5.png",
+            "characterImage": "",
+            "next": "s5_d6",
+            "environment": "Farklı bir gruba yardım eden gönüllü ekibin bulunduğu yer."
+        },
+        "s5_d6": {
+            "id": "s5_d6",
+            "type": "dialogue",
+            "speaker": "Yardım Alan",
+            "text": "Sadece, bizi takip edin ve size güvenin.",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s5.png",
             "characterImage": "",
             "next": "s5_choice",
-            "environment": "Yol B'de gönüllüler, sosyal faaliyetlere katılıyorlar ancak dil bariyeri ve sosyal kaygılar iletişim sorunlarına yol açıyor."
+            "environment": "Farklı bir gruba yardım eden gönüllü ekibin bulunduğu yer."
         },
         "s5_choice": {
             "id": "s5_choice",
             "type": "choice",
-            "speaker": "Sen (İç Ses)",
-            "text": "Dil bariyerini nasıl aşabilirim? İletişim sorunlarını nasıl çözebilirim?",
-            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s5.png",
+            "speaker": "",
+            "text": "SEÇİM: ",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s5.png",
             "characterImage": "",
             "choices": [
                 {
-                    "label": "Dil bariyerini aşmaya çalışmak, ortak bir dil bulmak.",
-                    "next": "s8_info",
-                    "struggleCategory": "İletişim"
+                    "label": "Gönüllü, yardıma devam eder.",
+                    "next": "s6_info",
+                    "struggleCategory": "Gönüllü Olma"
                 },
                 {
-                    "label": "Farklı bir sosyal faaliyet denemek, daha rahat hissedebileceğiniz bir.activity seçmek.",
-                    "next": "s8_info",
-                    "struggleCategory": "Sosyal"
+                    "label": "Gönüllü, olumsuz davranışlarda bulunur.",
+                    "next": "s5_d7",
+                    "struggleCategory": "Olumsuz Davranış"
                 }
             ],
-            "environment": "Yol B'de gönüllüler, sosyal faaliyetlere katılıyorlar ancak dil bariyeri ve sosyal kaygılar iletişim sorunlarına yol açıyor."
+            "environment": "Farklı bir gruba yardım eden gönüllü ekibin bulunduğu yer."
+        },
+        "s5_d7": {
+            "id": "s5_d7",
+            "type": "dialogue",
+            "speaker": "Ana",
+            "text": "Yardım gerçekten zor bir iş. Acaba gerçekten başarılı olabilecek miyim?",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s5.png",
+            "characterImage": "",
+            "next": "s6_info",
+            "environment": "Farklı bir gruba yardım eden gönüllü ekibin bulunduğu yer."
         },
         "s6_info": {
             "id": "s6_info",
             "type": "dialogue",
             "speaker": "",
-            "text": "ORTAM: Bir gönüllü, istikrarsızlık nedeniyle grubunu terk ediyor ve diğer gönüllüler arasında panik başlıyor.",
-            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s6.png",
+            "text": "ORTAM: Yardım ekibinin ulaştığı bir diğer bölge.",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s6.png",
             "characterImage": "",
             "next": "s6_d1",
-            "environment": "Bir gönüllü, istikrarsızlık nedeniyle grubunu terk ediyor ve diğer gönüllüler arasında panik başlıyor."
+            "environment": "Yardım ekibinin ulaştığı bir diğer bölge."
         },
         "s6_d1": {
             "id": "s6_d1",
             "type": "dialogue",
-            "speaker": "Terk Eden Gönüllü",
-            "text": "Üzgünüm, ancak ben bu grupta çalışamayacağım. Başka bir şeylere odaklanmam gerekiyor.",
-            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s6.png",
+            "speaker": "Ana",
+            "text": "Burada ne gibi yardımlara ihtiyaç var?",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s6.png",
             "characterImage": "",
             "next": "s6_d2",
-            "environment": "Bir gönüllü, istikrarsızlık nedeniyle grubunu terk ediyor ve diğer gönüllüler arasında panik başlıyor."
+            "environment": "Yardım ekibinin ulaştığı bir diğer bölge."
         },
         "s6_d2": {
             "id": "s6_d2",
             "type": "dialogue",
-            "speaker": "Diğer Gönüllü",
-            "text": "Oh no, bu kötü. Acaba biz de bırakmalı mıyız?",
-            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s6.png",
+            "speaker": "Gönüllü Lider",
+            "text": "İlk olarak bölgeyi değerlendireceğiz. Sonra yardıma ihtiyacı olan insanlara ulaşacağız.",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s6.png",
             "characterImage": "",
             "next": "s6_d3",
-            "environment": "Bir gönüllü, istikrarsızlık nedeniyle grubunu terk ediyor ve diğer gönüllüler arasında panik başlıyor."
+            "environment": "Yardım ekibinin ulaştığı bir diğer bölge."
         },
         "s6_d3": {
             "id": "s6_d3",
             "type": "dialogue",
-            "speaker": "Grup Lideri",
-            "text": "Hayır, biz birbirimize destek olmalıyız. Daha güçlü bir topluluk için birlikte çalışmaya devam edeceğiz.",
-            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s6.png",
+            "speaker": "Ana",
+            "text": "Peki, hangi yardımlar öncelikli?",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s6.png",
+            "characterImage": "",
+            "next": "s6_d4",
+            "environment": "Yardım ekibinin ulaştığı bir diğer bölge."
+        },
+        "s6_d4": {
+            "id": "s6_d4",
+            "type": "dialogue",
+            "speaker": "Gönüllü Lider",
+            "text": "Öncelikle, acil durumda olan insanlara yardım etmek zorundayız.",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s6.png",
+            "characterImage": "",
+            "next": "s6_d5",
+            "environment": "Yardım ekibinin ulaştığı bir diğer bölge."
+        },
+        "s6_d5": {
+            "id": "s6_d5",
+            "type": "dialogue",
+            "speaker": "Ana",
+            "text": "Anladım, peki nasıl belirleyeceğiz?",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s6.png",
+            "characterImage": "",
+            "next": "s6_d6",
+            "environment": "Yardım ekibinin ulaştığı bir diğer bölge."
+        },
+        "s6_d6": {
+            "id": "s6_d6",
+            "type": "dialogue",
+            "speaker": "Gönüllü Lider",
+            "text": "Bölgeyi dolaşarak, insanlarla konuşarak belirleyeceğiz.",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s6.png",
             "characterImage": "",
             "next": "s6_choice",
-            "environment": "Bir gönüllü, istikrarsızlık nedeniyle grubunu terk ediyor ve diğer gönüllüler arasında panik başlıyor."
+            "environment": "Yardım ekibinin ulaştığı bir diğer bölge."
         },
         "s6_choice": {
             "id": "s6_choice",
             "type": "choice",
-            "speaker": "Sen (İç Ses)",
-            "text": "Acaba ben de grubu terk etmeli miyim? Ya da birlikte çalışmaya devam etmeli miyim?",
-            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s6.png",
+            "speaker": "",
+            "text": "SEÇİM: ",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s6.png",
             "characterImage": "",
             "choices": [
                 {
-                    "label": "Grubun moralsini yükseltmeye çalışmak, birbirlerine destek olmak.",
-                    "next": "s9_info",
-                    "struggleCategory": "Sosyal"
+                    "label": "Ana ve takım, yardım çalışmalarına başlar.",
+                    "next": "s7_info",
+                    "struggleCategory": "Gönüllü Olma"
                 },
                 {
-                    "label": "Terk eden gönüllüye destek olmak, onun kararını anlamaya çalışmak.",
-                    "next": "s9_info",
-                    "struggleCategory": "Empati"
+                    "label": "Ana, bölgeyi daha detaylı incelemek için zaman ister.",
+                    "next": "s6_d7",
+                    "struggleCategory": "Bilgi Toplama"
                 }
             ],
-            "environment": "Bir gönüllü, istikrarsızlık nedeniyle grubunu terk ediyor ve diğer gönüllüler arasında panik başlıyor."
+            "environment": "Yardım ekibinin ulaştığı bir diğer bölge."
+        },
+        "s6_d7": {
+            "id": "s6_d7",
+            "type": "dialogue",
+            "speaker": "Ana",
+            "text": "Acaba yeterli donanıma sahip miyim? Yardıma ihtiyacı olan insanları gerçekten yardım edebilecek miyim?",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s6.png",
+            "characterImage": "",
+            "next": "s7_info",
+            "environment": "Yardım ekibinin ulaştığı bir diğer bölge."
         },
         "s7_info": {
             "id": "s7_info",
             "type": "dialogue",
             "speaker": "",
-            "text": "ORTAM: Yol A'da gönüllüler, zaman yönetimi konusunda küçük başarılar elde etmeye başlıyorlar ancak yeni zorluklar ortaya çıkıyor.",
-            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s7.png",
+            "text": "ORTAM: Yardım ekibinin ulaştığı bir diğer bölge.",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s7.png",
             "characterImage": "",
             "next": "s7_d1",
-            "environment": "Yol A'da gönüllüler, zaman yönetimi konusunda küçük başarılar elde etmeye başlıyorlar ancak yeni zorluklar ortaya çıkıyor."
+            "environment": "Yardım ekibinin ulaştığı bir diğer bölge."
         },
         "s7_d1": {
             "id": "s7_d1",
             "type": "dialogue",
-            "speaker": "Eğitmen",
-            "text": "Gördüğünüz gibi, zamanı etkili yönetmek mümkün. Ancak şimdi, daha besar projelerle karşı karşıyasınız.",
-            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s7.png",
+            "speaker": "Ana",
+            "text": "Burada ne gibi yardımlara ihtiyaç var?",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s7.png",
             "characterImage": "",
             "next": "s7_d2",
-            "environment": "Yol A'da gönüllüler, zaman yönetimi konusunda küçük başarılar elde etmeye başlıyorlar ancak yeni zorluklar ortaya çıkıyor."
+            "environment": "Yardım ekibinin ulaştığı bir diğer bölge."
         },
         "s7_d2": {
             "id": "s7_d2",
             "type": "dialogue",
-            "speaker": "Gönüllü",
-            "text": "Bu gerçekten zor görünüyor. Ancak çalışarak başarabileceğimize inanıyorum.",
-            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s7.png",
+            "speaker": "Gönüllü Lider",
+            "text": "İlk olarak bölgeyi değerlendireceğiz. Sonra yardıma ihtiyacı olan insanlara ulaşacağız.",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s7.png",
             "characterImage": "",
             "next": "s7_d3",
-            "environment": "Yol A'da gönüllüler, zaman yönetimi konusunda küçük başarılar elde etmeye başlıyorlar ancak yeni zorluklar ortaya çıkıyor."
+            "environment": "Yardım ekibinin ulaştığı bir diğer bölge."
         },
         "s7_d3": {
             "id": "s7_d3",
             "type": "dialogue",
-            "speaker": "Diğer Gönüllü",
-            "text": "Beraber çalışırsak, daha büyük projeleri de başarabiliriz.",
-            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s7.png",
+            "speaker": "Ana",
+            "text": "Peki, hangi yardımlar öncelikli?",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s7.png",
+            "characterImage": "",
+            "next": "s7_d4",
+            "environment": "Yardım ekibinin ulaştığı bir diğer bölge."
+        },
+        "s7_d4": {
+            "id": "s7_d4",
+            "type": "dialogue",
+            "speaker": "Gönüllü Lider",
+            "text": "Öncelikle, acil durumda olan insanlara yardım etmek zorundayız.",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s7.png",
+            "characterImage": "",
+            "next": "s7_d5",
+            "environment": "Yardım ekibinin ulaştığı bir diğer bölge."
+        },
+        "s7_d5": {
+            "id": "s7_d5",
+            "type": "dialogue",
+            "speaker": "Ana",
+            "text": "Anladım, peki nasıl belirleyeceğiz?",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s7.png",
+            "characterImage": "",
+            "next": "s7_d6",
+            "environment": "Yardım ekibinin ulaştığı bir diğer bölge."
+        },
+        "s7_d6": {
+            "id": "s7_d6",
+            "type": "dialogue",
+            "speaker": "Gönüllü Lider",
+            "text": "Bölgeyi dolaşarak, insanlarla konuşarak belirleyeceğiz.",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s7.png",
             "characterImage": "",
             "next": "s7_choice",
-            "environment": "Yol A'da gönüllüler, zaman yönetimi konusunda küçük başarılar elde etmeye başlıyorlar ancak yeni zorluklar ortaya çıkıyor."
+            "environment": "Yardım ekibinin ulaştığı bir diğer bölge."
         },
         "s7_choice": {
             "id": "s7_choice",
             "type": "choice",
-            "speaker": "Sen (İç Ses)",
-            "text": "Acaba ben bu yeni zorlukları aşabilecek miyim? Başkaları gibi başarılı olabilir miyim?",
-            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s7.png",
+            "speaker": "",
+            "text": "SEÇİM: ",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s7.png",
             "characterImage": "",
             "choices": [
                 {
-                    "label": "Projelere devam etmek, yeni zorlukları aşmaya çalışmak.",
-                    "next": "s9_info",
-                    "struggleCategory": "Eylem"
+                    "label": "Ana ve takım, yardım çalışmalarına başlar.",
+                    "next": "s8_info",
+                    "struggleCategory": "Gönüllü Olma"
                 },
                 {
-                    "label": "Yeni stratejiler geliştirmek, farklı bir yaklaşım denemek.",
-                    "next": "s9_info",
-                    "struggleCategory": "Strateji"
+                    "label": "Ana, bölgeyi daha detaylı incelemek için zaman ister.",
+                    "next": "s7_d7",
+                    "struggleCategory": "Bilgi Toplama"
                 }
             ],
-            "environment": "Yol A'da gönüllüler, zaman yönetimi konusunda küçük başarılar elde etmeye başlıyorlar ancak yeni zorluklar ortaya çıkıyor."
+            "environment": "Yardım ekibinin ulaştığı bir diğer bölge."
+        },
+        "s7_d7": {
+            "id": "s7_d7",
+            "type": "dialogue",
+            "speaker": "Ana",
+            "text": "Acaba yeterli donanıma sahip miyim? Yardıma ihtiyacı olan insanları gerçekten yardım edebilecek miyim?",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s7.png",
+            "characterImage": "",
+            "next": "s8_info",
+            "environment": "Yardım ekibinin ulaştığı bir diğer bölge."
         },
         "s8_info": {
             "id": "s8_info",
             "type": "dialogue",
             "speaker": "",
-            "text": "ORTAM: Yol B'de sosyal faaliyetler, yaratıcı çözümler ile daha etkili hale geliyor ancak bazı gönüllüler arasında güvensizlik artıyor.",
-            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s8.png",
+            "text": "ORTAM: Yardım ekibinin ulaştığı bir diğer bölge.",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s8.png",
             "characterImage": "",
             "next": "s8_d1",
-            "environment": "Yol B'de sosyal faaliyetler, yaratıcı çözümler ile daha etkili hale geliyor ancak bazı gönüllüler arasında güvensizlik artıyor."
+            "environment": "Yardım ekibinin ulaştığı bir diğer bölge."
         },
         "s8_d1": {
             "id": "s8_d1",
             "type": "dialogue",
-            "speaker": "Gönüllü Lider",
-            "text": "Gördüğünüz gibi, birlikte çalışarak çok şey başarmak mümkün. Ancak bazı arkadaşlarımız güvensizlik yaşanıyor.",
-            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s8.png",
+            "speaker": "Ana",
+            "text": "Burada ne gibi yardımlara ihtiyaç var?",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s8.png",
             "characterImage": "",
             "next": "s8_d2",
-            "environment": "Yol B'de sosyal faaliyetler, yaratıcı çözümler ile daha etkili hale geliyor ancak bazı gönüllüler arasında güvensizlik artıyor."
+            "environment": "Yardım ekibinin ulaştığı bir diğer bölge."
         },
         "s8_d2": {
             "id": "s8_d2",
             "type": "dialogue",
-            "speaker": "Gönüllü",
-            "text": "Evet, bana da böyle geliyor. Acaba nasıl güvensizliği aşabiliriz?",
-            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s8.png",
+            "speaker": "Gönüllü Lider",
+            "text": "İlk olarak bölgeyi değerlendireceğiz. Sonra yardıma ihtiyacı olan insanlara ulaşacağız.",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s8.png",
             "characterImage": "",
             "next": "s8_d3",
-            "environment": "Yol B'de sosyal faaliyetler, yaratıcı çözümler ile daha etkili hale geliyor ancak bazı gönüllüler arasında güvensizlik artıyor."
+            "environment": "Yardım ekibinin ulaştığı bir diğer bölge."
         },
         "s8_d3": {
             "id": "s8_d3",
             "type": "dialogue",
-            "speaker": "Diğer Gönüllü",
-            "text": "Birbirimize daha açık ve dürüst davranarak güvensizliği aşabiliriz.",
-            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s8.png",
+            "speaker": "Ana",
+            "text": "Peki, hangi yardımlar öncelikli?",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s8.png",
+            "characterImage": "",
+            "next": "s8_d4",
+            "environment": "Yardım ekibinin ulaştığı bir diğer bölge."
+        },
+        "s8_d4": {
+            "id": "s8_d4",
+            "type": "dialogue",
+            "speaker": "Gönüllü Lider",
+            "text": "Öncelikle, acil durumda olan insanlara yardım etmek zorundayız.",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s8.png",
+            "characterImage": "",
+            "next": "s8_d5",
+            "environment": "Yardım ekibinin ulaştığı bir diğer bölge."
+        },
+        "s8_d5": {
+            "id": "s8_d5",
+            "type": "dialogue",
+            "speaker": "Ana",
+            "text": "Anladım, peki nasıl belirleyeceğiz?",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s8.png",
+            "characterImage": "",
+            "next": "s8_d6",
+            "environment": "Yardım ekibinin ulaştığı bir diğer bölge."
+        },
+        "s8_d6": {
+            "id": "s8_d6",
+            "type": "dialogue",
+            "speaker": "Gönüllü Lider",
+            "text": "Bölgeyi dolaşarak, insanlarla konuşarak belirleyeceğiz.",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s8.png",
             "characterImage": "",
             "next": "s8_choice",
-            "environment": "Yol B'de sosyal faaliyetler, yaratıcı çözümler ile daha etkili hale geliyor ancak bazı gönüllüler arasında güvensizlik artıyor."
+            "environment": "Yardım ekibinin ulaştığı bir diğer bölge."
         },
         "s8_choice": {
             "id": "s8_choice",
             "type": "choice",
-            "speaker": "Sen (İç Ses)",
-            "text": "Güvensizliği nasıl aşabilirim? İnsanların bana güvenmesini nasıl sağlayabilirim?",
-            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s8.png",
+            "speaker": "",
+            "text": "SEÇİM: ",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s8.png",
             "characterImage": "",
             "choices": [
                 {
-                    "label": "Güvensizliği aşmak için çalışmak, açık ve dürüst iletişim kurmaya odaklanmak.",
+                    "label": "Ana ve takım, yardım çalışmalarına başlar.",
                     "next": "s9_info",
-                    "struggleCategory": "İletişim"
+                    "struggleCategory": "Gönüllü Olma"
                 },
                 {
-                    "label": "Farklı bir sosyal faaliyet denemek, daha rahat hissedebileceğiniz bir.activity seçmek.",
-                    "next": "s9_info",
-                    "struggleCategory": "Sosyal"
+                    "label": "Ana, bölgeyi daha detaylı incelemek için zaman ister.",
+                    "next": "s8_d7",
+                    "struggleCategory": "Bilgi Toplama"
                 }
             ],
-            "environment": "Yol B'de sosyal faaliyetler, yaratıcı çözümler ile daha etkili hale geliyor ancak bazı gönüllüler arasında güvensizlik artıyor."
+            "environment": "Yardım ekibinin ulaştığı bir diğer bölge."
+        },
+        "s8_d7": {
+            "id": "s8_d7",
+            "type": "dialogue",
+            "speaker": "Ana",
+            "text": "Acaba yeterli donanıma sahip miyim? Yardıma ihtiyacı olan insanları gerçekten yardım edebilecek miyim?",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s8.png",
+            "characterImage": "",
+            "next": "s9_info",
+            "environment": "Yardım ekibinin ulaştığı bir diğer bölge."
         },
         "s9_info": {
             "id": "s9_info",
             "type": "dialogue",
             "speaker": "",
-            "text": "ORTAM: Her iki yolun gönüllüleri bir araya geliyor ve yaşanan sorunları açıkça tartışıyor, çözüm yolları aramaya başlıyorlar.",
-            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s9.png",
+            "text": "ORTAM: Yardım ekibinin ulaştığı bir diğer bölge.",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s9.png",
             "characterImage": "",
             "next": "s9_d1",
-            "environment": "Her iki yolun gönüllüleri bir araya geliyor ve yaşanan sorunları açıkça tartışıyor, çözüm yolları aramaya başlıyorlar."
+            "environment": "Yardım ekibinin ulaştığı bir diğer bölge."
         },
         "s9_d1": {
             "id": "s9_d1",
             "type": "dialogue",
-            "speaker": "Yol A Lideri",
-            "text": "Gördüğümüz gibi, her iki yol da zorluklar yaşadı. Ancak birlikte çalışarak çok şey başarmak mümkün.",
-            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s9.png",
+            "speaker": "Ana",
+            "text": "Burada ne gibi yardımlara ihtiyaç var?",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s9.png",
             "characterImage": "",
             "next": "s9_d2",
-            "environment": "Her iki yolun gönüllüleri bir araya geliyor ve yaşanan sorunları açıkça tartışıyor, çözüm yolları aramaya başlıyorlar."
+            "environment": "Yardım ekibinin ulaştığı bir diğer bölge."
         },
         "s9_d2": {
             "id": "s9_d2",
             "type": "dialogue",
-            "speaker": "Yol B Lideri",
-            "text": "Evet, birlikte çalışarak güvensizliği aşabilir ve daha güçlü bir topluluk oluşturabiliriz.",
-            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s9.png",
+            "speaker": "Gönüllü Lider",
+            "text": "İlk olarak bölgeyi değerlendireceğiz. Sonra yardıma ihtiyacı olan insanlara ulaşacağız.",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s9.png",
             "characterImage": "",
             "next": "s9_d3",
-            "environment": "Her iki yolun gönüllüleri bir araya geliyor ve yaşanan sorunları açıkça tartışıyor, çözüm yolları aramaya başlıyorlar."
+            "environment": "Yardım ekibinin ulaştığı bir diğer bölge."
         },
         "s9_d3": {
             "id": "s9_d3",
             "type": "dialogue",
-            "speaker": "Diğer Gönüllü",
-            "text": "Birlikte çalışarak, birbirimize destek olarak daha başarılı olabiliriz.",
-            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s9.png",
+            "speaker": "Ana",
+            "text": "Peki, hangi yardımlar öncelikli?",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s9.png",
+            "characterImage": "",
+            "next": "s9_d4",
+            "environment": "Yardım ekibinin ulaştığı bir diğer bölge."
+        },
+        "s9_d4": {
+            "id": "s9_d4",
+            "type": "dialogue",
+            "speaker": "Gönüllü Lider",
+            "text": "Öncelikle, acil durumda olan insanlara yardım etmek zorundayız.",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s9.png",
+            "characterImage": "",
+            "next": "s9_d5",
+            "environment": "Yardım ekibinin ulaştığı bir diğer bölge."
+        },
+        "s9_d5": {
+            "id": "s9_d5",
+            "type": "dialogue",
+            "speaker": "Ana",
+            "text": "Anladım, peki nasıl belirleyeceğiz?",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s9.png",
+            "characterImage": "",
+            "next": "s9_d6",
+            "environment": "Yardım ekibinin ulaştığı bir diğer bölge."
+        },
+        "s9_d6": {
+            "id": "s9_d6",
+            "type": "dialogue",
+            "speaker": "Gönüllü Lider",
+            "text": "Bölgeyi dolaşarak, insanlarla konuşarak belirleyeceğiz.",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s9.png",
             "characterImage": "",
             "next": "s9_choice",
-            "environment": "Her iki yolun gönüllüleri bir araya geliyor ve yaşanan sorunları açıkça tartışıyor, çözüm yolları aramaya başlıyorlar."
+            "environment": "Yardım ekibinin ulaştığı bir diğer bölge."
         },
         "s9_choice": {
             "id": "s9_choice",
             "type": "choice",
-            "speaker": "Sen (İç Ses)",
-            "text": "Acaba gerçekten birlikte çalışarak başarılı olabilir miyiz? Birbirimize nasıl destek olabiliriz?",
-            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s9.png",
+            "speaker": "",
+            "text": "SEÇİM: ",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s9.png",
             "characterImage": "",
             "choices": [
                 {
-                    "label": "Birlikte çalışmaya devam etmek, ortak bir çözüm bulmaya çalışmak.",
+                    "label": "Ana ve takım, yardım çalışmalarına başlar.",
                     "next": "s10_info",
-                    "struggleCategory": "İşbirliği"
+                    "struggleCategory": "Gönüllü Olma"
                 },
                 {
-                    "label": "Farklı bir yol denemek, birbirinden bağımsız olarak ilerlemek.",
-                    "next": "s10_info",
-                    "struggleCategory": "Bağımsızlık"
+                    "label": "Ana, bölgeyi daha detaylı incelemek için zaman ister.",
+                    "next": "s9_d7",
+                    "struggleCategory": "Bilgi Toplama"
                 }
             ],
-            "environment": "Her iki yolun gönüllüleri bir araya geliyor ve yaşanan sorunları açıkça tartışıyor, çözüm yolları aramaya başlıyorlar."
+            "environment": "Yardım ekibinin ulaştığı bir diğer bölge."
+        },
+        "s9_d7": {
+            "id": "s9_d7",
+            "type": "dialogue",
+            "speaker": "Ana",
+            "text": "Acaba yeterli donanıma sahip miyim? Yardıma ihtiyacı olan insanları gerçekten yardım edebilecek miyim?",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s9.png",
+            "characterImage": "",
+            "next": "s10_info",
+            "environment": "Yardım ekibinin ulaştığı bir diğer bölge."
         },
         "s10_info": {
             "id": "s10_info",
             "type": "dialogue",
             "speaker": "",
-            "text": "ORTAM: Gönüllüler, IYACA'nın misyonuna uygun olarak potansiyellerini ortaya çıkarmaya başlıyor ve birbirlerine destek olmayı öğreniyorlar.",
-            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s10.png",
+            "text": "ORTAM: Yardım ekibinin ulaştığı son bölge.",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s10.png",
             "characterImage": "",
             "next": "s10_d1",
-            "environment": "Gönüllüler, IYACA'nın misyonuna uygun olarak potansiyellerini ortaya çıkarmaya başlıyor ve birbirlerine destek olmayı öğreniyorlar."
+            "environment": "Yardım ekibinin ulaştığı son bölge."
         },
         "s10_d1": {
             "id": "s10_d1",
             "type": "dialogue",
-            "speaker": "Ana Gönüllü Lider",
-            "text": "Gördüğünüz gibi, birlikte çalışarak çok şey başarmak mümkün. IYACA'nın misyonuna uygun olarak, birbirimize destek olmayı öğrendik.",
-            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s10.png",
+            "speaker": "Ana",
+            "text": "Burada ne gibi yardımlara ihtiyaç var?",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s10.png",
             "characterImage": "",
             "next": "s10_d2",
-            "environment": "Gönüllüler, IYACA'nın misyonuna uygun olarak potansiyellerini ortaya çıkarmaya başlıyor ve birbirlerine destek olmayı öğreniyorlar."
+            "environment": "Yardım ekibinin ulaştığı son bölge."
         },
         "s10_d2": {
             "id": "s10_d2",
             "type": "dialogue",
-            "speaker": "Gönüllü",
-            "text": "Evet, gerçekten çok şey öğrendim. Bu deneyim bana çok şey kazandırdı.",
-            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s10.png",
+            "speaker": "Gönüllü Lider",
+            "text": "İlk olarak bölgeyi değerlendireceğiz. Sonra yardıma ihtiyacı olan insanlara ulaşacağız.",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s10.png",
             "characterImage": "",
             "next": "s10_d3",
-            "environment": "Gönüllüler, IYACA'nın misyonuna uygun olarak potansiyellerini ortaya çıkarmaya başlıyor ve birbirlerine destek olmayı öğreniyorlar."
+            "environment": "Yardım ekibinin ulaştığı son bölge."
         },
         "s10_d3": {
             "id": "s10_d3",
             "type": "dialogue",
-            "speaker": "Diğer Gönüllü",
-            "text": "Ben de çok şey öğrendim. Birlikte çalışarak daha güçlü bir topluluk oluşturduk.",
-            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s10.png",
+            "speaker": "Ana",
+            "text": "Peki, hangi yardımlar öncelikli?",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s10.png",
             "characterImage": "",
-            "next": "s10_choice",
-            "environment": "Gönüllüler, IYACA'nın misyonuna uygun olarak potansiyellerini ortaya çıkarmaya başlıyor ve birbirlerine destek olmayı öğreniyorlar."
+            "next": "s10_d4",
+            "environment": "Yardım ekibinin ulaştığı son bölge."
         },
-        "s10_choice": {
-            "id": "s10_choice",
-            "type": "choice",
-            "speaker": "Sen (İç Ses)",
-            "text": "Acaba ben de bu deneyimi başka insanlarla paylaşabilir miyim? Başkalarına nasıl yardımcı olabilirim?",
-            "image": "/ai/assets/gonullulukte_zorluklar/scenes/s10.png",
+        "s10_d4": {
+            "id": "s10_d4",
+            "type": "dialogue",
+            "speaker": "Gönüllü Lider",
+            "text": "Öncelikle, acil durumda olan insanlara yardım etmek zorundayız.",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s10.png",
             "characterImage": "",
-            "choices": [
-                {
-                    "label": "IYACA'nın misyonuna devam etmek, başka projelerde çalışmak.",
-                    "next": "ending",
-                    "struggleCategory": "Sürdürülebilirlik"
-                },
-                {
-                    "label": "Yeni bir gönüllü projesi başlatmak, başka bir alanda çalışmak.",
-                    "next": "ending",
-                    "struggleCategory": "Girişimcilik"
-                }
-            ],
-            "environment": "Gönüllüler, IYACA'nın misyonuna uygun olarak potansiyellerini ortaya çıkarmaya başlıyor ve birbirlerine destek olmayı öğreniyorlar."
+            "next": "s10_d5",
+            "environment": "Yardım ekibinin ulaştığı son bölge."
+        },
+        "s10_d5": {
+            "id": "s10_d5",
+            "type": "dialogue",
+            "speaker": "Ana",
+            "text": "Anladım, peki nasıl belirleyeceğiz?",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s10.png",
+            "characterImage": "",
+            "next": "s10_d6",
+            "environment": "Yardım ekibinin ulaştığı son bölge."
+        },
+        "s10_d6": {
+            "id": "s10_d6",
+            "type": "dialogue",
+            "speaker": "Gönüllü Lider",
+            "text": "Bölgeyi dolaşarak, insanlarla konuşarak belirleyeceğiz.",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/s10.png",
+            "characterImage": "",
+            "next": "ending",
+            "environment": "Yardım ekibinin ulaştığı son bölge."
         },
         "ending": {
             "id": "ending",
             "type": "ending",
             "speaker": "",
             "text": "Simülasyon Tamamlandı.",
-            "image": "/ai/assets/gonullulukte_zorluklar/scenes/ending.png",
+            "image": "/ai/assets/yangin_sonrasi_yardim_calismalari__gonullulerin_karsilastigi_zorluklar/scenes/ending.png",
             "characterImage": ""
         }
     }
