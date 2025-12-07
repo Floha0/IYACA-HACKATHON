@@ -164,6 +164,7 @@ class MultiAgentGenerator:
         {rich_text}
 
         KOORDİNATÖR ADI: {coord_name}
+        GÖNÜLLÜ ADI: Brad
 
         HEDEF ŞEMA (TypeScript):
         type ScenarioNode = {{
@@ -171,27 +172,41 @@ class MultiAgentGenerator:
             type: 'dialogue' | 'choice' | 'ending';
             speaker: string; ("Sen (İç Ses)", "Sen", "{coord_name} (Koordinatör)", "")
             text: string; (Metni aynen al)
-            image: ""; 
-            characterImage: "";
+            subtitle?: "",
+            image: "";
+            characterImage?: "";
+            environment?: "";
             next?: string;
             choices?: [ {{ "label": "...", "next": "...", "struggleCategory": "..." }} ]
         }}
 
         KRİTİK KURALLAR:
         1. **NODE ZİNCİRİ:** Her sahneyi parçala:
-           - Info (Ortam) -> Dialogue 1 -> Dialogue 2 -> ... -> Choice -> (Sonraki Sahne Info).
+           - Sahne 1 Dialogue 1 -> Sahne 1 Dialogue 2 -> ... -> Choice -> (Sonraki Sahne Dialogu 1).
            - Sahneleri birbirine `next` ile bağla. Zinciri koparma.
+           - Environment hikayedeki mekan olacak. Kısa mekan ve/veya gün isimleri yaz. Örnek: Ofis - Gün 5
 
-        2. **SAHNE SAYISI:** Metinde 10 sahne var. JSON çıktısında da 10 sahne olmalı.
+        2. **KARAKTERLER:**
+           - En fazla 1 gönüllü ve 1 kordinator olucak.
+           - characterImage kısmını konuşan karakter eğer gönüllü ise /characters/x.png (x şunlardan biri olmalı: Brad, Elena, Bella) ile doldur.
+           - characterImage kısmını konuşan karakter eğer kordinator ise /characters/Ana_1.png ile doldur.
+           - image kısmını ise /scenarios/x.png (x yerine şunlardan birini seç, bir sahnenin bütün nodeları aynı olmalı: background_airport.png, background_class.png, background_kids.png, background_office.png, background_dirty_room.png) yaz
+
+        3. **SAHNE SAYISI:** Metinde 10 sahne var. JSON çıktısında da 10 sahne olmalı.
            - s1_... den başlayıp s10_... a kadar git.
 
-        3. **SEÇİMLER (CHOICE):**
+        4. **SEÇİMLER (CHOICE):**
            - `choices` dizisi EN AZ 2 seçenek içermeli.
            - Tek seçenek varsa, sen mantıklı bir "Vazgeç/Risk Al" seçeneği uydur.
+           - eğer cevap düzgün bir cevap ise struggleCategory ekleme, değil ise ekle.
 
-        4. **BİTİŞ (ENDING):**
+        5. **BİTİŞ (ENDING):**
            - 10. Sahne bittikten sonra MUTLAKA `id: "ending"` olan, `type: "ending"` bir node ekle.
            - Son diyalog bu "ending" node'una bağlanmalı (`next: "ending"`).
+
+        6. **TEXT VS SUBTITLE:**
+           - Eğer speaker biz veya bizim iç sesimiz ise text'teki metin subtitle'da olmalı, text boş kalmalı.
+           - Eğer konuşan kişi kordinator ya da gönüllü ise subtitle'a gerek yok.
 
         ÇIKTI FORMATI:
         {{

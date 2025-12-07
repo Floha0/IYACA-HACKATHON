@@ -163,7 +163,7 @@ export const scenarios: Record<number, Simulation> = {
                 text: "I felt like you were not listening yesterday. I tried to explain the activity and you walked away.",
                 subtitle: "(Şok oldun, sadece malzeme almaya gitmiştin.)",
                 image: "/scenarios/background_class.png",
-                characterImage: "/characters/Elena_3.png",
+                characterImage: "/characters/Elena.png",
                 environment: "Toplantı Odası • Gün 12",
                 choices: [
                     // YENİ: struggleCategory eklendi
@@ -277,7 +277,7 @@ export const scenarios: Record<number, Simulation> = {
                 speaker: "Elena (Gönüllü)",
                 text: "Mehmet, her zaman bu kadar ciddi misin? (Gülüyorlar, ama sen rahatsız oldun.)",
                 image: "/scenarios/background_class.png",
-                characterImage: "/characters/Elena_3.png",
+                characterImage: "/characters/Elena.png",
                 environment: "Grup Toplantısı • Gün 55",
                 choices: [
                     { label: "A) İçinden kırılıp sessizleş", next: "sahne-11-A" },
