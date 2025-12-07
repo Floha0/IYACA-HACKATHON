@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useAuth } from '@/context/AuthContext';
-import { LogOut, User as UserIcon } from 'lucide-react';
+import { LogOut, User as UserIcon, PlusCircle } from 'lucide-react'; // PlusCircle ikonu eklendi
 
 export default function Navbar() {
     const { user, logout } = useAuth();
@@ -10,7 +10,7 @@ export default function Navbar() {
     return (
         <header className="flex items-center justify-between whitespace-nowrap border-b border-gray-200 dark:border-gray-700 px-6 sm:px-10 py-4 bg-background-light dark:bg-background-dark sticky top-0 z-50">
 
-            {/* Logo Alanı (Aynı) */}
+            {/* Logo Alanı */}
             <Link href="/" className="flex items-center gap-4 text-text-light dark:text-text-dark">
                 <div className="text-primary w-8 h-8">
                     <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
@@ -26,12 +26,16 @@ export default function Navbar() {
                     <Link href="/simulations" className="text-sm font-medium text-text-muted-light hover:text-primary transition-colors">
                         Tüm Simülasyonlar
                     </Link>
+
+                    {/* Sadece giriş yapmışsa gösterilen linkler */}
                     {user && (
-                        <Link href="/my-simulations" className="text-sm font-medium text-text-muted-light hover:text-primary transition-colors">
-                            Simülasyonlarım
-                        </Link>
+                        <>
+                            <Link href="/my-simulations" className="text-sm font-medium text-text-muted-light hover:text-primary transition-colors">
+                                Simülasyonlarım
+                            </Link>
+                        </>
                     )}
-                    {/* DÜZELTME 1: href="/about" yapıldı */}
+
                     <Link href="/about" className="text-sm font-medium text-text-muted-light hover:text-primary transition-colors">
                         Hakkımızda
                     </Link>
@@ -41,8 +45,13 @@ export default function Navbar() {
             {/* Sağ Taraf */}
             <div className="flex items-center gap-2">
                 {user ? (
-                    <div className="flex items-center gap-4">
-                        {/* DÜZELTME 2: Profil kısmına tıklanınca /profile'a git */}
+                    <div className="flex items-center gap-8">
+                        {/* OLUŞTUR */}
+                        <Link href="/create" className="flex items-center gap-1 text-sm font-bold text-purple-600 hover:text-purple-700 transition-colors">
+                            <PlusCircle size={16} />
+                            Oluştur
+                        </Link>
+
                         <Link href="/profile" className="flex items-center gap-2 text-sm font-bold text-gray-700 dark:text-gray-200 hover:opacity-80 transition-opacity">
                             <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary">
                                 <UserIcon size={18} />
@@ -58,14 +67,12 @@ export default function Navbar() {
                         </button>
                     </div>
                 ) : (
-                    // GİRİŞ YAPILMAMIŞSA
                     <>
                         <Link href="/login">
                             <button className="flex min-w-[84px] cursor-pointer items-center justify-center rounded-lg h-10 px-4 bg-transparent border border-gray-300 hover:bg-gray-100 text-text-light text-sm font-bold transition-colors dark:border-gray-600 dark:hover:bg-gray-800">
                                 Giriş Yap
                             </button>
                         </Link>
-                        {/* GÜNCELLENEN KISIM: href direkt /register oldu */}
                         <Link href="/register">
                             <button className="flex min-w-[84px] cursor-pointer items-center justify-center rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold shadow-soft hover:brightness-105 transition-all">
                                 Kayıt Ol

@@ -6,9 +6,18 @@ import random
 from groq import Groq
 import dotenv
 import httpx
+from pathlib import Path
+import io
+import sys
+
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8')
+
+current_dir = Path(__file__).parent
+env_path = current_dir / ".env.local"
 
 # API Key Kontrolü
-dotenv.load_dotenv(".env.local")
+dotenv.load_dotenv(env_path)
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
 # --- IYACA BİLGİ BANKASI ---
@@ -17,7 +26,9 @@ KURUM: IYACA. MİSYON: Gençlerin potansiyellerini ortaya çıkarmak.
 TEMALAR: Zaman Yönetimi, Yetersizlik Hissi, Dil Bariyeri, Sosyal Kaygılar, İstikrarsızlık.
 """
 
-OUTPUT_FILE = "iyaca_frontend_ready.json"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+OUTPUT_FILE = os.path.join(BASE_DIR, "..", "public", "iyaca_frontend_ready.json")
+# OUTPUT_FILE = "../public/iyaca_frontend_ready.json"
 
 
 class MultiAgentGenerator:

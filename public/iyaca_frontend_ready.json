@@ -1,0 +1,703 @@
+{
+    "id": 1765087159,
+    "title": "Yeni Simülasyon",
+    "description": "",
+    "difficulty": "Orta",
+    "estimatedTime": "15 dk",
+    "startNodeId": "s1_info",
+    "totalSteps": 61,
+    "nodes": {
+        "s1_info": {
+            "id": "s1_info",
+            "type": "dialogue",
+            "speaker": "",
+            "text": "ORTAM: Genç gönüllülerle dolu bir etkinlik alanında, Elif ilk defa bu kadar fazla sayıda gönüllü ile buluşuyor. Etkinlik alanı renkli ve coşkulu, herkes birbirini tanıma telaşı içinde.",
+            "image": "/scenarios/background_office.png",
+            "characterImage": "/characters/Ana_1.png",
+            "next": "s1_d1"
+        },
+        "s1_d1": {
+            "id": "s1_d1",
+            "type": "dialogue",
+            "speaker": "Elif",
+            "text": "Merhaba herkes, ben Elif. Bu gönüllülük hikayesine başlarken çok heyecanlıyım. Hepimize birlikte harika şeyler yapacağımızdan eminim.",
+            "image": "",
+            "characterImage": "",
+            "next": "s1_d2"
+        },
+        "s1_d2": {
+            "id": "s1_d2",
+            "type": "dialogue",
+            "speaker": "Genç Gönüllü",
+            "text": "Merhaba Elif, biz de seni tanımaktan mutluluk duyuyoruz. Sence bugün neler konuşacağız?",
+            "image": "",
+            "characterImage": "",
+            "next": "s1_d3"
+        },
+        "s1_d3": {
+            "id": "s1_d3",
+            "type": "dialogue",
+            "speaker": "Elif (İç Ses)",
+            "text": "Sen, Elif, gerçekten hazırlıklı mısın? Bu kadar fazla gönüllü ile çalışmak nasıl olacak?",
+            "image": "",
+            "characterImage": "",
+            "next": "s1_d4"
+        },
+        "s1_d4": {
+            "id": "s1_d4",
+            "type": "dialogue",
+            "speaker": "Diğer Genç Gönüllü",
+            "text": "Elif, seninle konuşmak ve seni daha iyi tanımak isteriz. Sence nasıl başlayabiliriz?",
+            "image": "",
+            "characterImage": "",
+            "next": "s1_d5"
+        },
+        "s1_d5": {
+            "id": "s1_d5",
+            "type": "dialogue",
+            "speaker": "Elif",
+            "text": "Tabii, çok isterim. Bugün birbirimizi tanıyalım ve gönüllülük hikayemizin başlangıcını yapalım.",
+            "image": "",
+            "characterImage": "",
+            "next": "s1_choice"
+        },
+        "s1_choice": {
+            "id": "s1_choice",
+            "type": "choice",
+            "speaker": "",
+            "text": "Elif, genç gönüllülerle sohbet etmeye başlar, herkesin birbirini tanımasına yardımcı olur.",
+            "image": "",
+            "characterImage": "",
+            "choices": [
+                {
+                    "label": "A) Elif, genç gönüllülerle sohbet etmeye başlar, herkesin birbirini tanımasına yardımcı olur.",
+                    "next": "s2_info",
+                    "struggleCategory": "Tanışma"
+                },
+                {
+                    "label": "B) Elif, direkt gönüllülük projelerine geçmek ister, herkesi motive etmeye çalışır.",
+                    "next": "s2_info",
+                    "struggleCategory": "Motivasyon"
+                },
+                {
+                    "label": "C) Elif, bir grup çalışması önerir, böylece herkes birbirini ve projeleri daha iyi anlayabilir.",
+                    "next": "s2_info",
+                    "struggleCategory": "Grup Çalışması"
+                }
+            ]
+        },
+        "s2_info": {
+            "id": "s2_info",
+            "type": "dialogue",
+            "speaker": "",
+            "text": "ORTAM: Etkinlik alanında, gönüllü projeleri hakkında genel bir bakış sunuluyor. Projeler çeşitlilik gösteriyor, genç gönüllüler ilgiyle dinliyor.",
+            "image": "",
+            "characterImage": "",
+            "next": "s2_d1"
+        },
+        "s2_d1": {
+            "id": "s2_d1",
+            "type": "dialogue",
+            "speaker": "Proje Lideri",
+            "text": "Bu projeler, toplumun farklı kesimlerine yardım etmeyi amaçlıyor. Her biri önemli ve değerlidir. Sizin gibi genç gönüllülere ihtiyacımız var.",
+            "image": "",
+            "characterImage": "",
+            "next": "s2_d2"
+        },
+        "s2_d2": {
+            "id": "s2_d2",
+            "type": "dialogue",
+            "speaker": "Genç Gönüllü",
+            "text": "Hangi projede çalışacağımı seçmek zorundayım, çok fazla seçeneğin olması beni karıştırdı. Nasıl karar vereceğimi bilemiyorum.",
+            "image": "",
+            "characterImage": "",
+            "next": "s2_d3"
+        },
+        "s2_d3": {
+            "id": "s2_d3",
+            "type": "dialogue",
+            "speaker": "Elif (İç Ses)",
+            "text": "Sen, Elif, nasıl yardımcı olabilirsin? Herkesin kendine uygun bir proje bulmasını sağlamak wichtig.",
+            "image": "",
+            "characterImage": "",
+            "next": "s2_d4"
+        },
+        "s2_d4": {
+            "id": "s2_d4",
+            "type": "dialogue",
+            "speaker": "Diğer Genç Gönüllü",
+            "text": "Ben de benzer şekilde düşünüyorum. Projeleri daha iyi anlamak için neler yapabiliriz?",
+            "image": "",
+            "characterImage": "",
+            "next": "s2_choice"
+        },
+        "s2_choice": {
+            "id": "s2_choice",
+            "type": "choice",
+            "speaker": "",
+            "text": "Elif, genç gönüllülere projeleri tanıtmaya devam etmeyi önerir, böylece herkes doğru kararı verebilir.",
+            "image": "",
+            "characterImage": "",
+            "choices": [
+                {
+                    "label": "A) Elif, genç gönüllülere projeleri tanıtmaya devam etmeyi önerir, böylece herkes doğru kararı verebilir.",
+                    "next": "s3_info",
+                    "struggleCategory": "Proje Tanıtımı"
+                },
+                {
+                    "label": "B) Elif, kendi deneyimlerini paylaşarak genç gönüllülere ilham vermeyi dener, böylece projelerin önemini vurgular.",
+                    "next": "s3_info",
+                    "struggleCategory": "İlham Vermek"
+                },
+                {
+                    "label": "C) Elif, küçük gruplar oluşturur, böylece herkes projeleri daha derinlemesine tartışabilir.",
+                    "next": "s3_info",
+                    "struggleCategory": "Grup Tartışması"
+                }
+            ]
+        },
+        "s3_info": {
+            "id": "s3_info",
+            "type": "dialogue",
+            "speaker": "",
+            "text": "ORTAM: Elif ve genç gönüllüler, gönüllülük projelerine başladıktan sonra karşılaştıkları ilk zorluklarla yüzleşiyorlar. Herkes birbirine destek olmaya çalışıyor.",
+            "image": "",
+            "characterImage": "",
+            "next": "s3_d1"
+        },
+        "s3_d1": {
+            "id": "s3_d1",
+            "type": "dialogue",
+            "speaker": "Elif",
+            "text": "Biri zaman yönetimi zorluğuyla karşılaşırken, diğeri dil bariyeriyle karşılaşıyor. Her iki durum da zorlu. Nasıl üstesinden gelebiliriz?",
+            "image": "",
+            "characterImage": "",
+            "next": "s3_d2"
+        },
+        "s3_d2": {
+            "id": "s3_d2",
+            "type": "dialogue",
+            "speaker": "Genç Gönüllü",
+            "text": "Ben zamanımı nasıl etkili bir şekilde yönetebilirim? Bu gerçekten zor geliyor.",
+            "image": "",
+            "characterImage": "",
+            "next": "s3_d3"
+        },
+        "s3_d3": {
+            "id": "s3_d3",
+            "type": "dialogue",
+            "speaker": "Diğer Genç Gönüllü",
+            "text": "Ben ise dil bariyerini aşmak için neler yapabilirim? Başkalarına nasıl yardım edebilirim?",
+            "image": "",
+            "characterImage": "",
+            "next": "s3_d4"
+        },
+        "s3_d4": {
+            "id": "s3_d4",
+            "type": "dialogue",
+            "speaker": "Elif (İç Ses)",
+            "text": "Sen, Elif, genç gönüllülere nasıl rehberlik edebilirsin? Onların zorluklarını anlamak wichtig.",
+            "image": "",
+            "characterImage": "",
+            "next": "s3_choice"
+        },
+        "s3_choice": {
+            "id": "s3_choice",
+            "type": "choice",
+            "speaker": "",
+            "text": "Elif, zaman yönetimi hakkında tavsiyelerde bulunur, böylece herkes daha verimli olabilir.",
+            "image": "",
+            "characterImage": "",
+            "choices": [
+                {
+                    "label": "A) Elif, zaman yönetimi hakkında tavsiyelerde bulunur, böylece herkes daha verimli olabilir.",
+                    "next": "s4_info",
+                    "struggleCategory": "Zaman Yönetimi"
+                },
+                {
+                    "label": "B) Elif, dil öğrenimi almaya başlamanın önemini vurgular, dil bariyerini aşmak için yardımlar önerir.",
+                    "next": "s4_info",
+                    "struggleCategory": "Dil Öğrenimi"
+                },
+                {
+                    "label": "C) Elif, genç gönüllülere birlikte çalışmanın değerini öğretir, böylece herkes birbirine destek olabilir.",
+                    "next": "s4_info",
+                    "struggleCategory": "Birlikte Çalışma"
+                }
+            ]
+        },
+        "s4_info": {
+            "id": "s4_info",
+            "type": "dialogue",
+            "speaker": "",
+            "text": "ORTAM: Elif, genç gönüllülere zaman yönetimi hakkında rehberlik ediyor. Dil öğrenimi de önemli bir konu olarak gündeme geliyor.",
+            "image": "",
+            "characterImage": "",
+            "next": "s4_d1"
+        },
+        "s4_d1": {
+            "id": "s4_d1",
+            "type": "dialogue",
+            "speaker": "Elif",
+            "text": "Zamanınızı planlamak ve önceliklendirmek çok önemli. Bu şekilde daha verimli olabileceksiniz. Ayrıca, dil öğrenimi de iletişim kurmak için çok değerli.",
+            "image": "",
+            "characterImage": "",
+            "next": "s4_d2"
+        },
+        "s4_d2": {
+            "id": "s4_d2",
+            "type": "dialogue",
+            "speaker": "Genç Gönüllü",
+            "text": "Anladım, teşekkür ederim. Şimdi daha iyi zaman yönetebileceğimi düşünüyorum. Ancak dil öğrenimi için ne yapmalıyım?",
+            "image": "",
+            "characterImage": "",
+            "next": "s4_d3"
+        },
+        "s4_d3": {
+            "id": "s4_d3",
+            "type": "dialogue",
+            "speaker": "Diğer Genç Gönüllü",
+            "text": "Ben de benzer şekilde düşünüyorum. Dil bariyerini aşmak için nasıl bir yol izlemeliyim?",
+            "image": "",
+            "characterImage": "",
+            "next": "s4_d4"
+        },
+        "s4_d4": {
+            "id": "s4_d4",
+            "type": "dialogue",
+            "speaker": "Elif (İç Ses)",
+            "text": "Sen, Elif, genç gönüllülere nasıl praktik yardım sağlayabilirsin? Onların başarıları wichtig.",
+            "image": "",
+            "characterImage": "",
+            "next": "s4_choice"
+        },
+        "s4_choice": {
+            "id": "s4_choice",
+            "type": "choice",
+            "speaker": "",
+            "text": "Elif, genç gönüllüye küçük bir görev vererek zaman yönetimini test eder, böylece pratik öğrenme sağlanır.",
+            "image": "",
+            "characterImage": "",
+            "choices": [
+                {
+                    "label": "A) Elif, genç gönüllüye küçük bir görev vererek zaman yönetimini test eder, böylece pratik öğrenme sağlanır.",
+                    "next": "s5_info",
+                    "struggleCategory": "Pratik Öğrenme"
+                },
+                {
+                    "label": "B) Elif, genç gönüllüye bir sonraki etkinliğe hazırlanması için rehberlik eder, böylece herkes daha iyi hazırlanabilir.",
+                    "next": "s5_info",
+                    "struggleCategory": "Etkinlik Hazırlığı"
+                },
+                {
+                    "label": "C) Elif, dil öğrenimi kaynakları önerir, böylece dil bariyeri daha kolay aşılabilir.",
+                    "next": "s5_info",
+                    "struggleCategory": "Dil Öğrenimi Kaynakları"
+                }
+            ]
+        },
+        "s5_info": {
+            "id": "s5_info",
+            "type": "dialogue",
+            "speaker": "",
+            "text": "ORTAM: Diğeri dil bariyerini aşmak için dil öğrenimi almaya başlıyor. Dil öğrenimi önemli bir adım olarak görülüyor.",
+            "image": "",
+            "characterImage": "",
+            "next": "s5_d1"
+        },
+        "s5_d1": {
+            "id": "s5_d1",
+            "type": "dialogue",
+            "speaker": "Dil Öğretmeni",
+            "text": "Dil öğrenimi, iletişim kurmak ve farklı kültürleri anlamak için çok önemlidir. Sizin gibi genç gönüllülere dil öğrenimi vermek bizim için önemli.",
+            "image": "",
+            "characterImage": "",
+            "next": "s5_d2"
+        },
+        "s5_d2": {
+            "id": "s5_d2",
+            "type": "dialogue",
+            "speaker": "Genç Gönüllü",
+            "text": "Kommünikasyon hatası yapmaktan korkuyorum, nasıl üstesinden gelebilirim? Dil öğrenimi sayesinde daha iyi iletişim kurabilir miyim?",
+            "image": "",
+            "characterImage": "",
+            "next": "s5_d3"
+        },
+        "s5_d3": {
+            "id": "s5_d3",
+            "type": "dialogue",
+            "speaker": "Elif (İç Ses)",
+            "text": "Sen, Elif, dil öğrenimi sürecinde nasıl yardımcı olabilirsin? Genç gönüllülere güven vermek wichtig.",
+            "image": "",
+            "characterImage": "",
+            "next": "s5_d4"
+        },
+        "s5_d4": {
+            "id": "s5_d4",
+            "type": "dialogue",
+            "speaker": "Diğer Genç Gönüllü",
+            "text": "Ben de benzer şekilde düşünüyorum. Dil öğrenimi almak ve iletişim kurmak için neler yapabilirim?",
+            "image": "",
+            "characterImage": "",
+            "next": "s5_choice"
+        },
+        "s5_choice": {
+            "id": "s5_choice",
+            "type": "choice",
+            "speaker": "",
+            "text": "Elif, genç gönüllüye dil öğrenimini desteklemek için kaynaklar önerir, böylece dil öğrenimi daha etkili olabilir.",
+            "image": "",
+            "characterImage": "",
+            "choices": [
+                {
+                    "label": "A) Elif, genç gönüllüye dil öğrenimini desteklemek için kaynaklar önerir, böylece dil öğrenimi daha etkili olabilir.",
+                    "next": "s6_info",
+                    "struggleCategory": "Dil Öğrenimi Kaynakları"
+                },
+                {
+                    "label": "B) Elif, genç gönüllüyü dil pratik etmeye teşvik eder, böylece iletişim yeteneği gelişir.",
+                    "next": "s6_info",
+                    "struggleCategory": "Dil Pratiği"
+                },
+                {
+                    "label": "C) Elif, dil öğrenimi grubu oluşturur, böylece herkes birlikte öğrenir ve destek olabilir.",
+                    "next": "s6_info",
+                    "struggleCategory": "Dil Öğrenimi Grubu"
+                }
+            ]
+        },
+        "s6_info": {
+            "id": "s6_info",
+            "type": "dialogue",
+            "speaker": "",
+            "text": "ORTAM: Her iki yolu takip eden karakterler, yetersizlik hissi ve sosyal kaygılara karşı mücadele verirken. Herkes birbirine destek vermeye çalışıyor.",
+            "image": "",
+            "characterImage": "",
+            "next": "s6_d1"
+        },
+        "s6_d1": {
+            "id": "s6_d1",
+            "type": "dialogue",
+            "speaker": "Genç Gönüllü",
+            "text": "Bazen yetersiz hissettiğim anlar oluyor, ne yapmalıyım? Nasıl daha güvende hissedebilirim?",
+            "image": "",
+            "characterImage": "",
+            "next": "s6_d2"
+        },
+        "s6_d2": {
+            "id": "s6_d2",
+            "type": "dialogue",
+            "speaker": "Diğer Genç Gönüllü",
+            "text": "Ben de benzer hissediıyorum, birlikte nasıl üstesinden gelebiliriz? Sizin gibi deneyimli birinden rehberlik almak önemli.",
+            "image": "",
+            "characterImage": "",
+            "next": "s6_d3"
+        },
+        "s6_d3": {
+            "id": "s6_d3",
+            "type": "dialogue",
+            "speaker": "Elif",
+            "text": "Hepinizin önemli ve değerli olduğunu unutmayın. Birlikte çalışarak her şeyi başarabilirsiniz.",
+            "image": "",
+            "characterImage": "",
+            "next": "s6_d4"
+        },
+        "s6_d4": {
+            "id": "s6_d4",
+            "type": "dialogue",
+            "speaker": "Elif (İç Ses)",
+            "text": "Sen, Elif, genç gönüllülere nasıl cesaret verebilirsin? Onların güveni wichtig.",
+            "image": "",
+            "characterImage": "",
+            "next": "s6_choice"
+        },
+        "s6_choice": {
+            "id": "s6_choice",
+            "type": "choice",
+            "speaker": "",
+            "text": "Elif, genç gönüllülere kendi deneyimlerinden bahseder, böylece onlar da benzer şekilde motive olabilirler.",
+            "image": "",
+            "characterImage": "",
+            "choices": [
+                {
+                    "label": "A) Elif, genç gönüllülere kendi deneyimlerinden bahseder, böylece onlar da benzer şekilde motive olabilirler.",
+                    "next": "s7_info",
+                    "struggleCategory": "Kendi Deneyimleri"
+                },
+                {
+                    "label": "B) Elif, genç gönüllülere destek olmak için bir araya gelmelerini önerir, böylece herkes birbirine yakın hissedebilir.",
+                    "next": "s7_info",
+                    "struggleCategory": "Birlikte Destek"
+                },
+                {
+                    "label": "C) Elif, genç gönüllülere birlikte çalışmanın değerini öğretir, böylece herkes birbirini destekleyebilir.",
+                    "next": "s7_info",
+                    "struggleCategory": "Birlikte Çalışma"
+                }
+            ]
+        },
+        "s7_info": {
+            "id": "s7_info",
+            "type": "dialogue",
+            "speaker": "",
+            "text": "ORTAM: İnstikrarsızlık karşısında genç gönüllüler, kararlılıklarını yeniden değerlendirmek zorunda kalıyor. Herkes birbirine destek vermeye çalışıyor.",
+            "image": "",
+            "characterImage": "",
+            "next": "s7_d1"
+        },
+        "s7_d1": {
+            "id": "s7_d1",
+            "type": "dialogue",
+            "speaker": "Genç Gönüllü",
+            "text": "Projeden ayrılma kararı aldım, çok zor geliyor. Nasıl devam edebilirim?",
+            "image": "",
+            "characterImage": "",
+            "next": "s7_d2"
+        },
+        "s7_d2": {
+            "id": "s7_d2",
+            "type": "dialogue",
+            "speaker": "Elif",
+            "text": "Kararlı kalmanız ve zorlukların üstesinden gelmeniz çok önemli. Neden böyle bir karar aldığınızı anlatır mısınız?",
+            "image": "",
+            "characterImage": "",
+            "next": "s7_d3"
+        },
+        "s7_d3": {
+            "id": "s7_d3",
+            "type": "dialogue",
+            "speaker": "Elif (İç Ses)",
+            "text": "Sen, Elif, genç gönüllülere nasıl yardımcı olabilirsin? Onların kararlılığı wichtig.",
+            "image": "",
+            "characterImage": "",
+            "next": "s7_d4"
+        },
+        "s7_d4": {
+            "id": "s7_d4",
+            "type": "dialogue",
+            "speaker": "Diğer Genç Gönüllü",
+            "text": "Ben de benzer şekilde düşünüyorum. Projemiz için nasıl devam edebilirim?",
+            "image": "",
+            "characterImage": "",
+            "next": "s7_choice"
+        },
+        "s7_choice": {
+            "id": "s7_choice",
+            "type": "choice",
+            "speaker": "",
+            "text": "Elif, genç gönüllüye projenin önemini hatırlatır, böylece o da amacını hatırlayabilir.",
+            "image": "",
+            "characterImage": "",
+            "choices": [
+                {
+                    "label": "A) Elif, genç gönüllüye projenin önemini hatırlatır, böylece o da amacını hatırlayabilir.",
+                    "next": "s8_info",
+                    "struggleCategory": "Proje Önemi"
+                },
+                {
+                    "label": "B) Elif, genç gönüllüye alternatif çözümler önerir, böylece o da başka seçenekler düşünebilir.",
+                    "next": "s8_info",
+                    "struggleCategory": "Alternatif Çözümler"
+                },
+                {
+                    "label": "C) Elif, genç gönüllülere birlikte çalışmanın değerini öğretir, böylece herkes birbirine destek olabilir.",
+                    "next": "s8_info",
+                    "struggleCategory": "Birlikte Çalışma"
+                }
+            ]
+        },
+        "s8_info": {
+            "id": "s8_info",
+            "type": "dialogue",
+            "speaker": "",
+            "text": "ORTAM: Gönüllülük projelerindeki ilerleme ve genç gönüllülerin büyümeleri. Herkes birbirine gururla bakıyor.",
+            "image": "",
+            "characterImage": "",
+            "next": "s8_d1"
+        },
+        "s8_d1": {
+            "id": "s8_d1",
+            "type": "dialogue",
+            "speaker": "Proje Lideri",
+            "text": "Projeler iyi ilerlemekte, genç gönüllüler çok şey öğreniyorlar. Sizin gibi genç gönüllülere ihtiyacımız var.",
+            "image": "",
+            "characterImage": "",
+            "next": "s8_d2"
+        },
+        "s8_d2": {
+            "id": "s8_d2",
+            "type": "dialogue",
+            "speaker": "Genç Gönüllü",
+            "text": "Evet, ben de çok şey öğrendim ve büyüdüm. Ancak mali kaynak eksikliği gibi bir sorunla karşılaşıyoruz. Nasıl çözümler bulabiliriz?",
+            "image": "",
+            "characterImage": "",
+            "next": "s8_d3"
+        },
+        "s8_d3": {
+            "id": "s8_d3",
+            "type": "dialogue",
+            "speaker": "Elif (İç Ses)",
+            "text": "Sen, Elif, молодым gönüllülere nasıl yardımcı olabilirsin? Onların başarıları wichtig.",
+            "image": "",
+            "characterImage": "",
+            "next": "s8_d4"
+        },
+        "s8_d4": {
+            "id": "s8_d4",
+            "type": "dialogue",
+            "speaker": "Diğer Genç Gönüllü",
+            "text": "Ben de benzer şekilde düşünüyorum. Projelerimiz için nasıl daha iyi kaynaklar bulabiliriz?",
+            "image": "",
+            "characterImage": "",
+            "next": "s8_choice"
+        },
+        "s8_choice": {
+            "id": "s8_choice",
+            "type": "choice",
+            "speaker": "",
+            "text": "Elif, mali kaynak bulmak için önerilerde bulunur, böylece projeler devam edebilir.",
+            "image": "",
+            "characterImage": "",
+            "choices": [
+                {
+                    "label": "A) Elif, mali kaynak bulmak için önerilerde bulunur, böylece projeler devam edebilir.",
+                    "next": "s9_info",
+                    "struggleCategory": "Mali Kaynak"
+                },
+                {
+                    "label": "B) Elif, genç gönüllülere kaynak bulma konusunda rehberlik eder, böylece herkes birlikte çalışabilir.",
+                    "next": "s9_info",
+                    "struggleCategory": "Kaynak Bulma"
+                },
+                {
+                    "label": "C) Elif, genç gönüllülere birlikte çalışma değerini öğretir, böylece herkes birbirine destek olabilir.",
+                    "next": "s9_info",
+                    "struggleCategory": "Birlikte Çalışma"
+                }
+            ]
+        },
+        "s9_info": {
+            "id": "s9_info",
+            "type": "dialogue",
+            "speaker": "",
+            "text": "ORTAM: Son kritik karar anı - Yol A ve Yol B birleşir. Herkes birlikte karar vermeye çalışıyor.",
+            "image": "",
+            "characterImage": "",
+            "next": "s9_d1"
+        },
+        "s9_d1": {
+            "id": "s9_d1",
+            "type": "dialogue",
+            "speaker": "Elif",
+            "text": "Her iki yol da önemli ve zorlukların üstesinden gelmek için birleşmeliyiz. birlikte daha güçlü olabiliriz.",
+            "image": "",
+            "characterImage": "",
+            "next": "s9_d2"
+        },
+        "s9_d2": {
+            "id": "s9_d2",
+            "type": "dialogue",
+            "speaker": "Genç Gönüllü",
+            "text": "Anladım, birlikte daha güçlü olabiliriz. Nasıl birlikte çalışabiliriz?",
+            "image": "",
+            "characterImage": "",
+            "next": "s9_d3"
+        },
+        "s9_d3": {
+            "id": "s9_d3",
+            "type": "dialogue",
+            "speaker": "Elif (İç Ses)",
+            "text": "Sen, Elif, genç gönüllülere nasıl yardımcı olabilirsin? Onların birliği wichtig.",
+            "image": "",
+            "characterImage": "",
+            "next": "s9_d4"
+        },
+        "s9_d4": {
+            "id": "s9_d4",
+            "type": "dialogue",
+            "speaker": "Diğer Genç Gönüllü",
+            "text": "Ben de benzer şekilde düşünüyorum. Birlikte nasıl devam edebiliriz?",
+            "image": "",
+            "characterImage": "",
+            "next": "s9_choice"
+        },
+        "s9_choice": {
+            "id": "s9_choice",
+            "type": "choice",
+            "speaker": "",
+            "text": "Elif, genç gönüllülere birleştirici bir görev verir, böylece herkes birlikte çalışabilir.",
+            "image": "",
+            "characterImage": "",
+            "choices": [
+                {
+                    "label": "A) Elif, genç gönüllülere birleştirici bir görev verir, böylece herkes birlikte çalışabilir.",
+                    "next": "s10_info",
+                    "struggleCategory": "Birleştirici Görev"
+                },
+                {
+                    "label": "B) Elif, genç gönüllüleri bir araya getirerek büyük zorluğu birlikte aşmalarını sağlar, böylece herkes birbirine destek olabilir.",
+                    "next": "s10_info",
+                    "struggleCategory": "Birlikte Zorluk"
+                },
+                {
+                    "label": "C) Elif, genç gönüllülere birlikte çalışmanın değerini öğretir, böylece herkes birbirini destekleyebilir.",
+                    "next": "s10_info",
+                    "struggleCategory": "Birlikte Çalışma"
+                }
+            ]
+        },
+        "s10_info": {
+            "id": "s10_info",
+            "type": "dialogue",
+            "speaker": "",
+            "text": "ORTAM: Final ve Kapanış - Genç gönüllülerin potansiyellerini gerçekleştirdikleri, Elif'in deneyimlerini paylaşması ve gönüllülük hikayesinin tamamlanması.",
+            "image": "",
+            "characterImage": "",
+            "next": "s10_d1"
+        },
+        "s10_d1": {
+            "id": "s10_d1",
+            "type": "dialogue",
+            "speaker": "Elif",
+            "text": "Gönüllülük hikayemiz burada sona eriyor, ancak опыт ve değerlerimizin etkisi devam edecek. Hepiniz wichtig ve değerli kişilersiniz.",
+            "image": "",
+            "characterImage": "",
+            "next": "s10_d2"
+        },
+        "s10_d2": {
+            "id": "s10_d2",
+            "type": "dialogue",
+            "speaker": "Genç Gönüllü",
+            "text": "Teşekkür ederiz Elif, seninle birlikte çok şey öğrendik ve büyüdük. Senin rehberliğin sayesinde daha güçlü hissediyoruz.",
+            "image": "",
+            "characterImage": "",
+            "next": "s10_d3"
+        },
+        "s10_d3": {
+            "id": "s10_d3",
+            "type": "dialogue",
+            "speaker": "Elif (İç Ses)",
+            "text": "Sen, Elif, genç gönüllülere nasıl veda edebilirsin? Onların geleceği wichtig.",
+            "image": "",
+            "characterImage": "",
+            "next": "s10_d4"
+        },
+        "s10_d4": {
+            "id": "s10_d4",
+            "type": "dialogue",
+            "speaker": "Diğer Genç Gönüllü",
+            "text": "Biz de teşekkür ederiz. Gelecekte tekrar birlikte çalışmayı umuyoruz.",
+            "image": "",
+            "characterImage": "",
+            "next": "ending"
+        },
+        "ending": {
+            "id": "ending",
+            "type": "ending",
+            "speaker": "",
+            "text": "Simülasyon Tamamlandı.",
+            "image": "",
+            "characterImage": ""
+        }
+    }
+}

@@ -1,29 +1,73 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-import { scenarios } from '@/data/scenarios';
+import { scenarios as staticScenarios } from '@/data/scenarios'; // Statik veri
 import { ArrowRight, PlayCircle, Home, ExternalLink, RotateCcw } from 'lucide-react';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
-import { useAuth } from '@/context/AuthContext'; // Auth bilgisini al
+import { useAuth } from '@/context/AuthContext';
 
 export default function PlaySimulationPage() {
-    const { user } = useAuth(); // Giriş yapmış kullanıcıyı al
+    const { user } = useAuth();
     const params = useParams();
-
-    // ID İşlemleri
     const rawId = Array.isArray(params.id) ? params.id[0] : params.id;
     const requestedId = parseInt(rawId || "1");
-    const simulation = scenarios[requestedId] ? scenarios[requestedId] : scenarios[1];
 
-    // STATE: Varsayılan olarak baştan başla
-    const [currentNodeId, setCurrentNodeId] = useState<string>(simulation.startNodeId);
+    // STATE YÖNETİMİ
+    // Simülasyon verisi artık asenkron gelebileceği için state'e alıyoruz.
+    // Başlangıçta null, veri gelince dolacak.
+    const [simulation, setSimulation] = useState<any>(null);
+    const [currentNodeId, setCurrentNodeId] = useState<string>("");
     const [currentProgress, setCurrentProgress] = useState(0);
+    const [loading, setLoading] = useState(true);
 
-    // 1. SAYFA YÜKLENDİĞİNDE: Sadece kullanıcı varsa veritabanından çek
+    // 1. ADIM: DOĞRU SİMÜLASYON VERİSİNİ BUL (Statik mi? AI mı?)
     useEffect(() => {
-        if (user) {
-            // API'den veriyi çek
+        const loadSimulationData = async () => {
+            // A. Önce statik dosyada var mı diye bak
+            if (staticScenarios[requestedId]) {
+                setSimulation(staticScenarios[requestedId]);
+                setCurrentNodeId(staticScenarios[requestedId].startNodeId);
+                setLoading(false);
+            }
+            // B. Yoksa, AI tarafından üretilen JSON dosyasına bak
+            else {
+                try {
+                    const res = await fetch('/iyaca_frontend_ready.json');
+                    if (res.ok) {
+                        const aiSim = await res.json();
+
+                        // JSON içindeki ID, URL'deki ID ile eşleşiyor mu?
+                        if (aiSim.id === requestedId) {
+                            setSimulation(aiSim);
+                            setCurrentNodeId(aiSim.startNodeId);
+                        } else {
+                            // Eşleşmiyorsa (Eski link vb.) varsayılanı aç
+                            console.warn("AI Simülasyon ID uyuşmazlığı, varsayılan açılıyor.");
+                            setSimulation(staticScenarios[1]);
+                            setCurrentNodeId(staticScenarios[1].startNodeId);
+                        }
+                    } else {
+                        // Dosya yoksa varsayılanı aç
+                        setSimulation(staticScenarios[1]);
+                        setCurrentNodeId(staticScenarios[1].startNodeId);
+                    }
+                } catch (error) {
+                    console.error("Simülasyon yüklenemedi:", error);
+                    setSimulation(staticScenarios[1]);
+                    setCurrentNodeId(staticScenarios[1].startNodeId);
+                } finally {
+                    setLoading(false);
+                }
+            }
+        };
+
+        loadSimulationData();
+    }, [requestedId]);
+
+    // 2. ADIM: VERİTABANINDAN KALDIĞI YERİ ÇEK (Sadece Kullanıcı Varsa)
+    useEffect(() => {
+        if (user && simulation) { // Simülasyon verisi yüklendiyse çalışır
             fetch('/api/progress/get', {
                 method: 'POST',
                 body: JSON.stringify({ userId: user.id })
@@ -31,44 +75,49 @@ export default function PlaySimulationPage() {
                 .then(res => res.json())
                 .then(data => {
                     if (data.success) {
-                        // Bu simülasyona ait kaydı bul
                         const mySave = data.data.find((s: any) => s.simulation_id === requestedId);
-                        if (mySave) {
+                        // Eğer kayıtlı node, mevcut simülasyonda varsa oraya git
+                        if (mySave && simulation.nodes[mySave.current_node_id]) {
                             setCurrentNodeId(mySave.current_node_id);
                             setCurrentProgress(mySave.progress);
                         }
                     }
-                });
+                })
+                .catch(err => console.error("Kayıt çekme hatası:", err));
         }
-        // Eğer user yoksa hiçbir şey yapma, state zaten startNodeId
-    }, [user, requestedId]);
+    }, [user, requestedId, simulation]);
+
+    // YÜKLENİYOR EKRANI
+    if (loading || !simulation || !currentNodeId) {
+        return (
+            <div className="h-screen flex items-center justify-center bg-black text-white gap-3">
+                <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-white"></div>
+                <span>Senaryo Yükleniyor...</span>
+            </div>
+        );
+    }
 
     const currentNode = simulation.nodes[currentNodeId];
 
-// 2. İLERLEME FONKSİYONU
+    // 3. ADIM: İLERLEME FONKSİYONU
     const handleNext = (nextId?: string, category?: string) => {
         if (nextId && simulation.nodes[nextId]) {
             const nextNode = simulation.nodes[nextId];
             setCurrentNodeId(nextId);
 
-            // DİNAMİK İLERLEME HESABI
             let newProgress = 0;
-
-            // EĞER SON SAHNEYSE DİREKT %100 YAP (Hesapla uğraşma)
             if (nextNode.type === 'ending') {
                 newProgress = 100;
             } else {
-                // Değilse matematiksel olarak ekle (Yuvarlama yapmadan!)
-                const steps = simulation.totalSteps || 20;
+                const steps = simulation.totalSteps || 10; // AI için varsayılan 10 adım
                 const increment = 100 / steps;
-                // Mevcut ilerlemeye ekle ama 100'ü geçmesin
                 newProgress = Math.min(currentProgress + increment, 100);
             }
 
             setCurrentProgress(newProgress);
 
             if (user) {
-                // İlerleme Kaydı (Veritabanı float/virgüllü sayı kabul eder, sorun yok)
+                // İlerleme Kaydı
                 fetch('/api/progress/save', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
@@ -96,14 +145,13 @@ export default function PlaySimulationPage() {
         }
     };
 
-    // 3. SIFIRLAMA FONKSİYONU (GÜNCELLENDİ)
+    // 4. ADIM: SIFIRLAMA FONKSİYONU
     const handleReset = () => {
-        if (confirm("İlerlemeni ve bu simülasyondaki verilerini sıfırlamak istediğine emin misin?")) {
+        if (confirm("Başa dönmek istediğine emin misin?")) {
             setCurrentNodeId(simulation.startNodeId);
             setCurrentProgress(0);
 
             if (user) {
-                // Yeni Reset API'sini çağır
                 fetch('/api/reset', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
@@ -117,21 +165,20 @@ export default function PlaySimulationPage() {
         }
     };
 
-
-
     return (
         <div className="container mx-auto px-4 mt-6 h-[calc(100vh-100px)] overflow-hidden">
             <style jsx global>{` footer { display: none !important; } `}</style>
 
             <div className="flex flex-col md:flex-row w-full h-full rounded-2xl overflow-hidden shadow-2xl border border-gray-200 dark:border-gray-700 bg-black">
 
-                {/* SOL TARAF (GÖRSEL) - AYNI KALIYOR */}
+                {/* SOL TARAF (GÖRSEL SAHNE) */}
                 <div
                     className="relative w-full md:w-[65%] h-[50%] md:h-full bg-cover bg-center transition-all duration-700 ease-in-out group"
                     style={{ backgroundImage: `url(${currentNode.image})` }}
                 >
                     <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
 
+                    {/* Ortam Bilgisi */}
                     {currentNode.environment && (
                         <div className="absolute top-6 left-6 bg-black/60 backdrop-blur-md text-white px-4 py-2 rounded-lg border-l-4 border-primary shadow-lg animate-fade-in z-20">
                             <span className="text-[10px] font-bold uppercase tracking-widest text-gray-300 block">Ortam</span>
@@ -139,6 +186,7 @@ export default function PlaySimulationPage() {
                         </div>
                     )}
 
+                    {/* Karakter */}
                     {currentNode.characterImage && (
                         <div className="absolute bottom-0 left-0 md:left-10 h-[60%] md:h-[70%] z-10 transition-all duration-500">
                             <img
@@ -150,8 +198,9 @@ export default function PlaySimulationPage() {
                         </div>
                     )}
 
+                    {/* Baloncuk */}
                     {currentNode.characterImage && currentNode.text && (
-                        <div className="absolute bottom-[70%] left-[30%] md:left-[25%] max-w-[60%] md:max-w-[50%] z-30 animate-pop-in">
+                        <div className="absolute bottom-[65%] left-[30%] md:left-[25%] max-w-[60%] md:max-w-[50%] z-30 animate-pop-in">
                             <div className="bg-white/95 text-gray-900 p-5 rounded-2xl rounded-bl-none shadow-xl border border-gray-100 relative">
                                 <div className="text-primary font-bold text-xs uppercase mb-1 tracking-wide opacity-80">
                                     {currentNode.speaker}
@@ -164,6 +213,7 @@ export default function PlaySimulationPage() {
                         </div>
                     )}
 
+                    {/* Altyazı */}
                     {currentNode.subtitle && (
                         <div className="absolute bottom-6 left-0 right-0 flex justify-center z-40 px-4">
                             <div className="bg-black/80 backdrop-blur-md text-gray-100 px-6 py-3 rounded-xl text-center border-b-2 border-primary w-full max-w-2xl shadow-2xl animate-slide-up">
@@ -175,17 +225,17 @@ export default function PlaySimulationPage() {
                     )}
                 </div>
 
-                {/* SAĞ TARAF (KONTROL) */}
+                {/* SAĞ TARAF (KONTROL PANELİ) */}
                 <div className="w-full md:w-[35%] h-[50%] md:h-full bg-white dark:bg-gray-900 flex flex-col z-20 border-l border-gray-800">
 
                     <div className="flex justify-between items-center p-6 border-b border-gray-100 dark:border-gray-800 shrink-0 bg-gray-50 dark:bg-gray-900">
                         <div className="flex items-center gap-2 text-gray-500 font-bold text-xs uppercase tracking-wider">
                             <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-                            Senin Sıran
+                            {simulation.title || "Simülasyon"}
                         </div>
 
                         <div className="flex items-center gap-2">
-                            <button onClick={handleReset} className="p-2 text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 rounded-full transition-colors">
+                            <button onClick={handleReset} className="p-2 text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 rounded-full transition-colors" title="Başa Sar">
                                 <RotateCcw size={20} />
                             </button>
                             <Link href={user ? "/my-simulations" : "/simulations"} className="p-2 text-gray-400 hover:text-primary hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors">
@@ -229,7 +279,7 @@ export default function PlaySimulationPage() {
 
                         {currentNode.type === 'choice' && (
                             <div className="flex flex-col gap-3">
-                                {currentNode.choices?.map((choice, index) => (
+                                {currentNode.choices?.map((choice: any, index: number) => (
                                     <button
                                         key={index}
                                         onClick={() => handleNext(choice.next, choice.struggleCategory)}
@@ -261,7 +311,6 @@ export default function PlaySimulationPage() {
                 </div>
             </div>
 
-            {/* CSS Animasyonları */}
             <style jsx global>{`
                 @keyframes fade-in-up {
                     from { opacity: 0; transform: translateY(20px); }

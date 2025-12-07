@@ -1,10 +1,9 @@
 import { simulations } from '@/data/simulations';
-import { mySimulations as defaultMySims } from '@/data/mySimulations';
 
 const STORAGE_KEY = 'gonulver_my_simulations';
 const STRUGGLE_KEY = 'gonulver_struggles';
 
-// TİP TANIMLAMASI (Any hatasını çözer)
+// TİP TANIMLAMASI
 interface StoredSimulation {
     id: number;
     title: string;
@@ -18,20 +17,20 @@ interface StoredSimulation {
 // Verileri Getir
 export const getStoredSimulations = (): StoredSimulation[] => {
     if (typeof window === 'undefined') return [];
+
     const stored = localStorage.getItem(STORAGE_KEY);
+
     if (!stored) {
-        // Varsayılan veriyi kaydet ve döndür
-        // (defaultMySims yapısı StoredSimulation ile uyuşmuyor olabilir, hackathon için any ile geçiyoruz ama kontrollü)
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(defaultMySims));
-        return defaultMySims as unknown as StoredSimulation[];
+        // Varsayılan veri yok, boş liste dönüyoruz.
+        return [];
     }
+
     return JSON.parse(stored) as StoredSimulation[];
 };
 
 // Belirli bir simülasyonun durumunu getir
 export const getSavedSimulationState = (id: number) => {
     const list = getStoredSimulations();
-    // 's: any' yerine tip güvenli arama
     return list.find((s) => s.id === id);
 };
 
@@ -65,8 +64,6 @@ export const updateSimulationProgress = (id: number, nodeId: string, progressToA
 
     if (index === -1) return;
 
-    // HATALARIN ÇÖZÜMÜ: 'let' yerine 'const' (değer değişmiyorsa)
-    // Eğer değeri değiştiriyorsak let kalmalı, ama burada değişkeni tekrar atamıyoruz, nesne özelliğini değiştiriyoruz.
     const currentProgress = list[index].progress || 0;
     const newProgress = Math.min(currentProgress + progressToAdd, 100);
 
@@ -103,9 +100,6 @@ export const trackStruggle = (category: string) => {
     if (typeof window === 'undefined' || !category) return;
 
     const stored = localStorage.getItem(STRUGGLE_KEY);
-    // 'let' hatası çözümü: struggles içeriği değişiyor ama referansı aynı kalsa da const yapıp deneyelim,
-    // JSON.parse sonucu let olması daha güvenli çünkü tamamen yeni obje oluşturabiliriz.
-    // Ancak ESLint uyarısı "never reassigned" diyorsa const yaparız.
     const struggles: Record<string, number> = stored ? JSON.parse(stored) : {};
 
     if (struggles[category]) {
