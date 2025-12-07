@@ -74,7 +74,7 @@ class VisualAssetGenerator:
         # Ortam görselleri için sadece 'info' veya 'ending' node'larını filtrele
         # (Genelde sahne başları _info ile biter)
         info_nodes = {k: v for k, v in nodes.items() if
-                      k.endswith('_info') or k.endswith('_end') or v.get('type') == 'ending'}
+                      k.endswith('_d1') or v.get('type') == 'ending'}
 
         total_scenes = len(info_nodes)
         current_count = 0

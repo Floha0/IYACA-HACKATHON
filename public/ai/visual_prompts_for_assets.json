@@ -1,34 +1,37 @@
 {
     "sahne_gorselleri": {
         "s1_d1": {
-            "ortam_prompt": "Create a serene and rustic village scene with a warm, golden light casting long shadows across the thatched roofs of the cottages, surrounded by lush green trees and vibrant wildflowers, with a soft, gentle mist hovering above the landscape, evoking a sense of peacefulness and community, as if the air is filled with the sweet scent of blooming flowers and the distant sound of birds chirping, with the villagers and Leyla working together in harmony, their faces unseen in the wide shot, as the atmosphere is alive with the promise of new beginnings and collaboration."
+            "ortam_prompt": "\"A serene, rural village landscape at sunset, with warm golden light casting long shadows across the rolling hills and verdant fields, surrounded by rustic wooden houses and trees, under a soft, pastel-colored sky with wispy clouds, as the atmosphere is filled with a sense of tranquility and community, with people subtly present in the distance, engaged in volunteer work, amidst the gentle rustle of leaves and the faint sound of nature.\""
         },
         "s2_d1": {
-            "ortam_prompt": "\"A serene, rustic village scene with a warm, golden light casting long shadows across the thatched roofs and the dirt path, surrounded by lush green trees and vibrant wildflowers, with a few villagers gathered in the distance, set against a clear blue sky with a few puffy white clouds, evoking a sense of community and cooperation.\""
+            "ortam_prompt": "Village town hall with rustic wooden beams, earthy tones, and warm golden lighting, surrounded by lush greenery, with a gentle misty atmosphere, and a sense of community and gathering, wide shot."
         },
         "s3_d1": {
-            "ortam_prompt": "A dimly lit, neutral-colored conference room with a large wooden table at its center, surrounded by high-backed chairs, the walls adorned with minimalistic artwork, and a single, narrow window allowing a sliver of soft, natural light to illuminate the space, casting a sense of seriousness and deliberation over the scene."
+            "ortam_prompt": "A large, open community center with two separate areas, one filled with rows of tables and chairs for educational activities, and the other with toolboxes, ladders, and construction materials for infrastructure work, illuminated by warm, natural light pouring in through large windows, with a mix of beige and gray tones, and an atmosphere of collaboration and productivity."
         },
         "s4_d1": {
-            "ortam_prompt": "A dimly lit, worn-out classroom with faded walls, dusty chalkboards, and outdated educational posters, the air thick with the scent of old books and stagnation, as if the very atmosphere is weighed down by the lack of resources, with faint, diffused natural light filtering through grimy windows, casting a bleak, hopeless glow over the entire scene."
+            "ortam_prompt": "A dimly lit, worn-out language classroom with faded white walls, old wooden desks, and chairs, filled with an air of frustration and disconnection, soft gray light pouring through the grimy windows, illuminating the disappointed faces of students and teachers, amidst a backdrop of dusty language textbooks and scattered notes, with a sense of isolation and misunderstanding hanging heavily in the atmosphere."
         },
         "s5_d1": {
-            "ortam_prompt": "\"A dark and ominous abandoned water treatment facility with a deteriorated electrical infrastructure, dimly lit with faint, flickering fluorescent lights, revealing rusty pipes, cracked concrete, and peeling paint, surrounded by a murky, stagnant pool of water, with an atmosphere of neglect and disrepair, as if time has stood still for decades.\""
+            "ortam_prompt": "\"A dimly lit, melancholic room with muted colors, faded textures, and an atmosphere of palpable tension, where the air is thick with unspoken words and unresolved emotions, with a sense of heavy-heartedness lingering in every corner.\""
         },
         "s6_d1": {
-            "ortam_prompt": "Create a wide shot of a cluttered, dimly lit conference room with beige walls, worn wooden tables, and faded blue chairs, where a group of people from diverse cultural backgrounds are seated, surrounded by scattered papers, empty coffee cups, and broken whiteboards, with a backdrop of a large, foggy window that filters in soft, grey natural light, casting a melancholic atmosphere, and incorporating a mix of warm and cool color tones, with an emphasis on textures of worn wood, faded fabric, and rough paper."
+            "ortam_prompt": "\"A dimly lit, worn conference room with faded grey walls, a large wooden table at its center, and a few scattered chairs, illuminated only by a single, flickering fluorescent light overhead, casting an air of desperation and uncertainty, with shades of beige and pale blue dominating the color palette, and a sense of stagnation hanging in the air.\""
         },
         "s7_d1": {
-            "ortam_prompt": "\"A dimly lit, nostalgic, and worn-down traditional village scene with old wooden buildings, dusty streets, and fading cultural artifacts, illuminated by a warm, golden-hour sunlight, casting long shadows and emphasizing the textures of the aged structures, with a sense of melancholy and resistance to change lingering in the air.\""
+            "ortam_prompt": "\"a rustic village setting with a worn, earthy tone, surrounded by wooden crates and piles of construction materials, with a hint of tension in the air, warm sunlight casting long shadows across the dusty ground, and a backdrop of traditional village houses with terracotta rooftops, amidst a flurry of activity with people milling about in the distance\""
         },
         "s8_d1": {
-            "ortam_prompt": "Create a dramatic and ultra-detailed wide shot of a dimly lit, cluttered, and disorganized office space with scattered papers, clocks, and calendars on the walls, reflecting a sense of chaotic time management, with warm golden lighting casting long shadows, and a mix of wooden and metallic textures, conveying a feeling of urgency and disarray."
+            "ortam_prompt": "A serene and vibrant rural village scene at sunset, with warm golden light casting long shadows across the thatched roofs of the cottages, surrounded by lush green fields and trees, under a clear blue sky with a few wispy clouds, capturing the joyful atmosphere of a close-knit community, with people milling about in the distance, their faces indistinct, as the air is filled with a sense of satisfaction and completion."
         },
         "s9_d1": {
-            "ortam_prompt": "Create a serene and rustic village scene at dawn, with soft golden light casting a warm glow over the thatched roofs of the cottages, surrounded by lush green trees and a gentle mist rising from the ground, with a sense of community and cooperation in the air."
+            "ortam_prompt": "\"A vibrant, sun-drenched village square with colorful lanterns and streamers hanging from rustic wooden beams, surrounded by lush green trees and quaint stone cottages, warm golden light casting a joyful atmosphere, with a soft, blurred focus on the revelers in the distance, emphasizing the lively, festive environment.\""
         },
         "s10_d1": {
-            "ortam_prompt": "\"A serene, sun-drenched village scene with a warm, golden light casting a gentle glow over the thatched roofs of the traditional cottages, surrounded by lush green fields and vibrant wildflowers, with a soft, misty atmosphere and a sense of tranquility, as if the village is basking in a sense of pride and accomplishment, with the distant sound of nature and the faint smell of freshly cut grass wafting through the air.\""
+            "ortam_prompt": "\"A serene and vibrant village scene at sunset, with warm golden light casting long shadows across the thatched roofs of the cottages, surrounded by lush green trees and blooming wildflowers, under a clear blue sky with a few wispy clouds, capturing the joyful atmosphere of a community coming together, with people milling about in the distance, their faces indistinct, as the overall mood is one of peaceful celebration and contentment.\""
+        },
+        "ending": {
+            "ortam_prompt": "\"A vast, futuristic laboratory with sleek, metallic walls and floors, illuminated by a kaleidoscope of neon lights and holographic projections, as a massive, spherical simulation chamber dominates the center of the room, emitting a mesmerizing, pulsating glow that reflects off the surrounding surfaces, casting an otherworldly ambiance.\""
         }
     }
 }
